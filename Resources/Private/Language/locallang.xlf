@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-15T10:15:18Z" product-name="stafflist">
+		<header/>
+		<body>
+			<trans-unit id="tx_stafflist_domain_model_persons">
+				<source>Persons</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.lastname">
+				<source>Lastname</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.firstname">
+				<source>Firstname</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.salutation">
+				<source>Salutation</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.avatar">
+				<source>Avatar</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.function">
+				<source>Function</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.tasks">
+				<source>Tasks</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.incompany">
+				<source>Incompany</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.building">
+				<source>Building</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.room">
+				<source>Room</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.mobile">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.officehours">
+				<source>Officehours</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.bio">
+				<source>Bio</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.twitter">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.instagram">
+				<source>Instagram</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.xing">
+				<source>Xing</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.github">
+				<source>Github</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.gitlab">
+				<source>Gitlab</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.teams">
+				<source>Teams</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.functions">
+				<source>Functions</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_persons.locations">
+				<source>Locations</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_teams">
+				<source>Teams</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_teams.teamname">
+				<source>Teamname</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_teams.teampage">
+				<source>Teampage</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_teams.teamleaders">
+				<source>Teamleaders</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_functions">
+				<source>Functions</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_functions.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_locations">
+				<source>Locations</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_locations.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_locations.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_locations.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_locations.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_locations.state">
+				<source>State</source>
+			</trans-unit>
+			<trans-unit id="tx_stafflist_domain_model_locations.country">
+				<source>Country</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

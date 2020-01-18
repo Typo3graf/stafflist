@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-15T10:15:18Z" product-name="stafflist">
+		<header/>
+		<body>
+			<trans-unit id="lastname.description">
+				<source>lastname</source>
+			</trans-unit>
+			<trans-unit id="firstname.description">
+				<source>firstname</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="salutation.description">
+				<source>salutation</source>
+			</trans-unit>
+			<trans-unit id="avatar.description">
+				<source>avatar</source>
+			</trans-unit>
+			<trans-unit id="function.description">
+				<source>function</source>
+			</trans-unit>
+			<trans-unit id="tasks.description">
+				<source>tasks</source>
+			</trans-unit>
+			<trans-unit id="incompany.description">
+				<source>incompany</source>
+			</trans-unit>
+			<trans-unit id="building.description">
+				<source>building</source>
+			</trans-unit>
+			<trans-unit id="room.description">
+				<source>room</source>
+			</trans-unit>
+			<trans-unit id="phone.description">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="mobile.description">
+				<source>mobile</source>
+			</trans-unit>
+			<trans-unit id="fax.description">
+				<source>fax</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="officehours.description">
+				<source>officehours</source>
+			</trans-unit>
+			<trans-unit id="bio.description">
+				<source>bio</source>
+			</trans-unit>
+			<trans-unit id="twitter.description">
+				<source>twitter</source>
+			</trans-unit>
+			<trans-unit id="facebook.description">
+				<source>facebook</source>
+			</trans-unit>
+			<trans-unit id="instagram.description">
+				<source>instagram</source>
+			</trans-unit>
+			<trans-unit id="xing.description">
+				<source>xing</source>
+			</trans-unit>
+			<trans-unit id="github.description">
+				<source>github</source>
+			</trans-unit>
+			<trans-unit id="gitlab.description">
+				<source>gitlab</source>
+			</trans-unit>
+			<trans-unit id="teams.description">
+				<source>teams</source>
+			</trans-unit>
+			<trans-unit id="functions.description">
+				<source>Repetitive functions</source>
+			</trans-unit>
+			<trans-unit id="locations.description">
+				<source>locations</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

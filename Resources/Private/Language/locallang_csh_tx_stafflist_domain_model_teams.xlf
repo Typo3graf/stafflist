@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-15T10:15:18Z" product-name="stafflist">
+		<header/>
+		<body>
+			<trans-unit id="teamname.description">
+				<source>teamname</source>
+			</trans-unit>
+			<trans-unit id="teampage.description">
+				<source>teampage</source>
+			</trans-unit>
+			<trans-unit id="teamleaders.description">
+				<source>teamleaders</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

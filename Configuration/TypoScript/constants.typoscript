@@ -1,0 +1,15 @@
+
+plugin.tx_stafflist_personlist {
+    view {
+        # cat=plugin.tx_stafflist_personlist/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:stafflist/Resources/Private/Templates/
+        # cat=plugin.tx_stafflist_personlist/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:stafflist/Resources/Private/Partials/
+        # cat=plugin.tx_stafflist_personlist/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:stafflist/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_stafflist_personlist//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

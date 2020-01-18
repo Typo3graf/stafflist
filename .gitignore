@@ -1,0 +1,4 @@
+/vendor/
+.idea/
+ExtensionBuilder.json
+/Configuration/ExtensionBuilder/

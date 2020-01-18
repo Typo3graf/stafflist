@@ -1,0 +1,28 @@
+{
+    "name": "typo3graf/stafflist",
+    "type": "typo3-cms-extension",
+    "description": "This versatile staff list is the easiest way to add staff directories to your website. Company and faculty are presented in several easy to understand layouts, including a team list or employee directory, allowing visitors to get to know your company and capabilities.",
+    "authors": [
+        {
+            "name": "Development-Team",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Typo3graf\\Stafflist\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Typo3graf\\Stafflist\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "typo3graf/stafflist": "self.version",
+        "typo3-ter/stafflist": "self.version"
+    }
+}
