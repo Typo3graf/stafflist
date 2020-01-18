@@ -17,18 +17,19 @@ namespace Typo3graf\Stafflist\Controller;
  */
 class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
     /**
-     * personsRepository
-     * 
-     * @var \Typo3graf\Stafflist\Domain\Repository\PersonsRepository
-     * @inject
+     * Inject a persons repository to enable DI
+     *
+     * @param \Typo3graf\Stafflist\Domain\Repository\PersonsRepository $personsRepository
      */
-    protected $personsRepository = null;
-
+    public function injectPersonsRepository(\Typo3graf\Stafflist\Domain\Repository\PersonsRepository $personsRepository)
+    {
+        $this->personsRepository = $personsRepository;
+    }
+    
     /**
      * action personList
-     * 
+     *
      * @return void
      */
     public function personListAction()
@@ -39,7 +40,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action groupedByList
-     * 
+     *
      * @return void
      */
     public function groupedByListAction()
@@ -48,7 +49,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action detailView
-     * 
+     *
      * @return void
      */
     public function detailViewAction()
@@ -57,7 +58,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action boxView
-     * 
+     *
      * @return void
      */
     public function boxViewAction()

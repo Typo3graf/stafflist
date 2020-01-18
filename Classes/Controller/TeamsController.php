@@ -17,18 +17,19 @@ namespace Typo3graf\Stafflist\Controller;
  */
 class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
     /**
-     * teamsRepository
-     * 
-     * @var \Typo3graf\Stafflist\Domain\Repository\TeamsRepository
-     * @inject
+     * Inject a teams repository to enable DI
+     *
+     * @param \Typo3graf\Stafflist\Domain\Repository\TeamsRepository $teamsRepository
      */
-    protected $teamsRepository = null;
+    public function injectTeamsRepository(\Typo3graf\Stafflist\Domain\Repository\TeamsRepository $teamsRepository)
+    {
+        $this->teamsRepository = $teamsRepository;
+    }
 
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
@@ -39,7 +40,7 @@ class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * action teamList
-     * 
+     *
      * @return void
      */
     public function teamListAction()

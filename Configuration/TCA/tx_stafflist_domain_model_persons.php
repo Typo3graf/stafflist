@@ -169,6 +169,7 @@ return [
                     'appearance' => [
                         'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
                     ],
+                    'overrideChildTca' => [
                     'foreign_types' => [
                         '0' => [
                             'showitem' => '
@@ -200,6 +201,7 @@ return [
                             --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
                             --palette--;;filePalette'
                         ]
+                    ],
                     ],
                     'maxitems' => 1
                 ],
@@ -316,7 +318,7 @@ return [
                 'rows' => 15,
                 'eval' => 'trim',
             ],
-            
+
         ],
         'twitter' => [
             'exclude' => false,
@@ -396,7 +398,7 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
         'functions' => [
             'exclude' => false,
@@ -422,7 +424,7 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
         'locations' => [
             'exclude' => true,
@@ -448,8 +450,8 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
-    
+
     ],
 ];
