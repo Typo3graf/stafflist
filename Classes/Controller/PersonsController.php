@@ -15,6 +15,10 @@ namespace Typo3graf\Stafflist\Controller;
 /**
  * PersonsController
  */
+
+
+
+
 class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
@@ -26,7 +30,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     {
         $this->personsRepository = $personsRepository;
     }
-    
+
     /**
      * action personList
      *
@@ -50,18 +54,24 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action detailView
      *
+     * @param \Typo3graf\Stafflist\Domain\Model\Persons $persons
      * @return void
      */
-    public function detailViewAction()
+    public function detailViewAction(\Typo3graf\Stafflist\Domain\Model\Persons $persons = null)
     {
+        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($persons, 'My Title'); die();
+        $person =  $this->personsRepository->findByUid($persons);
+        $this->view->assign('person', $person);
     }
 
     /**
      * action boxView
      *
+     * @param \Typo3graf\StaffList\Domain\Model\Persons $persons
      * @return void
      */
-    public function boxViewAction()
+    public function boxViewAction(\Typo3graf\Stafflist\Domain\Model\Persons $persons = null)
     {
+        $this->view->assign('person', $persons);
     }
 }

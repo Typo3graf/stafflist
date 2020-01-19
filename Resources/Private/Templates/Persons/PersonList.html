@@ -35,6 +35,7 @@
 
 			<f:for each="{persons}" as="person">
 				<tr>
+					<f:link.page pageUid="1" additionalParams="{extension_key: {foo: 'bar'}}">page link</f:link.page>
 					<td><f:link.action action="detailView" arguments="{person : person}"> {person.lastname}</f:link.action></td>
 					<td><f:link.action action="detailView" arguments="{person : person}"> {person.firstname}</f:link.action></td>
 					<td><f:link.action action="detailView" arguments="{person : person}"> {person.title}</f:link.action></td>

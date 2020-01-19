@@ -122,7 +122,7 @@
 			<ROOT>
 				<TCEforms>
 					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.teamlist</sheetTitle>
-                    <displayCond>FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView;Persons->groupedByList</displayCond>
+                    <displayCond>FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</displayCond>
 				</TCEforms>
 				<type>array</type>
 				<el>
