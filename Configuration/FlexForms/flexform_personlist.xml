@@ -20,7 +20,7 @@
 									</numIndex>
 									<numIndex index="1">
 										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_teamlist</numIndex>
-										<numIndex index="1">Persons->personList;Persons->detailView;Persons->groupedByList</numIndex>
+										<numIndex index="1">Persons->personList;Persons->detailView</numIndex>
 									</numIndex>
 									<numIndex index="2">
 										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_detail</numIndex>
@@ -36,7 +36,7 @@
 									</numIndex>
 									<numIndex index="5">
 										<numIndex index="0">TEAMS DIRECTORY</numIndex>
-										<numIndex index="1">Teams->teamList;Persons->personList;Persons->detailView;Persons->groupedByList</numIndex>
+										<numIndex index="1">Teams->teamsList;Persons->personList;Persons->detailView</numIndex>
 									</numIndex>
 								</items>
 							</config>
