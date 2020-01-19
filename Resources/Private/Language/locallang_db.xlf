@@ -247,6 +247,12 @@
 			<trans-unit id="pi_flexform_dataStoragePage">
 				<source>Record Storage Page(s)</source>
 			</trans-unit>
+			<trans-unit id="pi_flexform_listtype_staff_divider">
+				<source>Staff</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_listtype_teams_divider">
+				<source>Teams</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

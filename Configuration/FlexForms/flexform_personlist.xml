@@ -15,7 +15,7 @@
 								<type>select</type>
 								<items>
 									<numIndex index="0">
-										<numIndex index="0">Staff</numIndex>
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_staff_divider</numIndex>
 										<numIndex index="1">--div--</numIndex>
 									</numIndex>
 									<numIndex index="1">
@@ -31,7 +31,7 @@
 										<numIndex index="1">Persons->boxView</numIndex>
 									</numIndex>
 									<numIndex index="4">
-										<numIndex index="0">Teams</numIndex>
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_teams_divider</numIndex>
 										<numIndex index="1">--div--</numIndex>
 									</numIndex>
 									<numIndex index="5">
