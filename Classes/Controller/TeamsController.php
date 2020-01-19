@@ -27,23 +27,15 @@ class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $this->teamsRepository = $teamsRepository;
     }
 
-    /**
-     * action list
-     *
-     * @return void
-     */
-    public function listAction()
-    {
-        $teams = $this->teamsRepository->findAll();
-        $this->view->assign('teams', $teams);
-    }
 
     /**
      * action teamList
      *
      * @return void
      */
-    public function teamListAction()
+    public function teamsListAction()
     {
+        $teams = $this->teamsRepository->findAll();
+        $this->view->assign('teams', $teams);
     }
 }

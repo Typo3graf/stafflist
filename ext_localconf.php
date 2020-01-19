@@ -9,8 +9,8 @@ call_user_func(
             'Typo3graf.Stafflist',
             'Personlist',
             [
-                'Persons' => 'list, personList, groupedByList, detailView, boxView',
-                'Teams' => 'list, teamList'
+                'Persons' => 'personList, groupedByList, detailView, boxView',
+                'Teams' => 'teamsList'
             ],
             // non-cacheable actions
             [
@@ -39,12 +39,12 @@ call_user_func(
        }'
     );
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
+
 			$iconRegistry->registerIcon(
 				'stafflist-plugin-personlist',
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 				['source' => 'EXT:stafflist/Resources/Public/Icons/user_plugin_personlist.svg']
 			);
-		
+
     }
 );
