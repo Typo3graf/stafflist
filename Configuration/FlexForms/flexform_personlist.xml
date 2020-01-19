@@ -10,22 +10,31 @@
 					<switchableControllerActions>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype</label>
+							<onChange>reload</onChange>
 							<config>
 								<type>select</type>
 								<items>
 									<numIndex index="0">
+										<numIndex index="0">Staff</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="1">
 										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_teamlist</numIndex>
 										<numIndex index="1">Persons->personList;Persons->detailView;Persons->groupedByList</numIndex>
 									</numIndex>
-									<numIndex index="1">
+									<numIndex index="2">
 										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_detail</numIndex>
 										<numIndex index="1">Persons->detailView</numIndex>
 									</numIndex>
-									<numIndex index="2">
+									<numIndex index="3">
 										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_box</numIndex>
 										<numIndex index="1">Persons->boxView</numIndex>
 									</numIndex>
-									<numIndex index="3">
+									<numIndex index="4">
+										<numIndex index="0">Teams</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="5">
 										<numIndex index="0">TEAMS DIRECTORY</numIndex>
 										<numIndex index="1">Teams->teamList;Persons->personList;Persons->detailView;Persons->groupedByList</numIndex>
 									</numIndex>
@@ -103,7 +112,6 @@
 										<numIndex index="1">250</numIndex>
 									</numIndex>
 								</items>
-								<default>0</default>
 							</config>
 						</TCEforms>
 					</persistence.recursive>
