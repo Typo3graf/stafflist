@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-14T20:05:42Z" product-name="stafflist">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-14T20:05:42Z"
+		  product-name="stafflist">
 		<header/>
 		<body>
 			<trans-unit id="tx_stafflist_domain_model_persons">
@@ -42,7 +43,7 @@
 			<trans-unit id="tx_stafflist_domain_model_persons.mobile">
 				<source>Mobile</source>
 			</trans-unit>
-            <trans-unit id="tx_stafflist_domain_model_persons.fax">
+			<trans-unit id="tx_stafflist_domain_model_persons.fax">
 				<source>Fax</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.email">
@@ -81,7 +82,7 @@
 			<trans-unit id="tx_stafflist_domain_model_persons.locations">
 				<source>Locations</source>
 			</trans-unit>
-            <trans-unit id="tx_stafflist_domain_model_persons.sorting">
+			<trans-unit id="tx_stafflist_domain_model_persons.sorting">
 				<source>sorting</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_teams">
@@ -129,117 +130,123 @@
 			<trans-unit id="tx_stafflist_personlist.description">
 				<source>Staff list all</source>
 			</trans-unit>
-            <trans-unit id="tt_content.pi_flexform.teamlist">
-            <source>Teamlist</source>
-            </trans-unit>
+			<trans-unit id="tt_content.pi_flexform.teamlist">
+				<source>Teamlist</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.contactbox">
-            <source>Contact person (Box)</source>
-            </trans-unit>
+				<source>Contact person (Box)</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.listtype">
-            <source>List to show</source>
-            </trans-unit>
+				<source>List to show</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.settings">
-            <source>Settings</source>
-            </trans-unit>
+				<source>Settings</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.detailview">
-            <source>Detailview</source>
-            </trans-unit>
+				<source>Detailview</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.click_enlarge">
-            <source>Click enlarge images?</source>
-            </trans-unit>
+				<source>Click enlarge images?</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.ignoreGroupSelection">
-            <source>Ignore Group selection (show every person)</source>
-            </trans-unit>
+				<source>Ignore Group selection (show every person)</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.ignoreTeamLeaders">
-            <source>Ignore the team leaders (hide in list)?</source>
-            </trans-unit>
+				<source>Ignore the team leaders (hide in list)?</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.disableBackLink">
-            <source>Disable back links?</source>
-            </trans-unit>
+				<source>Disable back links?</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.showimages">
-            <source>Show images?</source>
-            </trans-unit>
+				<source>Show images?</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.linkNamesToSingleView">
-            <source>Make names be linked to the single view?</source>
-            </trans-unit>
+				<source>Make names be linked to the single view?</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.showSingleViewAsPopUp">
-            <source>Show the single view in a pop-up?</source>
-            </trans-unit>
+				<source>Show the single view in a pop-up?</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.doNotLinkToDetailView">
-            <source>Do not link to details page.</source>
-            </trans-unit>
+				<source>Do not link to details page.</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.startingpoint">
-            <source>Startingpoint</source>
-            </trans-unit>
+				<source>Startingpoint</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.source_fromplugin">
-            <source>Which persons should be shown:</source>
-            </trans-unit>
+				<source>Which persons should be shown:</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.source_fromteamleaders">
-            <source>Show the leaders of which team?</source>
-            </trans-unit>
+				<source>Show the leaders of which team?</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.detailPage">
-            <source>Detailpage (where to show the detailed info of the persons?)</source>
-            </trans-unit>
+				<source>Detailpage (where to show the detailed info of the persons?)</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.sortOrder">
-            <source>Sort by</source>
-            </trans-unit>
+				<source>Sort by</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.sortOrderDirection">
-            <source>Sorting direction</source>
-            </trans-unit>
+				<source>Sorting direction</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.sortOrderDirection_asc">
-            <source>ascending</source>
-            </trans-unit>
+				<source>ascending</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.sortOrderDirection_desc">
-            <source>descending</source>
-            </trans-unit>
+				<source>descending</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.sortOrderForLeaders">
-            <source>Sort order for the team leaders (a field name)</source>
-            </trans-unit>
+				<source>Sort order for the team leaders (a field name)</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.usergroup">
-            <source>User Group (Team) to show</source>
-            </trans-unit>
-            <trans-unit id="pi_flexform_source">
-            <source>Where to select the person(s) to show?</source>
-            </trans-unit>
+				<source>User Group (Team) to show</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_source">
+				<source>Where to select the person(s) to show?</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_source_frompage">
-            <source>from page</source>
-            </trans-unit>
+				<source>from page</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_source_fromplugin">
-            <source>from this plugin  (default)</source>
-            </trans-unit>
+				<source>from this plugin (default)</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_source_fromteamleaders">
-            <source>from teams</source>
-            </trans-unit>
+				<source>from teams</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_listtype">
-            <source>What to show?</source>
-            </trans-unit>
+				<source>What to show?</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_listtype_detail">
-            <source>DETAIL - Detailed information</source>
-            </trans-unit>
+				<source>DETAIL - Detailed information</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_listtype_box">
-            <source>BOX - Contact person</source>
-            </trans-unit>
+				<source>BOX - Contact person</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_listtype_teamlist">
-            <source>TEAMLIST - List of a team</source>
-            </trans-unit>
+				<source>TEAMLIST - List of a team</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle">
-            <source>What to show?</source>
-            </trans-unit>
+				<source>What to show?</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_mixed">
-            <source>Text and images (default)</source>
-            </trans-unit>
+				<source>Text and images (default)</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_names">
-            <source>just names</source>
-            </trans-unit>
+				<source>just names</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_images">
-            <source>just images</source>
-            </trans-unit>
+				<source>just images</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_grouped">
-            <source>grouped by team</source>
-            </trans-unit>
+				<source>grouped by team</source>
+			</trans-unit>
 			<trans-unit id="pi_flexform_group">
-            <source>Which group should be shown?</source>
-            </trans-unit>
+				<source>Which group should be shown?</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_inheritFromTypoScript">
+				<source>Defined in TypoScript</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_dataStoragePage">
+				<source>Record Storage Page(s)</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
