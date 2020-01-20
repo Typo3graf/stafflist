@@ -1,5 +1,6 @@
 
 plugin.tx_stafflist_personlist {
+
     view {
         templateRootPaths.0 = EXT:{extension.shortExtensionKey}/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_stafflist_personlist.view.templateRootPath}
@@ -23,3 +24,7 @@ plugin.tx_stafflist_personlist {
         #callDefaultActionIfActionCantBeResolved = 1
     }
     }
+
+page.includeCSS{
+    stafflist = EXT:stafflist/Resources/Public/Css/stafflist-basic.css
+}

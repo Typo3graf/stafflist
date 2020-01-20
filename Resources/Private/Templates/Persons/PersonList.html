@@ -2,9 +2,80 @@
 	<f:layout name="Default" />
 
 	<f:section name="content">
+		<f:translate key="tx_stafflist_domain_model_person.building" />
+<f:if condition="{persons}">
+	<f:then>
+		<f:for each="{persons}" as="person-item" iteration="iterator">
+			<f:if condition="{iterator.isFirst}">
+				<div class="stafflist-row">
+			</f:if>
+
+			<f:if condition="{iterator.cycle} % 3">
+				<f:then>
+
+						<f:render partial="List/Person_{settings.liststyle}" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
+
+				</f:then>
+
+				<f:else>
+
+						<f:render partial="List/Person_{settings.liststyle}" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
+
+					<f:if condition="{iterator.isLast}">
+						<f:then></f:then>
+						<f:else>
+							</div><div class="stafflist-row">
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+
+			<f:if condition="{iterator.isLast}">
+				</div>
+			</f:if>
+		</f:for>
+	</f:then>
+	<f:else>
+		<f:translate key="tx_stafflist_list_nopersonsfound" />
+	</f:else>
+</f:if>
+
+
+
+
+
+		<!--div class="stafflist-row">
+			<f:for each="{persons}" as="person">
+				<div class="stafflist-column">
+					<div class="stafflist-card">
+						<f:if condition="{person.avatar}">
+
+								<f:image image="{person.avatar.originalResource}" class="stafflist-image"/>
+
+
+						</f:if>
+						<div class="stafflist-container">
+							<h6>{person.salutation} {person.title}</h6>
+							<h3>{person.firstname} {person.lastname}</h3>
+							<p class="stafflist-title">{person.function}</p>
+							<p><f:format.raw>{person.bio}</f:format.raw></p>
+							<p><f:translate key="tx_stafflist_domain_model_persons.building" />: {person.building}</p>
+							<p><f:translate key="tx_stafflist_domain_model_persons.room" />: {person.room}</p>
+							<p><f:translate key="tx_stafflist_domain_model_persons.phone" />: <a href="tel:{person.phone}">{person.phone}</a></p>
+							<p><f:translate key="tx_stafflist_domain_model_persons.mobile" />: <a href="tel:{person.mobile}">{person.mobile}</a></p>
+							<p><f:translate key="tx_stafflist_domain_model_persons.email" />: <f:link.email email="{person.email}">{person.email}</f:link.email></p>
+							<p><button class="stafflist-button">Contact</button></p>
+						</div>
+					</div>
+				</div>
+			</f:for>
+		</div>
+
+
 
 		<h1>Listing for Persons</h1>
  fhfghfghfghfgh
+		<f:link.page pageUid="{settings.detailPage}" additionalParams="{tx_stafflist_personlist: {persons:persons.uid}}">LINK</f:link.page>
 		<table  class="tx_stafflist" >
 			<tr>
 				<th><f:translate key="tx_stafflist_domain_model_persons.lastname" /></th>
@@ -35,31 +106,30 @@
 
 			<f:for each="{persons}" as="person">
 				<tr>
-					<f:link.page pageUid="1" additionalParams="{extension_key: {foo: 'bar'}}">page link</f:link.page>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.lastname}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.firstname}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.title}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.salutation}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.avatar.originalResource.name}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.function}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.tasks}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.incompany -> f:format.date()}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.building}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.room}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.phone}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.mobile}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.fax}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.email}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.officehours}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.bio}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.twitter}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.facebook}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.instagram}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.xing}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.github}</f:link.action></td>
-					<td><f:link.action action="detailView" arguments="{person : person}"> {person.gitlab}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.lastname}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.firstname}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.title}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.salutation}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.avatar.originalResource.name}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.function}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.tasks}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.incompany -> f:format.date()}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.building}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.room}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.phone}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.mobile}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.fax}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.email}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.officehours}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.bio}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.twitter}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.facebook}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.instagram}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.xing}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.github}</f:link.action></td>
+					<td><f:link.action action="detailView" arguments="{persons : person}"> {person.gitlab}</f:link.action></td>
 				</tr>
 			</f:for>
-		</table>
+		</table-->
 	</f:section>
 </html>

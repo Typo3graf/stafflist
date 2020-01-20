@@ -224,16 +224,19 @@
 				<source>TEAMLIST - List of a team</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle">
-				<source>What to show?</source>
+				<source>Which layout to show?</source>
 			</trans-unit>
-			<trans-unit id="pi_flexform_liststyle_mixed">
-				<source>Text and images (default)</source>
+			<trans-unit id="pi_flexform_liststyle_list">
+				<source>Text and images list (default)</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_liststyle_cards">
+				<source>Cards grid</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_names">
-				<source>just names</source>
+				<source>Name list (just names)</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_images">
-				<source>just images</source>
+				<source>Images grid</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_grouped">
 				<source>grouped by team</source>

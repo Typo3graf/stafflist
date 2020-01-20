@@ -60,8 +60,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function detailViewAction(\Typo3graf\Stafflist\Domain\Model\Persons $persons = null)
     {
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($persons, 'My Title'); die();
-        $person =  $this->personsRepository->findByUid($persons);
-        $this->view->assign('person', $person);
+        $this->view->assign('person', $persons);
     }
 
     /**

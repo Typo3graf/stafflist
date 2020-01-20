@@ -1,0 +1,80 @@
+.stafflist-row {
+	display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden;
+}
+
+/* Three columns side by side */
+.stafflist-column {
+	flex: 1;
+	width: 33.3%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+	display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+	.stafflist-column {
+		width: 100%;
+		display: block;
+	}
+}
+
+/* Add some shadows to create a card effect */
+.stafflist-card {
+	border: 1px solid #b9b9b9;
+	border-radius: 5px;
+	flex: 1;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+}
+.stafflist-footer {
+	overflow: hidden;
+	position: absolute;
+	bottom: 5%;
+	padding: 0 5%;
+}
+.tx-stafflist h3{
+	font-size: 24px;
+	margin: 0 0 0 0;
+}
+.tx-stafflist h6{
+	font-size: 18px;
+	color: grey;
+	margin: 0 0 0 0;
+}
+/* Some left and right padding inside the container */
+.stafflist-container {
+	padding: 16px 16px 0 16px;
+}
+
+/* Clear floats */
+.stafflist-container::after, .stafflist-row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.stafflist-image{
+	width: 100%;
+	max-height: 260px;
+	object-fit: cover;
+}
+
+.stafflist-title {
+	color: grey;
+	margin: 16px 0 16px 0;
+}
+
+.stafflist-button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+}
+
+.stafflist-button:hover {
+	background-color: #555;
+}
