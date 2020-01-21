@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{settings.showSalutation}">
+	<f:switch expression="{person-item.salutation}">
+		<f:case value="1"><f:translate key="tx_stafflist_domain_model_persons.mrs" />&nbsp;</f:case>
+		<f:case value="2"><f:translate key="tx_stafflist_domain_model_persons.mr" />&nbsp;</f:case>
+		<f:defaultCase><f:if condition="{person-item.title} || {space} == 0">
+			<f:then></f:then>
+			<f:else>&nbsp;</f:else>
+		</f:if></f:defaultCase>
+	</f:switch>
+</f:if>
+
+</html>
+
+
