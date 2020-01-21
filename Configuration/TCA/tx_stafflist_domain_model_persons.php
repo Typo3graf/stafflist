@@ -23,10 +23,10 @@ return [
         'iconfile' => 'EXT:stafflist/Resources/Public/Icons/tx_stafflist_domain_model_persons.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, title, salutation, avatar, function, tasks, incompany, building, room, phone, mobile, fax, email, officehours, bio, twitter, facebook, instagram, xing, github, gitlab, teams, functions, locations',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, function, functions, tasks, teams, locations, building, room, officehours, phone, mobile, fax, email, twitter, facebook, instagram, xing, github, gitlab, incompany, bio',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, title, salutation, avatar, function, tasks, incompany, building, room, phone, mobile, fax, email, officehours, bio, twitter, facebook, instagram, xing, github, gitlab, teams, functions, locations, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, function, functions, tasks, teams, locations, building, room, officehours, phone, mobile, fax, email, twitter, facebook, instagram, xing, github, gitlab, incompany, bio, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -118,7 +118,6 @@ return [
                 ]
             ],
         ],
-
         'lastname' => [
             'exclude' => false,
             'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.lastname',
@@ -137,15 +136,6 @@ return [
                 'eval' => 'trim,required'
             ],
         ],
-        'title' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.title',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
         'salutation' => [
             'exclude' => false,
             'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.salutation',
@@ -153,13 +143,22 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    [' ', 0],
+                    ['LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_none', 0],
                     ['LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.mrs', 1],
                     ['LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.mr', 2],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => ''
+            ],
+        ],
+        'title' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.title',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
             ],
         ],
         'avatar' => [
@@ -219,6 +218,32 @@ return [
                 'eval' => 'trim'
             ],
         ],
+        'functions' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.functions',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_stafflist_domain_model_functions',
+                'MM' => 'tx_stafflist_persons_functions_mm',
+                'size' => 10,
+                'autoSizeMax' => 30,
+                'maxitems' => 9999,
+                'multiple' => 0,
+                'fieldControl' => [
+                    'editPopup' => [
+                        'disabled' => false,
+                    ],
+                    'addRecord' => [
+                        'disabled' => false,
+                    ],
+                    'listModule' => [
+                        'disabled' => true,
+                    ],
+                ],
+            ],
+
+        ],
         'tasks' => [
             'exclude' => false,
             'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.tasks',
@@ -229,16 +254,57 @@ return [
                 'eval' => 'trim'
             ]
         ],
-        'incompany' => [
+        'teams' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.incompany',
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.teams',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'size' => 7,
-                'eval' => 'date',
-                'default' => time()
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_stafflist_domain_model_teams',
+                'MM' => 'tx_stafflist_persons_teams_mm',
+                'size' => 10,
+                'autoSizeMax' => 30,
+                'maxitems' => 9999,
+                'multiple' => 0,
+                'fieldControl' => [
+                    'editPopup' => [
+                        'disabled' => false,
+                    ],
+                    'addRecord' => [
+                        'disabled' => false,
+                    ],
+                    'listModule' => [
+                        'disabled' => true,
+                    ],
+                ],
             ],
+
+        ],
+        'locations' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.locations',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_stafflist_domain_model_locations',
+                'MM' => 'tx_stafflist_persons_locations_mm',
+                'size' => 10,
+                'autoSizeMax' => 30,
+                'maxitems' => 9999,
+                'multiple' => 0,
+                'fieldControl' => [
+                    'editPopup' => [
+                        'disabled' => false,
+                    ],
+                    'addRecord' => [
+                        'disabled' => false,
+                    ],
+                    'listModule' => [
+                        'disabled' => true,
+                    ],
+                ],
+            ],
+
         ],
         'building' => [
             'exclude' => false,
@@ -257,6 +323,16 @@ return [
                 'size' => 30,
                 'eval' => 'trim'
             ],
+        ],
+        'officehours' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.officehours',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim'
+            ]
         ],
         'phone' => [
             'exclude' => false,
@@ -293,34 +369,6 @@ return [
                 'size' => 30,
                 'eval' => 'nospace,email'
             ]
-        ],
-        'officehours' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.officehours',
-            'config' => [
-                'type' => 'text',
-                'cols' => 40,
-                'rows' => 15,
-                'eval' => 'trim'
-            ]
-        ],
-        'bio' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.bio',
-            'config' => [
-                'type' => 'text',
-                'enableRichtext' => true,
-                'richtextConfiguration' => 'default',
-                'fieldControl' => [
-                    'fullScreenRichtext' => [
-                        'disabled' => false,
-                    ],
-                ],
-                'cols' => 40,
-                'rows' => 15,
-                'eval' => 'trim',
-            ],
-
         ],
         'twitter' => [
             'exclude' => false,
@@ -376,84 +424,34 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'teams' => [
+        'incompany' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.teams',
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.incompany',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_stafflist_domain_model_teams',
-                'MM' => 'tx_stafflist_persons_teams_mm',
-                'size' => 10,
-                'autoSizeMax' => 30,
-                'maxitems' => 9999,
-                'multiple' => 0,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => true,
-                    ],
-                ],
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'size' => 7,
+                'eval' => 'date',
+                'default' => time()
             ],
-
         ],
-        'functions' => [
+        'bio' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.functions',
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.bio',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_stafflist_domain_model_functions',
-                'MM' => 'tx_stafflist_persons_functions_mm',
-                'size' => 10,
-                'autoSizeMax' => 30,
-                'maxitems' => 9999,
-                'multiple' => 0,
+                'type' => 'text',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default',
                 'fieldControl' => [
-                    'editPopup' => [
+                    'fullScreenRichtext' => [
                         'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => true,
                     ],
                 ],
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
             ],
 
         ],
-        'locations' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.locations',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_stafflist_domain_model_locations',
-                'MM' => 'tx_stafflist_persons_locations_mm',
-                'size' => 10,
-                'autoSizeMax' => 30,
-                'maxitems' => 9999,
-                'multiple' => 0,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => true,
-                    ],
-                ],
-            ],
-
         ],
-
-    ],
 ];

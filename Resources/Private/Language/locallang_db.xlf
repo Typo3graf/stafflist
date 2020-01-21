@@ -152,7 +152,7 @@
 				<source>Detailview</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.fieldselect">
-				<source>Select fields</source>
+				<source>Selectable fields</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.click_enlarge">
 				<source>Click enlarge images?</source>
@@ -171,6 +171,9 @@
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.linkNamesToSingleView">
 				<source>Make names be linked to the single view?</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.doNotLinkToDetailView">
+				<source>Do not link to detail view</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.showSocialLinks">
 				<source>Show social links</source>
@@ -306,6 +309,9 @@
 			</trans-unit>
 			<trans-unit id="pi_flexform_listtype_teams_divider">
 				<source>Teams</source>
+			</trans-unit>
+			<trans-unit id="pi_flexform_none">
+				<source>None</source>
 			</trans-unit>
 		</body>
 	</file>
