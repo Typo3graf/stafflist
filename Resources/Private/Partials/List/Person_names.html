@@ -1,6 +1,17 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:for each="{persons}" as="person-item" iteration="iterator">
-	<p>{person-item.salutation} {person-item.title} {person-item.firstname} {person-item.lastname}</p>
+	<f:if condition="{settings.linkNamesToSingleView} == 0 && {settings.doNotLinkToDetailView}">
+		<f:then>
+			<ul style="list-style-type:none">
+				<li><f:render partial="Salutation" arguments="{person-item: person-item, space:0}"/>{person-item.title} {person-item.firstname} {person-item.lastname}</li>
+			</ul>
+		</f:then>
+		<f:else>
+			<ul style="list-style-type:none">
+				<li><a href="#"><f:render partial="Salutation" arguments="{person-item: person-item, space:0}"/>{person-item.title} {person-item.firstname} {person-item.lastname}</a></li>
+			</ul>
+		</f:else>
+	</f:if>
 </f:for>
 </html>

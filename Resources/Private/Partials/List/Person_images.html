@@ -30,15 +30,19 @@
 </f:for>
 </html>
 <f:section name="card">
-	<div class="stafflist-column">
-		<div class="stafflist-card">
-			<f:if condition="{person-item.avatar}">
 
-				<f:image image="{person-item.avatar.originalResource}" class="stafflist-image"/>
+		<div class="stafflist-column">
+			<a href="#">
+			<div class="stafflist-card">
+				<f:if condition="{person-item.avatar}">
+
+					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image"/>
 
 
-			</f:if>
+				</f:if>
+			</div>
+			</a>
 		</div>
 
-	</div>
+
 </f:section>

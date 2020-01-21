@@ -169,7 +169,7 @@
 			<trans-unit id="tt_content.pi_flexform.linkNamesToSingleView">
 				<source>Make names be linked to the single view?</source>
 			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.showSingleViewAsPopUp">
+			<trans-unit id="tt_content.pi_flexform.showSocialLinks">
 				<source>Show the single view in a pop-up?</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.doNotLinkToDetailView">
