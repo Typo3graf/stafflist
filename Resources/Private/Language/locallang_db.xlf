@@ -35,7 +35,7 @@
 				<source>Tasks</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.incompany">
-				<source>Incompany</source>
+				<source>In company since</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.building">
 				<source>Building</source>
@@ -56,7 +56,7 @@
 				<source>Email</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.officehours">
-				<source>Officehours</source>
+				<source>Office hours</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.bio">
 				<source>Bio</source>
@@ -80,13 +80,13 @@
 				<source>Gitlab</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.teams">
-				<source>Teams</source>
+				<source>Related teams</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.functions">
-				<source>Functions</source>
+				<source>Related general functions</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.locations">
-				<source>Locations</source>
+				<source>Related Locations</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_persons.sorting">
 				<source>sorting</source>
@@ -104,7 +104,7 @@
 				<source>Teamleaders</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_functions">
-				<source>Functions</source>
+				<source>General functions</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_functions.title">
 				<source>Title</source>
@@ -151,6 +151,9 @@
 			<trans-unit id="tt_content.pi_flexform.detailview">
 				<source>Detailview</source>
 			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.fieldselect">
+				<source>Select fields</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.click_enlarge">
 				<source>Click enlarge images?</source>
 			</trans-unit>
@@ -170,10 +173,52 @@
 				<source>Make names be linked to the single view?</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.showSocialLinks">
-				<source>Show the single view in a pop-up?</source>
+				<source>Show social links</source>
 			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.doNotLinkToDetailView">
-				<source>Do not link to details page.</source>
+			<trans-unit id="tt_content.pi_flexform.showTitle">
+				<source>Show Title</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showFunction">
+				<source>Show function</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showTasks">
+				<source>Show tasks</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showIncompany">
+				<source>Show in company since</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showRoom">
+				<source>Show room</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showPhone">
+				<source>Show phone</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showMobile">
+				<source>Show mobile</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showEmail">
+				<source>Show email</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showOfficehours">
+				<source>Show office hours</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showSalutation">
+				<source>Show salutation</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showBuilding">
+				<source>Show building</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showBio">
+				<source>Show bio</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showTeams">
+				<source>Show related teams</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showLocations">
+				<source>Show related locations</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showFunctions">
+				<source>Show related general functions</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.startingpoint">
 				<source>Startingpoint</source>

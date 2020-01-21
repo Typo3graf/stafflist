@@ -39,6 +39,7 @@
 										<numIndex index="1">Teams->teamsList;Persons->personList;Persons->detailView</numIndex>
 									</numIndex>
 								</items>
+								<default>Persons->personList;Persons->detailView</default>
 							</config>
 						</TCEforms>
 					</switchableControllerActions>
@@ -218,14 +219,6 @@
 							</config>
 						</TCEforms>
 					</settings.doNotLinkToDetailView>
-					<settings.showSocialLinks>
-						<TCEforms>
-								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSocialLinks</label>
-								<config>
-										<type>check</type>
-								</config>
-						</TCEforms>
-					</settings.showSocialLinks>
 					<settings.disableBackLink>
 						<TCEforms>
 								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.disableBackLink</label>
@@ -463,5 +456,144 @@
 				</el>
 			</ROOT>
 		</Detailview>
+		<Fieldselect>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.fieldselect</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.showSalutation>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSalutation</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showSalutation>
+					<settings.showTitle>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTitle</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showTitle>
+					<settings.showFunction>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFunction</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showFunction>
+					<settings.showFunctions>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFunctions</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showFunctions>
+					<settings.showTasks>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTasks</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showTasks>
+					<settings.showTeams>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTeams</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showTeams>
+					<settings.showLocations>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showLocations</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showLocations>
+					<settings.showBuilding>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showBuilding</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showBuilding>
+					<settings.showRoom>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showRoom</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showRoom>
+					<settings.showOfficehours>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showOfficehours</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showOfficehours>
+					<settings.showPhone>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showPhone</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showPhone>
+					<settings.showMobile>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showMobile</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showMobile>
+					<settings.showEmail>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showEmail</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showEmail>
+					<settings.showSocialLinks>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSocialLinks</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showSocialLinks>
+					<settings.showIncompany>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIncompany</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showIncompany>
+
+					<settings.showBio>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showBio</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showBio>
+				</el>
+			</ROOT>
+		</Fieldselect>
 	</sheets>
 </T3DataStructure>
