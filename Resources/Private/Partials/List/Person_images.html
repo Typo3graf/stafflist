@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Title</title>
-</head>
-<body>
+<f:for each="{persons}" as="person-item" iteration="iterator">
+	<f:if condition="{iterator.isFirst}">
+		<div class="stafflist-row">
+	</f:if>
 
-</body>
-</html>
+	<f:if condition="{iterator.cycle} % 3">
+		<f:then>
+
+			<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
+
+		</f:then>
+
+		<f:else>
+
+			<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
+
+			<f:if condition="{iterator.isLast}">
+				<f:then></f:then>
+				<f:else>
+					</div><div class="stafflist-row">
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+
+	<f:if condition="{iterator.isLast}">
+		</div>
+	</f:if>
+</f:for>
+
+<f:section name="card">
+	<div class="stafflist-column">
+		<div class="stafflist-card">
+			<f:if condition="{person-item.avatar}">
+
+				<f:image image="{person-item.avatar.originalResource}" class="stafflist-image"/>
+
+
+			</f:if>
+		</div>
+
+	</div>
+</f:section>

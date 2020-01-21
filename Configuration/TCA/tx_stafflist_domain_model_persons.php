@@ -153,7 +153,9 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['-- Label --', 0],
+                    [' ', 0],
+                    ['LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.mrs', 1],
+                    ['LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.mr', 2],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
