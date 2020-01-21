@@ -132,10 +132,6 @@
 							<config>
 								<type>select</type>
 								<items type="array">
-									<numIndex index="0" type="array">
-										<numIndex index="0"></numIndex>
-										<numIndex index="1"></numIndex>
-									</numIndex>
 									<numIndex index="1" type="array">
 										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_list</numIndex>
 										<numIndex index="1">list</numIndex>
@@ -157,7 +153,7 @@
 										<numIndex index="1">grouped</numIndex>
 									</numIndex>
 								</items>
-								<default>mixed</default>
+								<default>list</default>
 								<maxitems>1</maxitems>
 								<size>1</size>
 							</config>
@@ -222,14 +218,14 @@
 							</config>
 						</TCEforms>
 					</settings.doNotLinkToDetailView>
-					<settings.showSingleViewAsPopUp>
+					<settings.showSocialLinks>
 						<TCEforms>
-								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSingleViewAsPopUp</label>
+								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSocialLinks</label>
 								<config>
 										<type>check</type>
 								</config>
 						</TCEforms>
-					</settings.showSingleViewAsPopUp>
+					</settings.showSocialLinks>
 					<settings.disableBackLink>
 						<TCEforms>
 								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.disableBackLink</label>
@@ -284,7 +280,7 @@
 								</items>
 								<maxitems>1</maxitems>
 								<size>1</size>
-								<default>last_name</default>
+								<default>lastname</default>
 							</config>
 						</TCEforms>
 					</settings.sortOrder>
@@ -355,7 +351,7 @@
 								</items>
 								<maxitems>1</maxitems>
 								<size>1</size>
-								<default>last_name</default>
+								<default>lastname</default>
 							</config>
 						</TCEforms>
 					</settings.sortOrderForLeaders>
