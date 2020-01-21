@@ -129,6 +129,8 @@
 			</trans-unit>
 			<trans-unit id="tx_stafflist_list_nopersonsfound">
 				<source>No persons available.</source>
+			</trans-unit><trans-unit id="tx_stafflist_list_readMore">
+				<source>More about me</source>
 			</trans-unit>
 		</body>
 	</file>

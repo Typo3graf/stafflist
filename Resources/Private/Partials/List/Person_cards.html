@@ -52,7 +52,7 @@
 			<f:if condition="{person-item.phone}"><p><f:translate key="tx_stafflist_domain_model_persons.phone" />: <a href="tel:{person-item.phone}">{person-item.phone}</a></p></f:if>
 			<f:if condition="{person-item.mobile}"><p><f:translate key="tx_stafflist_domain_model_persons.mobile" />: <a href="tel:{person-item.mobile}">{person-item.mobile}</a></p></f:if>
 			<f:if condition="{person-item.email}"><p><f:translate key="tx_stafflist_domain_model_persons.email" />: <f:link.email email="{person-item.email}">{person-item.email}</f:link.email></p></f:if>
-
+		<f:render partial="Socials/SocialLinks" arguments="{person-item:person-item}" />
 	</div>
 	<!--span class="stafflist-footer"><button class="stafflist-button">Contact</button></span-->
 </div>
