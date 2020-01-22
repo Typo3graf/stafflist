@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:if condition="{settings.showFunctions}">
 	<f:for each="{person-item.functions}" as="function-item" iteration="iterator">
-		, {function-item.title}
+		{function-item.title}
 	</f:for>
 </f:if>
 </html>

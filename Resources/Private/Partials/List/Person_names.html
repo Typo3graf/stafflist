@@ -4,12 +4,12 @@
 	<f:if condition="{settings.linkNamesToSingleView} == 0 && {settings.doNotLinkToDetailView}">
 		<f:then>
 			<ul style="list-style-type:none">
-				<li><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/>{person-item.title} {person-item.firstname} {person-item.lastname}</li>
+				<li><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/> <f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/> {person-item.firstname} {person-item.lastname}</li>
 			</ul>
 		</f:then>
 		<f:else>
 			<ul style="list-style-type:none">
-				<li><a href="#"><f:render partial="Salutation" arguments="{person-item: person-item, space:0}"/>{person-item.title} {person-item.firstname} {person-item.lastname}</a></li>
+				<li><a href="#"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/> <f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/> {person-item.firstname} {person-item.lastname}</a></li>
 			</ul>
 		</f:else>
 	</f:if>

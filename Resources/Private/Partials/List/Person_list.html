@@ -31,8 +31,6 @@
 			<f:render partial="Fields/List/Email" arguments="{person-item: person-item, settings:settings}"/>
 			<p><f:render partial="Fields/List/InCompany" arguments="{person-item: person-item, settings:settings}"/></p>
 			<f:render partial="Fields/List/Bio" arguments="{person-item: person-item, settings:settings}"/>
-
-
 			<f:render partial="Fields/List/SocialLinks" arguments="{person-item:person-item, settings:settings}" />
 			<f:if condition="{settings.doNotLinkToDetailView} == 0">
 			<p class="read-more">
