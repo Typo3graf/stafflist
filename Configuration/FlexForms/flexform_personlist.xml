@@ -486,6 +486,7 @@
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFunction</label>
 							<config>
 								<type>check</type>
+								<default>1</default>
 							</config>
 						</TCEforms>
 					</settings.showFunction>
@@ -494,6 +495,7 @@
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFunctions</label>
 							<config>
 								<type>check</type>
+								<default>1</default>
 							</config>
 						</TCEforms>
 					</settings.showFunctions>
@@ -526,6 +528,7 @@
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showBuilding</label>
 							<config>
 								<type>check</type>
+								<default>1</default>
 							</config>
 						</TCEforms>
 					</settings.showBuilding>
@@ -534,6 +537,7 @@
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showRoom</label>
 							<config>
 								<type>check</type>
+								<default>1</default>
 							</config>
 						</TCEforms>
 					</settings.showRoom>
@@ -550,6 +554,7 @@
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showPhone</label>
 							<config>
 								<type>check</type>
+								<default>1</default>
 							</config>
 						</TCEforms>
 					</settings.showPhone>
@@ -558,6 +563,7 @@
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showMobile</label>
 							<config>
 								<type>check</type>
+								<default>1</default>
 							</config>
 						</TCEforms>
 					</settings.showMobile>
@@ -566,6 +572,7 @@
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFax</label>
 							<config>
 								<type>check</type>
+								<default>1</default>
 							</config>
 						</TCEforms>
 					</settings.showFax>
@@ -574,6 +581,7 @@
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showEmail</label>
 							<config>
 								<type>check</type>
+								<default>1</default>
 							</config>
 						</TCEforms>
 					</settings.showEmail>
