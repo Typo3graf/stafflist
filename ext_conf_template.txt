@@ -1,0 +1,4 @@
+# Fontawesome
+###########################
+# cat=fontawesome/enable/103; type=boolean; label=load fontawesome
+loadFontawesome = 1
