@@ -212,6 +212,15 @@
 								</config>
 						</TCEforms>
 					</settings.linkNamesToSingleView>
+					<settings.linkContactInfos>
+						<TCEforms>
+								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkContactInfos</label>
+								<config>
+										<type>check</type>
+									<default>0</default>
+								</config>
+						</TCEforms>
+					</settings.linkContactInfos>
 					<settings.doNotLinkToDetailView>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.doNotLinkToDetailView</label>
