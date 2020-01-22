@@ -1,11 +1,20 @@
+# customsubcategory=stafflist_uids=LLL:EXT:stafflist/Resources/Private/Language/locallang.xlf:constantEditor.stafflist_uids
 
 plugin.tx_stafflist_personlist {
     view {
-        # cat=plugin.tx_stafflist_personlist/file; type=string; label=Path to template root (FE)
+        # cat=plugin.tx_stafflist_personlist/file/a; type=string; label=Path to template root (FE)
         templateRootPath = EXT:stafflist/Resources/Private/Templates/
-        # cat=plugin.tx_stafflist_personlist/file; type=string; label=Path to template partials (FE)
+        # cat=plugin.tx_stafflist_personlist/file/b; type=string; label=Path to template partials (FE)
         partialRootPath = EXT:stafflist/Resources/Private/Partials/
-        # cat=plugin.tx_stafflist_personlist/file; type=string; label=Path to template layouts (FE)
+        # cat=plugin.tx_stafflist_personlist/file/c; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:stafflist/Resources/Private/Layouts/
+    }
+    settings{
+        # cat=plugin.tx_stafflist_personlist/stafflist_uids/a; type=string; label=Default detail page
+        detailPage =
+    }
+    persistence{
+        # cat=plugin.tx_stafflist_personlist/stafflist_uids/b; type=string; label=Default storage PID
+        storagePid =
     }
 }
