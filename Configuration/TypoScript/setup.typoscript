@@ -24,7 +24,7 @@ plugin.tx_stafflist_personlist {
     }
     }
 settings{
-
+    showContactIcons = 1
     detailPage = {$plugin.tx_stafflist_personlist.settings.detailPage}
 }
 
