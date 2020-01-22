@@ -199,6 +199,9 @@
 			<trans-unit id="tt_content.pi_flexform.showMobile">
 				<source>Show mobile</source>
 			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showFax">
+				<source>Show fax</source>
+			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.showEmail">
 				<source>Show email</source>
 			</trans-unit>

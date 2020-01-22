@@ -1,0 +1,9 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{settings.showLocations}">
+	<f:for each="{person-item.locations}" as="location-item" iteration="iterator">
+		{location-item.street}<br/>
+		{location-item.zip} {location-item.city}<br/>
+		{location-item.state} {location-item.country}<br/>
+	</f:for>
+</f:if>
+</html>

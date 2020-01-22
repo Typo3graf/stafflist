@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
+<f:debug>{persons}</f:debug>
 <f:for each="{persons}" as="person-item" iteration="oddEvenIterator">
 	<!--f:debug>{person-item.avatar.Uid}</f:debug-->
 	<f:render section="card" arguments="{person-item: person-item, settings:settings, oddEvenIterator:oddEvenIterator, className:className, view:'list'}"/>
@@ -13,17 +13,27 @@
 		</div>
 		</f:if>
 		<div class="{f:if(condition: '{person-item.avatar} && {settings.showimages}', then: 'description', else: 'descriptionnophoto')}">
-			<span class="stafflist-title"><f:render partial="Salutation" arguments="{person-item: person-item, space:0}"/>{person-item.title}</span>
+			<span class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/> <f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/></span>
 			<f:if condition="{settings.linkNamesToSingleView}">
 				<f:then><a href="#"><h3>{person-item.firstname} {person-item.lastname}</h3></a></f:then>
 				<f:else><h3>{person-item.firstname} {person-item.lastname}</h3></f:else>
 			</f:if>
-			<p class="stafflist-title">{person-item.function}</p>
-			<p>{person-item.building} <f:if condition="{person-item.room}"><f:translate key="tx_stafflist_domain_model_persons.room" />: {person-item.room}</f:if></p>
-			<f:if condition="{person-item.phone}"><p><f:translate key="tx_stafflist_domain_model_persons.phone" />: <a href="tel:{person-item.phone}">{person-item.phone}</a></p></f:if>
-				<f:if condition="{person-item.mobile}"><p><f:translate key="tx_stafflist_domain_model_persons.mobile" />: <a href="tel:{person-item.mobile}">{person-item.mobile}</a></p></f:if>
-					<f:if condition="{person-item.email}"><p><f:translate key="tx_stafflist_domain_model_persons.email" />: <f:link.email email="{person-item.email}">{person-item.email}</f:link.email></p></f:if>
-			<f:render partial="Socials/SocialLinks" arguments="{person-item:person-item}" /> 
+			<p class="stafflist-title"><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
+			<br/><f:render partial="Fields/List/Tasks" arguments="{person-item: person-item, settings:settings}"/>
+			</p>
+			<p><f:render partial="Fields/List/Teams" arguments="{person-item: person-item, settings:settings}"/></p>
+			<p><f:render partial="Fields/List/Locations" arguments="{person-item: person-item, settings:settings}"/></p>
+			<p><f:render partial="Fields/List/Building" arguments="{person-item: person-item, settings:settings}"/>  <f:render partial="Fields/List/Room" arguments="{person-item: person-item, settings:settings}"/></p>
+			<p><f:render partial="Fields/List/OfficeHours" arguments="{person-item: person-item, settings:settings}"/></p>
+			<f:render partial="Fields/List/Phone" arguments="{person-item: person-item, settings:settings}"/>
+			<f:render partial="Fields/List/Mobile" arguments="{person-item: person-item, settings:settings}"/>
+			<f:render partial="Fields/List/Fax" arguments="{person-item: person-item, settings:settings}"/>
+			<f:render partial="Fields/List/Email" arguments="{person-item: person-item, settings:settings}"/>
+
+
+
+
+			<f:render partial="Socials/SocialLinks" arguments="{person-item:person-item}" />
 			<f:if condition="{settings.doNotLinkToDetailView} == 0">
 			<p class="read-more">
 				<a href="#"><button class="stafflist-button"><f:translate key="tx_stafflist_list_readMore" /></button></a>

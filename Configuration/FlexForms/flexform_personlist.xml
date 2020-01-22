@@ -561,6 +561,14 @@
 							</config>
 						</TCEforms>
 					</settings.showMobile>
+					<settings.showFax>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFax</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showFax>
 					<settings.showEmail>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showEmail</label>
