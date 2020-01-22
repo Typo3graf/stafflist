@@ -1,29 +1,40 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{settings.showSocialLinks}">
 <div class="social-buttons">
+	<f:if condition="{person-item.facebook}">
 	<a href="{person-item.facebook}" class="social-buttons__button social-button social-button--facebook" aria-label="Facebook">
     <span class="social-button__inner">
      f
     </span>
 	</a>
+	</f:if>
+	<f:if condition="{person-item.xing}">
 	<a href="#" class="social-buttons__button social-button social-button--xing" aria-label="xing">
     <span class="social-button__inner">
      x
     </span>
 	</a>
+	</f:if>
+	<f:if condition="{person-item.twitter}">
 	<a href="{person-item.twitter}" class="social-buttons__button social-button social-button--twitter" aria-label="Twitter">
     <span class="social-button__inner">
      T
     </span>
 	</a>
+	</f:if>
+	<f:if condition="{person-item.github}">
 	<a href="{person-item.github}" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
     <span class="social-button__inner">
      git
     </span>
-	</a>
+	</a></f:if>
+	<f:if condition="{person-item.instagram}">
 	<a href="#" class="social-buttons__button social-button social-button--codepen" aria-label="CodePen">
     <span class="social-button__inner">
      <i class="fab fa-codepen"></i>
     </span>
 	</a>
+	</f:if>
 </div>
+</f:if>
 </html>

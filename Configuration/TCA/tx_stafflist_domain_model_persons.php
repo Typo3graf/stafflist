@@ -23,10 +23,10 @@ return [
         'iconfile' => 'EXT:stafflist/Resources/Public/Icons/tx_stafflist_domain_model_persons.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, function, functions, tasks, teams, locations, building, room, officehours, phone, mobile, fax, email, twitter, facebook, instagram, xing, github, gitlab, incompany, bio',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, function, functions, tasks, teams, locations, building, room, officehours, phone, mobile, fax, email, incompany, bio, twitter, facebook, instagram, xing, github, gitlab',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, function, functions, tasks, teams, locations, building, room, officehours, phone, mobile, fax, email, twitter, facebook, instagram, xing, github, gitlab, incompany, bio, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, function, functions, tasks, teams, locations, building, room, officehours, phone, mobile, fax, email, incompany, bio, twitter, facebook, instagram, xing, github, gitlab, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -370,6 +370,35 @@ return [
                 'eval' => 'nospace,email'
             ]
         ],
+        'incompany' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.incompany',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'size' => 7,
+                'eval' => 'date',
+                'default' => time()
+            ],
+        ],
+        'bio' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.bio',
+            'config' => [
+                'type' => 'text',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default',
+                'fieldControl' => [
+                    'fullScreenRichtext' => [
+                        'disabled' => false,
+                    ],
+                ],
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
+            ],
+
+        ],
         'twitter' => [
             'exclude' => false,
             'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.twitter',
@@ -423,35 +452,6 @@ return [
                 'size' => 30,
                 'eval' => 'trim'
             ],
-        ],
-        'incompany' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.incompany',
-            'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'size' => 7,
-                'eval' => 'date',
-                'default' => time()
-            ],
-        ],
-        'bio' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.bio',
-            'config' => [
-                'type' => 'text',
-                'enableRichtext' => true,
-                'richtextConfiguration' => 'default',
-                'fieldControl' => [
-                    'fullScreenRichtext' => [
-                        'disabled' => false,
-                    ],
-                ],
-                'cols' => 40,
-                'rows' => 15,
-                'eval' => 'trim',
-            ],
-
         ],
         ],
 ];

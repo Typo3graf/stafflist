@@ -577,14 +577,6 @@
 							</config>
 						</TCEforms>
 					</settings.showEmail>
-					<settings.showSocialLinks>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSocialLinks</label>
-							<config>
-								<type>check</type>
-							</config>
-						</TCEforms>
-					</settings.showSocialLinks>
 					<settings.showIncompany>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIncompany</label>
@@ -602,6 +594,14 @@
 							</config>
 						</TCEforms>
 					</settings.showBio>
+					<settings.showSocialLinks>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSocialLinks</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.showSocialLinks>
 				</el>
 			</ROOT>
 		</Fieldselect>

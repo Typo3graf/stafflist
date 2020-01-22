@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:debug>{persons}</f:debug>
+
 <f:for each="{persons}" as="person-item" iteration="oddEvenIterator">
 	<!--f:debug>{person-item.avatar.Uid}</f:debug-->
 	<f:render section="card" arguments="{person-item: person-item, settings:settings, oddEvenIterator:oddEvenIterator, className:className, view:'list'}"/>
@@ -29,11 +29,11 @@
 			<f:render partial="Fields/List/Mobile" arguments="{person-item: person-item, settings:settings}"/>
 			<f:render partial="Fields/List/Fax" arguments="{person-item: person-item, settings:settings}"/>
 			<f:render partial="Fields/List/Email" arguments="{person-item: person-item, settings:settings}"/>
+			<p><f:render partial="Fields/List/InCompany" arguments="{person-item: person-item, settings:settings}"/></p>
+			<f:render partial="Fields/List/Bio" arguments="{person-item: person-item, settings:settings}"/>
 
 
-
-
-			<f:render partial="Socials/SocialLinks" arguments="{person-item:person-item}" />
+			<f:render partial="Fields/List/SocialLinks" arguments="{person-item:person-item, settings:settings}" />
 			<f:if condition="{settings.doNotLinkToDetailView} == 0">
 			<p class="read-more">
 				<a href="#"><button class="stafflist-button"><f:translate key="tx_stafflist_list_readMore" /></button></a>
