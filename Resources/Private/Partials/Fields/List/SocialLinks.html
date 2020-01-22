@@ -4,34 +4,42 @@
 	<f:if condition="{person-item.facebook}">
 	<a href="{person-item.facebook}" class="social-buttons__button social-button social-button--facebook" aria-label="Facebook">
     <span class="social-button__inner">
-     f
-    </span>
-	</a>
-	</f:if>
-	<f:if condition="{person-item.xing}">
-	<a href="#" class="social-buttons__button social-button social-button--xing" aria-label="xing">
-    <span class="social-button__inner">
-     x
+     <i class="fab fa-facebook-f"></i>
     </span>
 	</a>
 	</f:if>
 	<f:if condition="{person-item.twitter}">
-	<a href="{person-item.twitter}" class="social-buttons__button social-button social-button--twitter" aria-label="Twitter">
+		<a href="{person-item.twitter}" class="social-buttons__button social-button social-button--twitter" aria-label="Twitter">
     <span class="social-button__inner">
-     T
+     <i class="fab fa-twitter"></i>
+    </span>
+		</a>
+	</f:if>
+	<f:if condition="{person-item.instagram}">
+		<a href="{person-item.instagram}" class="social-buttons__button social-button social-button--instagram" aria-label="Instagram">
+    <span class="social-button__inner">
+     <i class="fab fa-instagram"></i>
+    </span>
+		</a>
+	</f:if>
+	<f:if condition="{person-item.xing}">
+	<a href="#" class="social-buttons__button social-button social-button--xing" aria-label="xing">
+    <span class="social-button__inner">
+    <i class="fab fa-xing"></i>
     </span>
 	</a>
 	</f:if>
+
 	<f:if condition="{person-item.github}">
 	<a href="{person-item.github}" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
     <span class="social-button__inner">
-     git
+    <i class="fab fa-github"></i>
     </span>
 	</a></f:if>
 	<f:if condition="{person-item.instagram}">
-	<a href="#" class="social-buttons__button social-button social-button--codepen" aria-label="CodePen">
+	<a href="#" class="social-buttons__button social-button social-button--gitlab" aria-label="Gitlab">
     <span class="social-button__inner">
-     <i class="fab fa-codepen"></i>
+    <i class="fab fa-gitlab"></i>
     </span>
 	</a>
 	</f:if>

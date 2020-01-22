@@ -16,6 +16,11 @@ namespace Typo3graf\Stafflist\Controller;
  * PersonsController
  */
 
+use TYPO3\CMS\Core\Page\PageRenderer;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use \TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Utility\PathUtility;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 
 
@@ -31,7 +36,17 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $this->personsRepository = $personsRepository;
     }
 
-    /**
+    public function initializeAction()
+    {
+        $pathPrefix =  PathUtility::getAbsoluteWebPath(ExtensionManagementUtility::extPath($this->request->getControllerExtensionKey()));
+        $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
+        $loadFontawesome = GeneralUtility::makeInstance(ExtensionConfiguration::class)
+            ->get('stafflist', 'loadFontawesome');
+        if ($loadFontawesome) {$pageRenderer->addCssLibrary( $pathPrefix. 'Resources/Public/Fonts/Fontawesome/Css/all.css');};
+
+    }
+
+        /**
      * action personList
      *
      * @return void

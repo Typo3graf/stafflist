@@ -306,28 +306,16 @@
 		background: #0077b5;
 	}
 	.social-button--github {
-		color: #6e5494;
+		color:  #AD5C51;
 	}
 	.social-button--github::after {
-		background: #6e5494;
+		background:  #AD5C51;
 	}
-	.social-button--codepen {
-		color: #212121;
+	.social-button--gitlab {
+		color: #E2432A;
 	}
-	.social-button--codepen::after {
-		background: #212121;
-	}
-	.social-button--steam {
-		color: #7da10e;
-	}
-	.social-button--steam::after {
-		background: #7da10e;
-	}
-	.social-button--snapchat {
-		color: #eec900;
-	}
-	.social-button--snapchat::after {
-		background: #eec900;
+	.social-button--gitlab::after {
+		background: #E2432A;
 	}
 	.social-button--twitter {
 		color: #55acee;
@@ -340,11 +328,5 @@
 	}
 	.social-button--instagram::after {
 		background: #e4405f;
-	}
-	.social-button--npmjs {
-		color: #c12127;
-	}
-	.social-button--npmjs::after {
-		background: #c12127;
 	}
 }

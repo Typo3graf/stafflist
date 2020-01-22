@@ -8,8 +8,4 @@ plugin.tx_stafflist_personlist {
         # cat=plugin.tx_stafflist_personlist/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:stafflist/Resources/Private/Layouts/
     }
-    persistence {
-        # cat=plugin.tx_stafflist_personlist//a; type=string; label=Default storage PID
-        storagePid =
-    }
 }
