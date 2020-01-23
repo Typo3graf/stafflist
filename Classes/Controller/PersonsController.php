@@ -15,7 +15,8 @@ namespace Typo3graf\Stafflist\Controller;
 /**
  * PersonsController
  */
-
+use Typo3graf\Stafflist\Utility\TypoScript;
+use TYPO3\CMS\Core\TypoScript\TypoScriptService;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use \TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
@@ -87,5 +88,57 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function boxViewAction(\Typo3graf\Stafflist\Domain\Model\Persons $persons = null)
     {
         $this->view->assign('person', $persons);
+    }
+
+    /**
+     * Helper
+     */
+
+    /**
+     * Injects the Configuration Manager and is initializing the framework settings
+     *
+     * @param \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager Instance of the Configuration Manager
+     */
+    public function injectConfigurationManager(
+        \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
+    ) {
+        $this->configurationManager = $configurationManager;
+
+        $tsSettings = $this->configurationManager->getConfiguration(
+            \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK,
+            'Stafflist',
+            'Personlist'
+        );
+        $originalSettings = $this->configurationManager->getConfiguration(
+            \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS
+        );
+        //   \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($tsSettings, 'TS Settings');
+       //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($originalSettings, 'OriginalSettings');
+
+       /* $propertiesNotAllowedViaFlexForms = [name];
+        foreach ($propertiesNotAllowedViaFlexForms as $property) {
+            $originalSettings[$property] = $tsSettings['settings'][$property];
+        }
+        $this->originalSettings = $originalSettings;*/
+
+        // start override
+        if (isset($tsSettings['settings']['overrideFlexformSettingsIfEmpty'])) {
+            $typoScriptUtility = GeneralUtility::makeInstance(TypoScript::class);
+            $originalSettings = $typoScriptUtility->override($originalSettings, $tsSettings);
+        }
+
+        if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['Stafflist']['Controller/PersonsController.php']['overrideSettings'])) {
+            foreach ($GLOBALS['TYPO3_CONF_VARS']['EXT']['Stafflist']['Controller/PersonsController.php']['overrideSettings'] as $_funcRef) {
+                $_params = [
+                    'originalSettings' => $originalSettings,
+                    'tsSettings' => $tsSettings,
+                ];
+                $originalSettings = GeneralUtility::callUserFunction($_funcRef, $_params, $this);
+            }
+        }
+
+        $this->settings = $originalSettings;
+       //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($tsSettings, 'TS Settings');
+       //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($originalSettings, 'OriginalSettings'); die();
     }
 }

@@ -8,10 +8,6 @@ plugin.tx_stafflist_personlist {
         layoutRootPaths.0 = EXT:tx_stafflist/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_stafflist_personlist.view.layoutRootPath}
     }
-    persistence{
-
-        storagePid = {$plugin.tx_stafflist_personlist.persistence.storagePid}
-    }
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
@@ -22,9 +18,10 @@ plugin.tx_stafflist_personlist {
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
+
     settings{
-        showContactIcons = 1
-        detailPage = {$plugin.tx_stafflist_personlist.settings.detailPage}
+        overrideFlexformSettingsIfEmpty = startingpoint,recursive
+        startingpoint = 123
     }
     }
 

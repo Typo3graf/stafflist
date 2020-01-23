@@ -20,7 +20,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * lastname
-     * 
+     *
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
@@ -28,7 +28,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * firstname
-     * 
+     *
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
@@ -36,21 +36,21 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * title
-     * 
+     *
      * @var string
      */
     protected $title = '';
 
     /**
      * salutation
-     * 
+     *
      * @var int
      */
     protected $salutation = 0;
 
     /**
      * avatar
-     * 
+     *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
@@ -58,143 +58,148 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * function
-     * 
+     *
      * @var string
      */
     protected $function = '';
 
     /**
      * tasks
-     * 
+     *
      * @var string
      */
     protected $tasks = '';
 
     /**
      * incompany
-     * 
+     *
      * @var \DateTime
      */
     protected $incompany = null;
 
     /**
      * building
-     * 
+     *
      * @var string
      */
     protected $building = '';
 
     /**
      * room
-     * 
+     *
      * @var string
      */
     protected $room = '';
 
     /**
      * phone
-     * 
+     *
      * @var string
      */
     protected $phone = '';
 
     /**
      * mobile
-     * 
+     *
      * @var string
      */
     protected $mobile = '';
 
     /**
      * fax
-     * 
+     *
      * @var string
      */
     protected $fax = '';
 
     /**
      * email
-     * 
+     *
      * @var string
      */
     protected $email = '';
 
     /**
      * officehours
-     * 
+     *
      * @var string
      */
     protected $officehours = '';
 
     /**
      * bio
-     * 
+     *
      * @var string
      */
     protected $bio = '';
 
     /**
      * twitter
-     * 
+     *
      * @var string
      */
     protected $twitter = '';
 
     /**
      * facebook
-     * 
+     *
      * @var string
      */
     protected $facebook = '';
 
     /**
      * instagram
-     * 
+     *
      * @var string
      */
     protected $instagram = '';
 
     /**
      * xing
-     * 
+     *
      * @var string
      */
     protected $xing = '';
 
     /**
      * github
-     * 
+     *
      * @var string
      */
     protected $github = '';
 
     /**
      * gitlab
-     * 
+     *
      * @var string
      */
     protected $gitlab = '';
 
     /**
      * teams
-     * 
+     *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Teams>
      */
     protected $teams = null;
 
     /**
      * Repetitive functions
-     * 
+     *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Functions>
      */
     protected $functions = null;
 
     /**
      * locations
-     * 
+     *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Locations>
      */
     protected $locations = null;
+
+    /**
+     * @var string
+     */
+    protected $startingpoint;
 
     /**
      * __construct
@@ -211,7 +216,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Do not modify this method!
      * It will be rewritten on each save in the extension builder
      * You may modify the constructor of this class instead
-     * 
+     *
      * @return void
      */
     protected function initStorageObjects()
@@ -223,7 +228,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the lastname
-     * 
+     *
      * @return string $lastname
      */
     public function getLastname()
@@ -233,7 +238,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the lastname
-     * 
+     *
      * @param string $lastname
      * @return void
      */
@@ -244,7 +249,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the firstname
-     * 
+     *
      * @return string $firstname
      */
     public function getFirstname()
@@ -254,7 +259,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the firstname
-     * 
+     *
      * @param string $firstname
      * @return void
      */
@@ -265,7 +270,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the title
-     * 
+     *
      * @return string $title
      */
     public function getTitle()
@@ -275,7 +280,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the title
-     * 
+     *
      * @param string $title
      * @return void
      */
@@ -286,7 +291,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the salutation
-     * 
+     *
      * @return int $salutation
      */
     public function getSalutation()
@@ -296,7 +301,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the salutation
-     * 
+     *
      * @param int $salutation
      * @return void
      */
@@ -307,7 +312,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the avatar
-     * 
+     *
      * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $avatar
      */
     public function getAvatar()
@@ -317,7 +322,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the avatar
-     * 
+     *
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $avatar
      * @return void
      */
@@ -328,7 +333,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the function
-     * 
+     *
      * @return string $function
      */
     public function getFunction()
@@ -338,7 +343,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the function
-     * 
+     *
      * @param string $function
      * @return void
      */
@@ -349,7 +354,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the tasks
-     * 
+     *
      * @return string $tasks
      */
     public function getTasks()
@@ -359,7 +364,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the tasks
-     * 
+     *
      * @param string $tasks
      * @return void
      */
@@ -370,7 +375,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the incompany
-     * 
+     *
      * @return \DateTime $incompany
      */
     public function getIncompany()
@@ -380,7 +385,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the incompany
-     * 
+     *
      * @param \DateTime $incompany
      * @return void
      */
@@ -391,7 +396,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the building
-     * 
+     *
      * @return string $building
      */
     public function getBuilding()
@@ -401,7 +406,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the building
-     * 
+     *
      * @param string $building
      * @return void
      */
@@ -412,7 +417,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the room
-     * 
+     *
      * @return string $room
      */
     public function getRoom()
@@ -422,7 +427,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the room
-     * 
+     *
      * @param string $room
      * @return void
      */
@@ -433,7 +438,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the phone
-     * 
+     *
      * @return string $phone
      */
     public function getPhone()
@@ -443,7 +448,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the phone
-     * 
+     *
      * @param string $phone
      * @return void
      */
@@ -454,7 +459,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the mobile
-     * 
+     *
      * @return string $mobile
      */
     public function getMobile()
@@ -464,7 +469,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the mobile
-     * 
+     *
      * @param string $mobile
      * @return void
      */
@@ -475,7 +480,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the email
-     * 
+     *
      * @return string $email
      */
     public function getEmail()
@@ -485,7 +490,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the email
-     * 
+     *
      * @param string $email
      * @return void
      */
@@ -496,7 +501,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the officehours
-     * 
+     *
      * @return string $officehours
      */
     public function getOfficehours()
@@ -506,7 +511,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the officehours
-     * 
+     *
      * @param string $officehours
      * @return void
      */
@@ -517,7 +522,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the bio
-     * 
+     *
      * @return string $bio
      */
     public function getBio()
@@ -527,7 +532,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the bio
-     * 
+     *
      * @param string $bio
      * @return void
      */
@@ -538,7 +543,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the twitter
-     * 
+     *
      * @return string $twitter
      */
     public function getTwitter()
@@ -548,7 +553,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the twitter
-     * 
+     *
      * @param string $twitter
      * @return void
      */
@@ -559,7 +564,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the facebook
-     * 
+     *
      * @return string $facebook
      */
     public function getFacebook()
@@ -569,7 +574,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the facebook
-     * 
+     *
      * @param string $facebook
      * @return void
      */
@@ -580,7 +585,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the instagram
-     * 
+     *
      * @return string $instagram
      */
     public function getInstagram()
@@ -590,7 +595,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the instagram
-     * 
+     *
      * @param string $instagram
      * @return void
      */
@@ -601,7 +606,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the xing
-     * 
+     *
      * @return string $xing
      */
     public function getXing()
@@ -611,7 +616,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the xing
-     * 
+     *
      * @param string $xing
      * @return void
      */
@@ -622,7 +627,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the github
-     * 
+     *
      * @return string $github
      */
     public function getGithub()
@@ -632,7 +637,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the github
-     * 
+     *
      * @param string $github
      * @return void
      */
@@ -643,7 +648,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the gitlab
-     * 
+     *
      * @return string $gitlab
      */
     public function getGitlab()
@@ -653,7 +658,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the gitlab
-     * 
+     *
      * @param string $gitlab
      * @return void
      */
@@ -664,7 +669,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Adds a Teams
-     * 
+     *
      * @param \Typo3graf\Stafflist\Domain\Model\Teams $team
      * @return void
      */
@@ -675,7 +680,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Removes a Teams
-     * 
+     *
      * @param \Typo3graf\Stafflist\Domain\Model\Teams $teamToRemove The Teams to be removed
      * @return void
      */
@@ -686,7 +691,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the teams
-     * 
+     *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Teams> $teams
      */
     public function getTeams()
@@ -696,7 +701,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the teams
-     * 
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Teams> $teams
      * @return void
      */
@@ -707,7 +712,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Adds a Functions
-     * 
+     *
      * @param \Typo3graf\Stafflist\Domain\Model\Functions $function
      * @return void
      */
@@ -718,7 +723,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Removes a Functions
-     * 
+     *
      * @param \Typo3graf\Stafflist\Domain\Model\Functions $functionToRemove The Functions to be removed
      * @return void
      */
@@ -729,7 +734,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the functions
-     * 
+     *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Functions> $functions
      */
     public function getFunctions()
@@ -739,7 +744,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the functions
-     * 
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Functions> $functions
      * @return void
      */
@@ -750,7 +755,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Adds a Locations
-     * 
+     *
      * @param \Typo3graf\Stafflist\Domain\Model\Locations $location
      * @return void
      */
@@ -761,7 +766,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Removes a Locations
-     * 
+     *
      * @param \Typo3graf\Stafflist\Domain\Model\Locations $locationToRemove The Locations to be removed
      * @return void
      */
@@ -772,7 +777,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the locations
-     * 
+     *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Locations> $locations
      */
     public function getLocations()
@@ -782,7 +787,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the locations
-     * 
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Locations> $locations
      * @return void
      */
@@ -793,7 +798,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the fax
-     * 
+     *
      * @return string $fax
      */
     public function getFax()
@@ -803,12 +808,26 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the fax
-     * 
+     *
      * @param string $fax
      * @return void
      */
     public function setFax($fax)
     {
         $this->fax = $fax;
+    }
+
+    /**
+     * @param string $startingpoint
+     */
+    public function setStartingpoint($startingpoint) {
+        $this->startingpoint = $startingpoint;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStartingpoint() {
+        return $this->startingpoint;
     }
 }

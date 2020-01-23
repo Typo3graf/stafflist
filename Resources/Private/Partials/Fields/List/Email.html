@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:debug>{settings.linkContactInfos}</f:debug>
+
 <f:if condition="{settings.showEmail}">
 	<f:if condition="{person-item.email}">
 		<p>
@@ -7,7 +7,7 @@
 				<f:then>
 					<f:if condition="{settings.showContactIcons}">
 						<f:then>
-							<i class="far fa-envelope"></i>
+							<i class="far fa-envelope"></i>&nbsp;
 						</f:then>
 						<f:else>
 							<f:translate key="tx_stafflist_domain_model_persons.email" />:
@@ -16,7 +16,15 @@
 					<f:link.email email="{person-item.email}">{person-item.email}</f:link.email>
 				</f:then>
 				<f:else>
-					<f:translate key="tx_stafflist_domain_model_persons.email" />: {person-item.email}
+					<f:if condition="{settings.showContactIcons}">
+						<f:then>
+							<i class="far fa-envelope"></i>&nbsp;
+						</f:then>
+						<f:else>
+							<f:translate key="tx_stafflist_domain_model_persons.email" />:
+						</f:else>
+					</f:if>
+					{person-item.email}
 				</f:else>
 			</f:if>
 

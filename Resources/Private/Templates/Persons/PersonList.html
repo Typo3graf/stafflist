@@ -2,6 +2,7 @@
 	<f:layout name="Default" />
 
 	<f:section name="content">
+		<f:debug>{settings}</f:debug>
 <f:if condition="{persons}">
 	<f:then>
 		<f:render partial="List/Person_{settings.liststyle}" arguments="{persons: persons, settings:settings, className:className, view:'list'}"/>
