@@ -22,11 +22,11 @@ plugin.tx_stafflist_personlist {
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
+    settings{
+        showContactIcons = 1
+        detailPage = {$plugin.tx_stafflist_personlist.settings.detailPage}
     }
-settings{
-    showContactIcons = 1
-    detailPage = {$plugin.tx_stafflist_personlist.settings.detailPage}
-}
+    }
 
 page.includeCSS{
     stafflist = EXT:stafflist/Resources/Public/Css/stafflist-basic.css
