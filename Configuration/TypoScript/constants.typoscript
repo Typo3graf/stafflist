@@ -9,9 +9,7 @@ plugin.tx_stafflist_personlist {
         # cat=plugin.tx_stafflist_personlist/file/c; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:stafflist/Resources/Private/Layouts/
     }
-    persistence{
-        storagePid = 1
-    }
+
     settings{
         # cat=plugin.tx_stafflist_personlist/stafflist_uids/a; type=string; label=Default detail page
         showContactIcons =
