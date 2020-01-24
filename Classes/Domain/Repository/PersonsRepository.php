@@ -13,7 +13,7 @@ namespace Typo3graf\Stafflist\Domain\Repository;
  *
  ***/
 
-
+use Typo3graf\Stafflist\Domain\Model\Persons;
 
 /**
  * The repository for Persons
@@ -26,23 +26,41 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      */
     protected $defaultOrderings = ['sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING];
 
-    // change default query settings
-   /* public function initializeObject()
+    /**
+     * Returns a category constraint created by
+     * a given list of categories and a junction string
+     *
+     * @param array $demand
+     * @param string $settings
+     *
+     */
+    public function findDemanded($demand, $settings)
     {
-        // get the current settings
+       // Set startingpoint(s)
+        $pidList = $pidList = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $settings['startingpoint'], TRUE);
         $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($querySettings, 'Before');
-
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($settings, 'Settings');
-
-        $pidList = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',',$this->settings['startingpoint'], TRUE);
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($pidList, 'pidList');
         $querySettings->setStoragePageIds($pidList);
-        // change the default setting, whether the storage page ID is ignored by the plugins (FALSE) or not (TRUE - default setting)
-        $querySettings->setRespectStoragePage(FALSE);
-
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($querySettings, 'AFTER');;die();
-        // store the new setting(s)
         $this->setDefaultQuerySettings($querySettings);
-    }*/
+
+        // Set ordering
+       /* $query=$this->createQuery();
+        if ($settings['sortOrderDirection'] === 'ASC') {
+            $orderings = [
+                $settings['sortOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+            ];
+        } else {
+            $orderings = [
+                $settings['sortOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+            ];
+        }
+        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($orderings, 'Orderings');
+        $query->setOrderings($orderings);
+        //$query = $this->findAll();
+        $query->execute();*/
+
+
+        $queryResult = $this->findAll();
+        //$queryResult = $query;
+        return $queryResult;
+    }
 }
