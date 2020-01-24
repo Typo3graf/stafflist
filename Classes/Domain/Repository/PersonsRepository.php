@@ -41,9 +41,7 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
         $querySettings->setStoragePageIds($pidList);
         $this->setDefaultQuerySettings($querySettings);
-
-        // Set ordering
-       /* $query=$this->createQuery();
+        // Set defaultOrderings
         if ($settings['sortOrderDirection'] === 'ASC') {
             $orderings = [
                 $settings['sortOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
@@ -53,14 +51,15 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
                 $settings['sortOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
             ];
         }
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($orderings, 'Orderings');
-        $query->setOrderings($orderings);
-        //$query = $this->findAll();
-        $query->execute();*/
+        $this->defaultOrderings = $orderings;
 
-
-        $queryResult = $this->findAll();
-        //$queryResult = $query;
-        return $queryResult;
+        // Query result
+        if ($settings['ignoreGroupSelection']) {
+           return $queryResult = $this->findAll();
+        } else {
+            $queryResult = $this->createQuery();
+            $queryResult->matching($queryResult->in('teams.uid', $demand));
+            return $queryResult->execute();
+        }
     }
 }

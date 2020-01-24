@@ -37,7 +37,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $this->personsRepository = $personsRepository;
     }
 
-  /*  public function initializeAction()
+    public function initializeAction()
     {
         $pathPrefix =  PathUtility::getAbsoluteWebPath(ExtensionManagementUtility::extPath($this->request->getControllerExtensionKey()));
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
@@ -45,7 +45,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
             ->get('stafflist', 'loadFontawesome');
         if ($loadFontawesome) {$pageRenderer->addCssLibrary( $pathPrefix. 'Resources/Public/Fonts/Fontawesome/Css/all.css');};
 
-    }*/
+    }
 
         /**
      * action personList
@@ -55,9 +55,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function personListAction()
     {
         $demand = '';
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings, 'Controller');
-        $persons = $this->personsRepository->findDemanded($demand, $this->settings);
-        // $persons = $this->personsRepository->findAll();
+        $persons = $this->personsRepository->findDemanded(GeneralUtility::trimExplode(',',$this->settings['usergroup'], TRUE), $this->settings);
         $this->view->assign('persons', $persons);
     }
 
