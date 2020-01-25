@@ -1,10 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
+<div class="stafflist-container-list">
 <f:for each="{persons}" as="person-item" iteration="oddEvenIterator">
 
 	<f:render section="card" arguments="{person-item: person-item, settings:settings, oddEvenIterator:oddEvenIterator, className:className, view:'list'}"/>
 </f:for>
-
+</div>
 <f:section name="card">
 	<div class="stafflist-item{f:if(condition: oddEvenIterator.isEven, then: '')}{f:if(condition: oddEvenIterator.isOdd, then: ' alt')}">
 		<f:if condition="{person-item.avatar} && {settings.showimages}">
