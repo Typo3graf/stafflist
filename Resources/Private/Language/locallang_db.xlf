@@ -100,8 +100,8 @@
 			<trans-unit id="tx_stafflist_domain_model_teams.teampage">
 				<source>Teampage</source>
 			</trans-unit>
-			<trans-unit id="tx_stafflist_domain_model_teams.teamleaders">
-				<source>Teamleaders</source>
+			<trans-unit id="tx_stafflist_domain_model_teams.teammembers">
+				<source>Teammembers</source>
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_model_functions">
 				<source>General functions</source>

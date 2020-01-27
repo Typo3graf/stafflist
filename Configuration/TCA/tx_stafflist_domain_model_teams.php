@@ -21,10 +21,10 @@ return [
         'iconfile' => 'EXT:stafflist/Resources/Public/Icons/tx_stafflist_domain_model_teams.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, teamname, teampage, teamleaders',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, teamname, teampage, persons',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, teamname, teampage, teamleaders, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, teamname, teampage, persons, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -135,14 +135,15 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'teamleaders' => [
+        'persons' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_teams.teamleaders',
+            'label' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_teams.teammembers',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_stafflist_domain_model_persons',
-                'MM' => 'tx_stafflist_teams_persons_mm',
+                'MM' => 'tx_stafflist_persons_teams_mm',
+                'MM_opposite_field' => 'persons',
                 'size' => 10,
                 'autoSizeMax' => 30,
                 'maxitems' => 9999,
@@ -159,8 +160,8 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
-    
+
     ],
 ];
