@@ -1,26 +1,36 @@
 /* Stafflist card grid and image gris */
-.stafflist-row {
-	display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden;
+.stafflist-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 1rem;
+	padding: 1rem;
 }
 
+
+
+
+/*.stafflist-row {
+	display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden;
+}*/
+
 /* Three columns side by side */
-.stafflist-column {
+/*.stafflist-column {
 	flex: 1;
 	width: 33.3%;
 	margin-bottom: 16px;
 	padding: 0 8px;
 	display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden;
 }
+*/
 
 
 
-
-.stafflist-container-cards {
+/*.stafflist-container-cards {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: stretch;
-}
+}*/
 .stafflist-card {
 	flex: 0 1 48%;
 	display: flex;
@@ -148,6 +158,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	max-height: 300px;
 	background-size: cover;
 	background-position: center;
 	transition: transform 0.2s;

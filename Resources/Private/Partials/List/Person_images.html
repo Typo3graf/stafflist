@@ -1,4 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section class="stafflist-card-grid">
+	<f:for each="{persons}" as="person-item" iteration="iterator">
+		<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
+	</f:for>
+</section>
+<!-- div>
 <f:for each="{persons}" as="person-item" iteration="iterator">
 	<f:if condition="{iterator.isFirst}">
 		<div class="stafflist-row">
@@ -28,7 +34,9 @@
 		</div>
 	</f:if>
 </f:for>
+</div-->
 </html>
+
 <f:section name="card">
 
 		<div class="stafflist-column">
@@ -36,7 +44,7 @@
 			<div class="stafflist-card">
 				<f:if condition="{person-item.avatar}">
 
-					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image"/>
+					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image" alt="{person-item.firstname} {person-item.lastname}" />
 
 
 				</f:if>

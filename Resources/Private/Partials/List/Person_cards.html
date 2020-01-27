@@ -1,42 +1,18 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="stafflist-container-cards">
-<f:for each="{persons}" as="person-item" iteration="iterator">
-	<f:if condition="{iterator.isFirst}">
-		<div class="stafflist-row">
-	</f:if>
 
-	<f:if condition="{iterator.cycle} % 3">
-		<f:then>
+<section class="stafflist-card-grid">
+	<f:for each="{persons}" as="person-item" iteration="iterator">
+		<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
+	</f:for>
+</section>
 
-			<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
-
-		</f:then>
-
-		<f:else>
-
-			<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
-
-			<f:if condition="{iterator.isLast}">
-				<f:then></f:then>
-				<f:else>
-					</div><div class="stafflist-row">
-				</f:else>
-			</f:if>
-		</f:else>
-	</f:if>
-
-	<f:if condition="{iterator.isLast}">
-		</div>
-	</f:if>
-</f:for>
-</div>
 <f:section name="card">
 
 	<div class="stafflist-card">
 		<div class="stafflist-card-inner">
 			<div class="stafflist-card-header">
 				<f:if condition="{person-item.avatar} && {settings.showimages}">
-					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image"/>
+					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image" alt="{person-item.firstname} {person-item.lastname}"/>
 				</f:if>
 			</div>
 			<div class="stafflist-card-body">
