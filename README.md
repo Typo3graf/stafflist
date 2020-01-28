@@ -18,7 +18,7 @@ Easily create a wide range of directories and listings:
 
 * Responsive layout.
 * List layout.
-* Single page option.
+* Detail page option.
 * Selection of the groups and fields to be displayed.
 * Social Icons.
 * Custom templates.
