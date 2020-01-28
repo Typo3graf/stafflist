@@ -1,4 +1,4 @@
-**Staff List** 
+[**Staff List** ](url)
 
 responsive, high quality plugin to showcase your team or staff members.
 
