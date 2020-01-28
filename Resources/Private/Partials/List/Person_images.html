@@ -4,53 +4,25 @@
 		<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
 	</f:for>
 </section>
-<!-- div>
-<f:for each="{persons}" as="person-item" iteration="iterator">
-	<f:if condition="{iterator.isFirst}">
-		<div class="stafflist-row">
-	</f:if>
-
-	<f:if condition="{iterator.cycle} % 3">
-		<f:then>
-
-			<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
-
-		</f:then>
-
-		<f:else>
-
-			<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
-
-			<f:if condition="{iterator.isLast}">
-				<f:then></f:then>
-				<f:else>
-					</div><div class="stafflist-row">
-				</f:else>
-			</f:if>
-		</f:else>
-	</f:if>
-
-	<f:if condition="{iterator.isLast}">
-		</div>
-	</f:if>
-</f:for>
-</div-->
 </html>
 
 <f:section name="card">
-
-		<div class="stafflist-column">
-			<a href="#">
-			<div class="stafflist-card">
-				<f:if condition="{person-item.avatar}">
-
-					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image" alt="{person-item.firstname} {person-item.lastname}" />
-
-
+	<div class="stafflist-card">
+		<div class="stafflist-card-inner">
+			<div class="stafflist-card-header">
+				<f:if condition="{person-item.avatar} && {settings.showimages}">
+					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image" alt="{person-item.firstname} {person-item.lastname}"/>
 				</f:if>
 			</div>
-			</a>
+			<div class="stafflist-card-body">
+				<p class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:1}"/>
+					<f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/></p>
+				<f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/>
+				<p class="stafflist-title"><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
+			</div>
+			<div class="stafflist-card-footer">
+				<span class="stafflist-footer"><f:render partial="Fields/Button" arguments="{person-item: person-item, settings:settings}"/></span>
+			</div>
 		</div>
-
-
+	</div>
 </f:section>

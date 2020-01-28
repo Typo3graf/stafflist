@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{settings.doNotLinkToDetailView}">
+	<f:then>
+
+	</f:then>
+	<f:else>
+		<f:if condition="{settings.detailPage}">
+			<f:then>
+				<f:link.page pageUid="{settings.detailPage}" additionalParams="{tx_stafflist_personlist: {persons:person-item.uid}}"><button class="stafflist-button"><f:translate key="tx_stafflist_list_readMore" /></button></f:link.page>
+			</f:then>
+			<f:else>
+				<f:link.action action="detailView" arguments="{persons:person-item}"><button class="stafflist-button"><f:translate key="tx_stafflist_list_readMore" /></button></f:link.action>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>
+
+</html>
+
