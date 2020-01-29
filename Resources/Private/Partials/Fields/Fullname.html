@@ -3,13 +3,13 @@
 	<f:then>
 		<f:if condition="{settings.detailPage}">
 			<f:then>
-				<f:link.page pageUid="{settings.detailPage}" additionalParams="{tx_stafflist_personlist: {persons:person-item.uid}}"><h3>{person-item.firstname} {person-item.lastname}</h3></f:link.page>
+				<f:link.page pageUid="{settings.detailPage}" additionalParams="{tx_stafflist_personlist: {persons:person-item.uid}}">{person-item.firstname} {person-item.lastname}</f:link.page>
 			</f:then>
 			<f:else>
-				<f:link.action action="detailView" arguments="{persons:person-item}"><h3>{person-item.firstname} {person-item.lastname}</h3></f:link.action>
+				<f:link.action action="detailView" arguments="{persons:person-item}">{person-item.firstname} {person-item.lastname}</f:link.action>
 			</f:else>
 		</f:if>
 	</f:then>
-	<f:else><h3>{person-item.firstname} {person-item.lastname}</h3></f:else>
+	<f:else>{person-item.firstname} {person-item.lastname}</f:else>
 </f:if>
 </html>
