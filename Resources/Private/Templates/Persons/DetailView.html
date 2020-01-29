@@ -2,57 +2,48 @@
 	<f:layout name="Default" />
 
 	<f:section name="content">
-    	<table  class="tx_stafflist" >
-			<tr>
-				<th><f:translate key="tx_stafflist_domain_model_persons.lastname" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.firstname" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.title" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.salutation" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.avatar" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.function" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.tasks" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.incompany" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.building" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.room" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.phone" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.mobile" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.fax" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.email" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.officehours" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.bio" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.twitter" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.facebook" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.instagram" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.xing" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.github" /></th>
-				<th><f:translate key="tx_stafflist_domain_model_persons.gitlab" /></th>
-				<th> </th>
-				<th> </th>
-			</tr>
-<tr>
-					<td>{person.lastname}</td>
-					<td>{person.firstname}</td>
-					<td>{person.title}</td>
-					<td>{person.salutation}</td>
-					<td>{person.avatar.originalResource.name}</td>
-					<td>{person.function}</td>
-					<td>{person.tasks}</td>
-					<td>{person.incompany -> f:format.date()}</td>
-					<td>{person.building}</td>
-					<td>{person.room}</td>
-					<td>{person.phone}</td>
-					<td>{person.mobile}</td>
-					<td>{person.fax}</td>
-					<td>{person.email}</td>
-					<td>{person.officehours}</td>
-					<td>{person.bio}</td>
-					<td>{person.twitter}</td>
-					<td>{person.facebook}</td>
-					<td>{person.instagram}</td>
-					<td>{person.xing}</td>
-					<td>{person.github}</td>
-					<td>{person.gitlab}</td>
-				</tr>
-                	</table>
+    	<div class="stafflist-singleView">
+			<div class="stafflist-sv-name">
+				<f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:1}"/>
+				<f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/>
+				<f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/>
+			</div>
+			<div class="stafflist-line" ></div>
+		</div>
+		<div class="stafflist-profile-card-grid"  >
+			<div  class="stafflist-col-left" >
+				<div class="stafflist-sv-image"  ><f:if condition="{person-item.avatar} && {settings.showimages}">
+					<f:image image="{person-item.avatar.originalResource}" class="stafflist-sv-image" alt="{person-item.firstname} {person-item.lastname}"/>
+				</f:if></div>
+    </div>
+    <div class="stafflist-col-right">
+        <div class="test" >
+			<f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
+			<p><f:render partial="Fields/List/Teams" arguments="{person-item: person-item, settings:settings}"/></p>
+			<p><f:render partial="Fields/List/Locations" arguments="{person-item: person-item, settings:settings}"/></p>
+			<p><f:render partial="Fields/List/Building" arguments="{person-item: person-item, settings:settings}"/>  <f:render partial="Fields/List/Room" arguments="{person-item: person-item, settings:settings}"/></p>
+			<p><f:render partial="Fields/List/OfficeHours" arguments="{person-item: person-item, settings:settings}"/></p>
+			<f:render partial="Fields/List/Phone" arguments="{person-item: person-item, settings:settings}"/>
+			<f:render partial="Fields/List/Mobile" arguments="{person-item: person-item, settings:settings}"/>
+			<f:render partial="Fields/List/Fax" arguments="{person-item: person-item, settings:settings}"/>
+			<f:render partial="Fields/List/Email" arguments="{person-item: person-item, settings:settings}"/>
+			<p><f:render partial="Fields/List/InCompany" arguments="{person-item: person-item, settings:settings}"/></p>
+            <div class="" >
+				<f:render partial="Fields/List/SocialLinks" arguments="{person-item:person-item, settings:settings}" />
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="stafflist-sv-bio">
+			<div class="" >
+				<f:render partial="Fields/List/Bio" arguments="{person-item: person-item, settings:settings}"/>
+			</div>
+		</div>
+<f:if condition="{settings.disableBackLink}">
+	<f:then></f:then>
+	<f:else>
+		<f:link.external uri="javascript:history.back()"><button class="stafflist-backlink">external link</button></f:link.external>
+	</f:else>
+</f:if>
 	</f:section>
 </html>

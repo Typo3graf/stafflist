@@ -42,6 +42,64 @@
 .stafflist-card-footer {
 	margin-top: auto;
 }
+/* DetailView */
+.stafflist-sv-name{
+	font-style: normal;
+	margin-bottom: 0;
+	padding: 0;
+	border: none;
+	font-size: 1.25rem
+}
+.stafflist-line{
+	border-bottom: 2px solid #b3b3b3;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.stafflist-profile-card-grid:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.stafflist-col-left {
+	float: left;
+	padding: 10px;
+	width: 25%;
+}
+.stafflist-col-right {
+	float: left;
+	padding: 10px;
+	width: 75%;
+}
+.stafflist-sv-image {
+	border: 1px solid #e6e6e6;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 300px;
+	max-width: 250px;
+}
+.stafflist-sv-bio {
+	margin-top: 20px;
+}
+
+.stafflist-backlink {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	/*width: 100%;*/
+}
+
+.stafflist-backlink:hover {
+	background-color: #555;
+}
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
 
@@ -54,6 +112,13 @@
 	.stafflist-card {
 		flex: 0 1 100%;
 		margin-top: 20px;
+	}
+
+	/*.stafflist-col-left {
+		width: 100%;
+	}*/
+	.stafflist-col-right {
+		width: 100%;
 	}
 }
 .stafflist-container-list {

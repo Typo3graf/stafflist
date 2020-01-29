@@ -79,18 +79,22 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         /*$requestData = $this->request->getArguments();
         \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($persons, 'Person -> Controller');
         \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($requestData, 'Arguments -> Controller'); die();*/
-        $this->view->assign('person', $persons);
+        $this->view->assign('person-item', $persons);
     }
 
     /**
      * action boxView
      *
-     * @param \Typo3graf\StaffList\Domain\Model\Persons $persons
      * @return void
      */
-    public function boxViewAction(\Typo3graf\Stafflist\Domain\Model\Persons $persons = null)
+    public function boxViewAction()
     {
-        $this->view->assign('person', $persons);
+       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['source_plugin'], 'Settings -> Controller');
+       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['source_plugin'] != null, 'Settings -> Controller'); die();
+        if ($this->settings['source_plugin'] != null) {
+            $persons = $this->personsRepository->findByUid($this->settings['source_plugin']);
+        }
+        $this->view->assign('person-item', $persons);
     }
 
     /**
