@@ -5,30 +5,27 @@
 
 			<f:if condition="{settings.linkContactInfos}">
 				<f:then>
-					<f:if condition="{settings.showContactIcons}">
-						<f:then>
-							<i class="far fa-envelope"></i>&nbsp;
-						</f:then>
-						<f:else>
-							<f:translate key="tx_stafflist_domain_model_persons.email" />:
-						</f:else>
-					</f:if>
-					<f:link.email email="{person-item.email}">{person-item.email}</f:link.email>
+					<f:render section="iconOrLabel" />
+
+					<f:link.email email="{person-item.email}">{person-item.email}</f:link.email><f:if condition="{cr}"><br/></f:if>
 				</f:then>
 				<f:else>
-					<f:if condition="{settings.showContactIcons}">
-						<f:then>
-							<i class="far fa-envelope"></i>&nbsp;
-						</f:then>
-						<f:else>
-							<f:translate key="tx_stafflist_domain_model_persons.email" />:
-						</f:else>
-					</f:if>
-					{person-item.email}
+					<f:render section="iconOrLabel" />
+					{person-item.email}<f:if condition="{cr}"><br/></f:if>
 				</f:else>
 			</f:if>
 
 
 	</f:if>
 </f:if>
+<f:section name="iconOrLabel">
+	<f:if condition="{settings.showIconsInsteadLabels}">
+		<f:then>
+			<i class="far fa-envelope"></i>&nbsp;
+		</f:then>
+		<f:else>
+			<f:translate key="tx_stafflist_domain_model_persons.email" />:
+		</f:else>
+	</f:if>
+</f:section>
 </html>

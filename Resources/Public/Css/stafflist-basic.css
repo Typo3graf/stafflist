@@ -100,6 +100,10 @@
 .stafflist-backlink:hover {
 	background-color: #555;
 }
+
+.stafflist-contactbox li{
+	padding: 10px;
+}
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
 

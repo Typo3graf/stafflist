@@ -12,6 +12,7 @@ plugin.tx_stafflist_personlist {
 
     settings{
         # cat=plugin.tx_stafflist_personlist/stafflist_uids/a; type=string; label=Default detail page
-        showContactIcons =
+        defaultDetailPage =
+        defaultStartingpoint =
     }
 }

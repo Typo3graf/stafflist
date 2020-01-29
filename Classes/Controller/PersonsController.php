@@ -92,9 +92,10 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
        // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['source_plugin'], 'Settings -> Controller');
        // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['source_plugin'] != null, 'Settings -> Controller'); die();
         if ($this->settings['source_plugin'] != null) {
-            $persons = $this->personsRepository->findByUid($this->settings['source_plugin']);
+            $persons = $this->personsRepository->findByUids($this->settings['source_plugin'],$this->settings);
         }
-        $this->view->assign('person-item', $persons);
+        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($persons, 'Settings -> Controller'); die();
+        $this->view->assign('persons', $persons);
     }
 
     /**

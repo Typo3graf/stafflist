@@ -2,7 +2,8 @@
 <f:if condition="{settings.showOfficehours}">
 	<f:if condition="{person-item.officehours}">
 	Office hours:<br/>
-	{person-item.officehours}
+	{person-item.officehours}<f:if condition="{cr}"><br/></f:if>
+
 </f:if>
 </f:if>
 </html>

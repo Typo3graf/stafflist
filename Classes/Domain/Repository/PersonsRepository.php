@@ -62,4 +62,32 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             return $queryResult->execute();
         }
     }
+
+    /**
+     *  Find by multiple uids using, seperated string
+     * @param string $uidList
+     * @param array $settings
+     */
+    public function findByUids($uidList,$settings) {
+        // Set startingpoint(s)
+        $pidList = $pidList = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $settings['startingpoint'], TRUE);
+        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+        $querySettings->setStoragePageIds($pidList);
+        $this->setDefaultQuerySettings($querySettings);
+        $uidArray = explode(',', $uidList);
+        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($uidArray, 'Settings -> Repository'); die();
+        $query = $this->createQuery();
+        $query->matching(
+            $query->in('uid', $uidArray),
+            $query->logicalAnd(
+                $query->equals('hidden', 0),
+                $query->equals('deleted', 0)
+            )
+        );
+
+
+       //$queryParser = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser::class); \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getSQL()); \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getParameters());
+
+        return $query->execute();
+    }
 }

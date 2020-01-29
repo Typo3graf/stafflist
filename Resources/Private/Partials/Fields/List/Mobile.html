@@ -4,14 +4,25 @@
 
 			<f:if condition="{settings.linkContactInfos}">
 				<f:then>
-					<f:translate key="tx_stafflist_domain_model_persons.mobile" />:
-					<a href="tel:{person-item.mobile}">{person-item.mobile}</a>
+					<f:render section="iconOrLabel" />
+
+					<a href="tel:{person-item.mobile}">{person-item.mobile}</a><f:if condition="{cr}"><br/></f:if>
 				</f:then>
 				<f:else>
-					<f:translate key="tx_stafflist_domain_model_persons.mobile" />: {person-item.mobile}
+					<f:render section="iconOrLabel" /> {person-item.mobile}<f:if condition="{cr}"><br/></f:if>
 				</f:else>
 			</f:if>
 
 	</f:if>
 </f:if>
+<f:section name="iconOrLabel">
+	<f:if condition="{settings.showIconsInsteadLabels}">
+		<f:then>
+			<i class="fas fa-mobile-alt"></i>&nbsp;
+		</f:then>
+		<f:else>
+			<f:translate key="tx_stafflist_domain_model_persons.mobile" />:
+		</f:else>
+	</f:if>
+</f:section>
 </html>

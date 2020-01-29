@@ -25,12 +25,12 @@
 				<p><f:render partial="Fields/List/Locations" arguments="{person-item: person-item, settings:settings}"/></p>
 				<p><f:render partial="Fields/List/Building" arguments="{person-item: person-item, settings:settings}"/>  <f:render partial="Fields/List/Room" arguments="{person-item: person-item, settings:settings}"/></p>
 				<p><f:render partial="Fields/List/OfficeHours" arguments="{person-item: person-item, settings:settings}"/></p>
-				<f:render partial="Fields/List/Phone" arguments="{person-item: person-item, settings:settings}"/>
-				<f:render partial="Fields/List/Mobile" arguments="{person-item: person-item, settings:settings}"/>
-				<f:render partial="Fields/List/Fax" arguments="{person-item: person-item, settings:settings}"/>
-				<f:render partial="Fields/List/Email" arguments="{person-item: person-item, settings:settings}"/>
+				<p><f:render partial="Fields/List/Phone" arguments="{person-item: person-item, settings:settings, cr:1}"/>
+				<f:render partial="Fields/List/Mobile" arguments="{person-item: person-item, settings:settings, cr:1}"/>
+				<f:render partial="Fields/List/Fax" arguments="{person-item: person-item, settings:settings, cr:1}"/>
+					<f:render partial="Fields/List/Email" arguments="{person-item: person-item, settings:settings}"/></p>
 				<p><f:render partial="Fields/List/InCompany" arguments="{person-item: person-item, settings:settings}"/></p>
-				<f:render partial="Fields/List/Bio" arguments="{person-item: person-item, settings:settings}"/>
+				<f:render partial="Fields/List/Bio" arguments="{person-item: person-item, settings:settings, crop:1}"/>
 
 			</div>
 			<div class="stafflist-card-footer">

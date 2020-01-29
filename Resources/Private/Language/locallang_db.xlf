@@ -319,6 +319,9 @@
 			<trans-unit id="tt_content.pi_flexform.linkContactInfos">
 				<source>Link contact info's (phone, mobile and e-mail)</source>
 			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.showIconsInsteadLabels">
+				<source>Show icons instead labels</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
