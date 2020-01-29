@@ -1,4 +1,4 @@
-**Staff List** 
+**Staff List**
 
 responsive, high quality plugin to showcase your team or staff members.
 
@@ -18,7 +18,7 @@ Easily create a wide range of directories and listings:
 
 * Responsive layout.
 * List layout.
-* Single page option.
+* Detail page option.
 * Selection of the groups and fields to be displayed.
 * Social Icons.
 * Custom templates.
