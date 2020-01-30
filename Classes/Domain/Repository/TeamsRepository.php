@@ -22,4 +22,23 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * @var array
      */
     protected $defaultOrderings = ['sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING];
+
+    /**
+     * Returns a category constraint created by
+     * a given list of categories and a junction string
+     *
+     * @param array $demand
+     * @param string $settings
+     *
+     */
+    public function findDemanded($demand, $settings)
+    {
+        // Set startingpoint(s)
+        $pidList = $pidList = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $settings['startingpoint'], true);
+        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+        $querySettings->setStoragePageIds($pidList);
+        $this->setDefaultQuerySettings($querySettings);
+
+        return $this->findAll();
+    }
 }

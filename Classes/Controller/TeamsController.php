@@ -2,15 +2,11 @@
 namespace Typo3graf\Stafflist\Controller;
 
 
-/***
- *
+use TYPO3\CMS\Core\Utility\GeneralUtility;/***
  * This file is part of the "Staff List" Extension for TYPO3 CMS.
- *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
- *
  *  (c) 2020 Development-Team <development@typo3graf.de>, Typo3graf media-agentur
- *
  ***/
 /**
  * TeamsController
@@ -35,7 +31,7 @@ class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function teamsListAction()
     {
-        $teams = $this->teamsRepository->findAll();
+        $teams = $this->teamsRepository->findDemanded(GeneralUtility::trimExplode(',',$this->settings['usergroup'], TRUE), $this->settings);
         $this->view->assign('teams', $teams);
     }
 }
