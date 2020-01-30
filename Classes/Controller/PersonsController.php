@@ -54,6 +54,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function personListAction()
     {
+        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings, 'Settings -> Controller');
         $demand = '';
         $persons = $this->personsRepository->findDemanded(GeneralUtility::trimExplode(',',$this->settings['usergroup'], TRUE), $this->settings);
         $this->view->assign('persons', $persons);

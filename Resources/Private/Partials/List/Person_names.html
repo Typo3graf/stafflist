@@ -9,7 +9,16 @@
 		</f:then>
 		<f:else>
 			<ul style="list-style-type:none">
-				<li><a href="#"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/> <f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/> {person-item.firstname} {person-item.lastname}</a></li>
+
+					<f:if condition="{settings.detailPage}">
+						<f:then>
+							<f:link.page pageUid="{settings.detailPage}" additionalParams="{tx_stafflist_personlist: {persons:person-item.uid}}"><li><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/> <f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/> {person-item.firstname} {person-item.lastname}</li></f:link.page>
+						</f:then>
+						<f:else>
+							<f:link.action action="detailView" arguments="{persons:person-item}"><li><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/> <f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/> {person-item.firstname} {person-item.lastname}</li></f:link.action>
+						</f:else>
+					</f:if>
+
 			</ul>
 		</f:else>
 	</f:if>

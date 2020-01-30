@@ -18,9 +18,9 @@
 			<div class="stafflist-card-body">
 				<p class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:1}"/>
 					<f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/></p>
-				<f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/>
-				<p class="stafflist-title"><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
-					<br/><f:render partial="Fields/List/Tasks" arguments="{person-item: person-item, settings:settings}"/></p>
+				<h3><f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/></h3>
+				<h4 class="stafflist-title"><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
+					<br/><f:render partial="Fields/List/Tasks" arguments="{person-item: person-item, settings:settings}"/></h4>
 				<p><f:render partial="Fields/List/Teams" arguments="{person-item: person-item, settings:settings}"/></p>
 				<p><f:render partial="Fields/List/Locations" arguments="{person-item: person-item, settings:settings}"/></p>
 				<p><f:render partial="Fields/List/Building" arguments="{person-item: person-item, settings:settings}"/>  <f:render partial="Fields/List/Room" arguments="{person-item: person-item, settings:settings}"/></p>

@@ -20,7 +20,7 @@ plugin.tx_stafflist_personlist {
     }
 
     settings{
-        overrideFlexformSettingsIfEmpty = startingpoint,recursive
+        overrideFlexformSettingsIfEmpty = startingpoint,recursive,detailpage
         startingpoint = 123
         detailPage = 14
     }

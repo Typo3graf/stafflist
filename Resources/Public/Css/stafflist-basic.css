@@ -153,14 +153,29 @@
 	border-radius: 4px;
 	padding: 10px;
 }
-.tx-stafflist h2{
-	font-size: 24px;
-	margin: 0 0 0 0;
-}
+
 .tx-stafflist .stafflist-title{
-	font-size: 18px;
+	font-size: 1.125rem;
 	color: grey;
 	margin: 0 0 0 0;
+}
+.stafflist-card-body h3{
+	font-size: 1.875rem;
+	font-weight: 400;
+	margin: 0 0 0 0;
+}
+.stafflist-card-body h4{
+	font-size: 1.125rem;
+	margin:0 0 1rem 0;
+}
+.stafflist-item h3{
+	font-size: 1.875rem;
+	font-weight: 400;
+	margin: 0 0 0 0;
+}
+.stafflist-item h4{
+	font-size: 1.125rem;
+	margin:0;
 }
 /* Some left and right padding inside the container */
 /*.stafflist-container {
