@@ -9,8 +9,8 @@ call_user_func(
             'Typo3graf.Stafflist',
             'Personlist',
             [
-                'Persons' => 'personList, groupedByList, detailView, boxView',
-                'Teams' => 'teamsList'
+                'Persons' => 'personList, detailView, boxView',
+                'Teams' => 'teamsList, groupedByTeams'
             ],
             // non-cacheable actions
             [

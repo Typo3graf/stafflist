@@ -35,8 +35,12 @@
 										<numIndex index="1">--div--</numIndex>
 									</numIndex>
 									<numIndex index="5">
-										<numIndex index="0">TEAMS DIRECTORY</numIndex>
-										<numIndex index="1">Teams->teamsList;Persons->personList;Persons->detailView</numIndex>
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_teams_directory</numIndex>
+										<numIndex index="1">Teams->teamsList;</numIndex>
+									</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_grouped</numIndex>
+										<numIndex index="1">Teams->groupedByTeams;Persons->detailView</numIndex>
 									</numIndex>
 								</items>
 								<default>Persons->personList;Persons->detailView</default>
@@ -151,7 +155,7 @@
 										<numIndex index="1">names</numIndex>
 									</numIndex>
 									<numIndex index="5" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_grouped</numIndex>
+										<numIndex index="0"></numIndex>
 										<numIndex index="1">grouped</numIndex>
 									</numIndex>
 								</items>

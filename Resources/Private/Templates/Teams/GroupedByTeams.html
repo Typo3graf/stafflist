@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="content">
+	<h1>Grouped by Teams</h1>
+	<f:debug>{teams}</f:debug>
+	<table  class="tx_stafflist" >
+		<tr>
+			<th><f:translate key="tx_stafflist_domain_model_teams.teamname" /></th>
+			<th><f:translate key="tx_stafflist_domain_model_teams.teampage" /></th>
+			<th> </th>
+			<th> </th>
+		</tr>
+
+		<f:for each="{teams}" as="team">
+			<tr>
+				<td><f:link.action action="show" arguments="{team : team}"> {team.teamname}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{team : team}"> {team.teampage}</f:link.action></td>
+			</tr>
+		</f:for>
+	</table>
+</f:section>
+</html>

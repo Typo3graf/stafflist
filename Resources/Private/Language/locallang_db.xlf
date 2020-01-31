@@ -254,7 +254,7 @@
 				<source>Sort order for the team leaders (a field name)</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.usergroup">
-				<source>User Group (Team) to show</source>
+				<source>User Group(s) to show</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_source">
 				<source>Where to select the person(s) to show?</source>
@@ -272,13 +272,13 @@
 				<source>What to show?</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_listtype_detail">
-				<source>DETAIL - Detailed information</source>
+				<source>PROFILE - Detailed information of staff member</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_listtype_box">
-				<source>BOX - Contact person</source>
+				<source>CONTACT BOX - List of contact person(s)</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_listtype_teamlist">
-				<source>TEAMLIST - List of a team</source>
+				<source>STAFFLIST - List of staff members</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle">
 				<source>Which layout to show?</source>
@@ -296,7 +296,9 @@
 				<source>Images grid</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_grouped">
-				<source>grouped by team</source>
+				<source>GROUPED BY TEAM(S) - Stafflist grouped by teams</source>
+			</trans-unit><trans-unit id="pi_flexform_liststyle_teams_directory">
+				<source>TEAMS DIRECTORY - List of team(s)</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_group">
 				<source>Which group should be shown?</source>
