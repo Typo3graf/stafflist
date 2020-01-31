@@ -32,6 +32,7 @@ class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function teamsListAction()
     {
         $teams = $this->teamsRepository->findDemanded(GeneralUtility::trimExplode(',',$this->settings['usergroup'], TRUE), $this->settings);
+              
         $this->view->assign('teams', $teams);
     }
 }

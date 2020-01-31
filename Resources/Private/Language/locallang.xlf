@@ -136,8 +136,8 @@
 			<trans-unit id="constantEditor.stafflist_uids">
 				<source>Page ID settings</source>
 			</trans-unit>
-			<trans-unit id="constantEditor.stafflist">
-				<source>constantEditor.stafflist</source>
+			<trans-unit id="constantEditor.stafflist_settings">
+				<source>Plugin settings</source>
 			</trans-unit>
 		</body>
 	</file>

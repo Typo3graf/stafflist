@@ -3,7 +3,7 @@
 	<f:if condition="{person-item.bio}">
 		<f:if condition="{crop}">
 			<f:then>
-				<f:format.crop maxCharacters="200"><f:format.raw>{person-item.bio}</f:format.raw></f:format.crop>
+				<f:format.crop maxCharacters="{settings.bioCrop}"><f:format.raw>{person-item.bio}</f:format.raw></f:format.crop>
 			</f:then>
 			<f:else>
 				<f:format.raw>{person-item.bio}</f:format.raw>

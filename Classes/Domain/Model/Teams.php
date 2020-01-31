@@ -20,7 +20,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * teamname
-     * 
+     *
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
@@ -28,17 +28,17 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * teampage
-     * 
+     *
      * @var string
      */
     protected $teampage = '';
 
     /**
-     * teamleaders
-     * 
+     * persons
+     *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons>
      */
-    protected $teamleaders = null;
+    protected $persons = null;
 
     /**
      * __construct
@@ -55,17 +55,17 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Do not modify this method!
      * It will be rewritten on each save in the extension builder
      * You may modify the constructor of this class instead
-     * 
+     *
      * @return void
      */
     protected function initStorageObjects()
     {
-        $this->teamleaders = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->persons = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
      * Returns the teamname
-     * 
+     *
      * @return string $teamname
      */
     public function getTeamname()
@@ -75,7 +75,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the teamname
-     * 
+     *
      * @param string $teamname
      * @return void
      */
@@ -86,7 +86,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the teampage
-     * 
+     *
      * @return string $teampage
      */
     public function getTeampage()
@@ -96,7 +96,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the teampage
-     * 
+     *
      * @param string $teampage
      * @return void
      */
@@ -107,44 +107,44 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Adds a Persons
-     * 
-     * @param \Typo3graf\Stafflist\Domain\Model\Persons $teamleader
+     *
+     * @param \Typo3graf\Stafflist\Domain\Model\Persons $person
      * @return void
      */
-    public function addTeamleader(\Typo3graf\Stafflist\Domain\Model\Persons $teamleader)
+    public function addPerson(\Typo3graf\Stafflist\Domain\Model\Persons $person)
     {
-        $this->teamleaders->attach($teamleader);
+        $this->persons->attach($person);
     }
 
     /**
      * Removes a Persons
-     * 
-     * @param \Typo3graf\Stafflist\Domain\Model\Persons $teamleaderToRemove The Persons to be removed
+     *
+     * @param \Typo3graf\Stafflist\Domain\Model\Persons $personToRemove The Persons to be removed
      * @return void
      */
-    public function removeTeamleader(\Typo3graf\Stafflist\Domain\Model\Persons $teamleaderToRemove)
+    public function removePerson(\Typo3graf\Stafflist\Domain\Model\Persons $personToRemove)
     {
-        $this->teamleaders->detach($teamleaderToRemove);
+        $this->persons->detach($personToRemove);
     }
 
     /**
-     * Returns the teamleaders
-     * 
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons> $teamleaders
+     * Returns the persons
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons> $persons
      */
-    public function getTeamleaders()
+    public function getPersons()
     {
-        return $this->teamleaders;
+        return $this->persons;
     }
 
     /**
-     * Sets the teamleaders
-     * 
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons> $teamleaders
+     * Sets the persons
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons> $persons
      * @return void
      */
-    public function setTeamleaders(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamleaders)
+    public function setPersons(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $persons)
     {
-        $this->teamleaders = $teamleaders;
+        $this->persons = $persons;
     }
 }

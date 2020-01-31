@@ -21,8 +21,9 @@ plugin.tx_stafflist_personlist {
 
     settings{
         overrideFlexformSettingsIfEmpty = startingpoint,recursive,detailpage
-        startingpoint = 123
-        detailPage = 14
+        startingpoint = {$plugin.tx_stafflist_personlist.settings.defaultStartingpoint}
+        detailPage = {$plugin.tx_stafflist_personlist.settings.defaultDetailPage}
+        bioCrop = {$plugin.tx_stafflist_personlist.settings.bioCrop}
     }
     }
 
