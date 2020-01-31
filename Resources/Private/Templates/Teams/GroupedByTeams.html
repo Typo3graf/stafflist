@@ -14,7 +14,9 @@
 		<f:for each="{teams}" as="team">
 			<tr>
 				<td><f:link.action action="show" arguments="{team : team}"> {team.teamname}</f:link.action></td>
-				<td><f:link.action action="show" arguments="{team : team}"> {team.teampage}</f:link.action></td>
+				<td> <f:link.typolink parameter="{team.teampage}">
+					Linktext
+				</f:link.typolink></td>
 			</tr>
 		</f:for>
 	</table>

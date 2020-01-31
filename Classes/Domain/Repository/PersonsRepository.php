@@ -24,7 +24,7 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     /**
      * @var array
      */
-    protected $defaultOrderings = ['sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING];
+    protected $defaultOrderings = ['lastname' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING];
 
     /**
      * Returns a category constraint created by
