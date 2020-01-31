@@ -51,7 +51,12 @@
 						<TCEforms>
 						<exclude>1</exclude>
 						<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.detailPage</label>
-							<displayCond>FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</displayCond>
+							<displayCond>
+								<OR>
+									<numIndex index="0">FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</numIndex>
+									<numIndex index="1">FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</numIndex>
+								</OR>
+							</displayCond>
 						<config>
 							<type>group</type>
 							<internal_type>db</internal_type>
@@ -471,6 +476,129 @@
 				</el>
 			</ROOT>
 		</Detailview>
+		<GroupedByTeams>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.groupedbyteams</sheetTitle>
+					<displayCond>FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</displayCond>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.usergroup>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_group</label>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_stafflist_domain_model_teams</foreign_table>
+								<foreign_table_where></foreign_table_where>
+								<size>3</size>
+								<autoSizeMax>10</autoSizeMax>
+								<minitems>0</minitems>
+								<maxitems>99</maxitems>
+								<itemsHeader>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_group</itemsHeader>
+								<allowNonIdValues>1</allowNonIdValues>
+							</config>
+						</TCEforms>
+					</settings.usergroup>
+					<settings.ignoreGroupSelection>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.ignoreTeamGroupSelection</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.ignoreGroupSelection>
+					<settings.showimages>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showimages</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.showimages>
+					<settings.linkNamesToSingleView>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkNamesToSingleView</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.linkNamesToSingleView>
+					<settings.showIconsInsteadLabels>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIconsInsteadLabels</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.showIconsInsteadLabels>
+					<settings.linkContactInfos>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkContactInfos</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.linkContactInfos>
+					<settings.doNotLinkToDetailView>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.doNotLinkToDetailView</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.doNotLinkToDetailView>
+					<settings.sortOrderTeams>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrder</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_teams_teamname</numIndex>
+										<numIndex index="1">teamname</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.sorting</numIndex>
+										<numIndex index="1">sorting</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<default>teamname</default>
+							</config>
+						</TCEforms>
+					</settings.sortOrderTeams>
+					<settings.sortOrderTeamsDirection>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection_asc</numIndex>
+										<numIndex index="1">ASC</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection_desc</numIndex>
+										<numIndex index="1">DESC</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<default>ASC</default>
+							</config>
+						</TCEforms>
+					</settings.sortOrderTeamsDirection>
+				</el>
+			</ROOT>
+		</GroupedByTeams>
 		<Fieldselect>
 			<ROOT>
 				<TCEforms>
@@ -479,6 +607,7 @@
 						<OR>
 							<numIndex index="0">FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</numIndex>
 							<numIndex index="1">FIELD:General.switchableControllerActions:=:Persons->detailView</numIndex>
+							<numIndex index="2">FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</numIndex>
 						</OR>
 					</displayCond>
 				</TCEforms>

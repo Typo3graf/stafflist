@@ -43,7 +43,8 @@ class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function groupedByTeamsAction()
     {
-        $teams = $this->teamsRepository->findAll();
+        $demand ='';
+        $teams = $this->teamsRepository->findGroupedByTeams(GeneralUtility::trimExplode(',',$this->settings['usergroup'], TRUE), $this->settings);
 
         $this->view->assign('teams', $teams);
     }
