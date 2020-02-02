@@ -3,7 +3,66 @@
 <f:section name="content">
 	<h1>Grouped by Teams</h1>
 	<f:debug>{teams}</f:debug>
-	<table  class="tx_stafflist" >
+	<article class="tx_stafflist">
+		<f:for each="{teams}" as="team">
+			<h3 class="grpteamname">{team.teamname}</h3>
+				<section class="stafflist-card-grid">
+					<f:for each="{team.persons}" as="person-item">
+
+						<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
+					</f:for>
+				</section>
+
+
+			</f:for>
+
+	</article>
+
+
+	<f:section name="card">
+
+		<div class="stafflist-card">
+			<div class="stafflist-card-inner">
+				<div class="stafflist-card-header">
+					<f:if condition="{person-item.avatar} && {settings.showimages}">
+						<f:image image="{person-item.avatar.originalResource}" class="stafflist-image" alt="{person-item.firstname} {person-item.lastname}"/>
+					</f:if>
+				</div>
+				<div class="stafflist-card-body">
+					<p class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:1}"/>
+						<f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/></p>
+					<h3><f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/></h3>
+					<h4 class="stafflist-title"><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
+						<br/><f:render partial="Fields/List/Tasks" arguments="{person-item: person-item, settings:settings}"/></h4>
+					<p><f:render partial="Fields/List/Teams" arguments="{person-item: person-item, settings:settings}"/></p>
+					<p><f:render partial="Fields/List/Locations" arguments="{person-item: person-item, settings:settings}"/></p>
+					<p><f:render partial="Fields/List/Building" arguments="{person-item: person-item, settings:settings}"/>  <f:render partial="Fields/List/Room" arguments="{person-item: person-item, settings:settings}"/></p>
+					<p><f:render partial="Fields/List/OfficeHours" arguments="{person-item: person-item, settings:settings}"/></p>
+					<p><f:render partial="Fields/List/Phone" arguments="{person-item: person-item, settings:settings, cr:1}"/>
+						<f:render partial="Fields/List/Mobile" arguments="{person-item: person-item, settings:settings, cr:1}"/>
+						<f:render partial="Fields/List/Fax" arguments="{person-item: person-item, settings:settings, cr:1}"/>
+						<f:render partial="Fields/List/Email" arguments="{person-item: person-item, settings:settings}"/></p>
+					<p><f:render partial="Fields/List/InCompany" arguments="{person-item: person-item, settings:settings}"/></p>
+					<f:render partial="Fields/List/Bio" arguments="{person-item: person-item, settings:settings, crop:1}"/>
+
+				</div>
+				<div class="stafflist-card-footer">
+					<f:render partial="Fields/List/SocialLinks" arguments="{person-item:person-item, settings:settings}" />
+					<span class="stafflist-footer"><f:render partial="Fields/Button" arguments="{person-item: person-item, settings:settings}"/></span>
+				</div>
+			</div>
+		</div>
+
+	</f:section>
+
+
+
+
+
+
+
+
+	<!--div  class="tx_stafflist" >
 		<tr>
 			<th><f:translate key="tx_stafflist_domain_model_teams.teamname" /></th>
 			<th><f:translate key="tx_stafflist_domain_model_teams.teampage" /></th>
@@ -13,12 +72,12 @@
 
 		<f:for each="{teams}" as="team">
 			<tr>
-				<td><f:link.action action="show" arguments="{team : team}"> {team.teamname}</f:link.action></td>
+				<td><f:link.action controller="Persons" action="show" arguments="{team : team}"> {team.teamname}</f:link.action></td>
 				<td> <f:link.typolink parameter="{team.teampage}">
 					Linktext
 				</f:link.typolink></td>
 			</tr>
 		</f:for>
-	</table>
+	</div-->
 </f:section>
 </html>

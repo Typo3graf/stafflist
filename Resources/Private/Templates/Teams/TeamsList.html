@@ -3,7 +3,23 @@
 	<f:section name="content">
 		<h1>Listing for Teams</h1>
 <f:debug>{teams}</f:debug>
-		<table  class="tx_stafflist" >
+		<ul>
+			<f:for each="{teams}" as="team">
+				<f:if condition="{team.teampage}">
+					<f:then>
+						<li><f:link.typolink parameter="{team.teampage}">{team.teamname}</f:link.typolink></li>
+					</f:then>
+					<f:else>
+						{team.teamname}
+					</f:else>
+				</f:if>
+				<li></li>
+			</f:for>
+		</ul>
+
+
+
+		<!--table  class="tx_stafflist" >
 			<tr>
 				<th><f:translate key="tx_stafflist_domain_model_teams.teamname" /></th>
 				<th><f:translate key="tx_stafflist_domain_model_teams.teampage" /></th>
@@ -17,6 +33,6 @@
 					<td><f:link.action action="show" arguments="{team : team}"> {team.teampage}</f:link.action></td>
 				</tr>
 			</f:for>
-		</table>
+		</table-->
 	</f:section>
 </html>
