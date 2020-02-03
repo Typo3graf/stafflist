@@ -44,7 +44,7 @@ cgl:
     - php -r "if (hash_file('SHA384', 'composer-setup.php') === file_get_contents('installer.sig')) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
     - php composer-setup.php --no-ansi --install-dir=/usr/bin --filename=composer
     - php -r "unlink('composer-setup.php'); unlink('installer.sig');"
-    - composer require typo3/cms="${TYPO3_VERSION}"
+    - composer require typo3/minimal:^9.5
   script:
     - .Build/bin/phpunit --colors  -c .Build/vendor/nimut/testing-framework/res/Configuration/UnitTests.xml Tests/Unit/
     - find . -name \*.php ! -path "./.Build/*" | parallel --gnu php -d display_errors=stderr -l {} > /dev/null
@@ -53,8 +53,8 @@ cgl:
 typo3_9lts :
   <<: *test_php
   image: php:7.2-alpine
-  variables:
-    TYPO3_VERSION: ^9
+  #variables:
+   #  TYPO3_VERSION: ^9
 
 #typoscript:test:
 #  image: composer:1.6
