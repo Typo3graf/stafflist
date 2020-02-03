@@ -1,25 +1,60 @@
 stages:
-  - lint
+  - test
   #- typoscript
   - yaml
   #- fluid
   #- xliff
+cache:
+  key: "$CI_BUILD_REF_NAME/$CI_BUILD_STAGE"
+  paths:
+    - .composer/
+    - .php_cs.cache
 
-lint:php:
-  stage: lint
-  image: sixlive/php-lint-fix
+variables:
+  COMPOSER_CACHE_DIR: ".composer"
+  COMPOSER_PROCESS_TIMEOUT: "1800"
+  COMPOSER_ALLOW_SUPERUSER: "1"
+  TYPO3_VERSION: ^7.6
+  TYPO3_PATH_WEB: "$CI_PROJECT_DIR/.Build/Web"
+  MYSQL_DATABASE: "typo3"
+  MYSQL_ROOT_PASSWORD: "joh316"
+  typo3DatabaseName: "typo3"
+  typo3DatabaseHost: "mysql"
+  typo3DatabaseUsername: "root"
+  typo3DatabasePassword: "joh316"
 
+cgl:
+  image: composer
+  stage: test
+  before_script:
+    - composer require typo3/cms="${TYPO3_VERSION}"
+    - composer install
   script:
-    - php-cs-fixer fix --dry-run --diff
-  #script:
-   # - .Build/bin/php-cs-fixer fix --dry-run --config=.php_cs --diff
+    - .Build/bin/php-cs-fixer fix --config=Build/.php_cs -v --dry-run --using-cache=no --path-mode=intersection `git diff --name-only --diff-filter=ACMRTUXB $COMMIT_RANGE`
 
-# Tests in PHP 7.2 and TYPO3 9.5 version
-#php:testphp72:typo3_95:
- # <<: *phptesting
-  #variables:
-   # DOCKER_TAG: 7.2-alpine
-    # TYPO3_VERSION: ^9.5
+.test: &test_php
+  stage: test
+  services:
+    - mysql:5
+  before_script:
+    - apk --no-cache add bash curl git mercurial openssh openssl parallel subversion tini
+    - docker-php-ext-install mysqli
+    - wget https://composer.github.io/installer.sig -O - -q | tr -d '\n' > installer.sig
+    - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    - php -r "if (hash_file('SHA384', 'composer-setup.php') === file_get_contents('installer.sig')) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    - php composer-setup.php --no-ansi --install-dir=/usr/bin --filename=composer
+    - php -r "unlink('composer-setup.php'); unlink('installer.sig');"
+    - composer require typo3/cms="${TYPO3_VERSION}"
+  script:
+    - .Build/bin/phpunit --colors  -c .Build/vendor/nimut/testing-framework/res/Configuration/UnitTests.xml Tests/Unit/
+    - find . -name \*.php ! -path "./.Build/*" | parallel --gnu php -d display_errors=stderr -l {} > /dev/null
+    - find 'Tests/Functional' -wholename '*Test.php' | parallel --gnu 'echo; echo "Running functional test suite {}"; .Build/bin/phpunit --colors  -c .Build/vendor/nimut/testing-framework/res/Configuration/FunctionalTests.xml {}'
+
+typo3_9lts :
+  <<: *test_php
+  image: php:7.2-alpine
+  variables:
+    TYPO3_VERSION: ^9
 
 #typoscript:test:
 #  image: composer:1.6
