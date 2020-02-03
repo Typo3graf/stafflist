@@ -7,18 +7,19 @@
 </html>
 
 <f:section name="card">
-	<div class="stafflist-card">
+	<div class="stafflist-card stafflist-img">
 		<div class="stafflist-card-inner">
-			<div class="stafflist-card-header">
+			<div class="stafflist-card-header stafflist-header-image">
 				<f:if condition="{person-item.avatar} && {settings.showimages}">
-					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image" alt="{person-item.firstname} {person-item.lastname}"/>
+					<f:image image="{person-item.avatar.originalResource}" class="stafflist-image stafflist-rounded" alt="{person-item.firstname} {person-item.lastname}"/>
 				</f:if>
 			</div>
 			<div class="stafflist-card-body">
 				<p class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:1}"/>
 					<f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/></p>
-				<f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/>
-				<p class="stafflist-title"><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
+				<h3><f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/></h3>
+				<h4 class="stafflist-title"><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
+				</h4>
 			</div>
 			<div class="stafflist-card-footer">
 				<span class="stafflist-footer"><f:render partial="Fields/Button" arguments="{person-item: person-item, settings:settings}"/></span>

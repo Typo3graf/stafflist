@@ -1,8 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="content">
-	<h1>Grouped by Teams</h1>
-	<f:debug>{teams}</f:debug>
 	<article class="tx_stafflist">
 		<f:for each="{teams}" as="team">
 			<h3 class="grpteamname">{team.teamname}</h3>
@@ -59,25 +57,5 @@
 
 
 
-
-
-
-	<!--div  class="tx_stafflist" >
-		<tr>
-			<th><f:translate key="tx_stafflist_domain_model_teams.teamname" /></th>
-			<th><f:translate key="tx_stafflist_domain_model_teams.teampage" /></th>
-			<th> </th>
-			<th> </th>
-		</tr>
-
-		<f:for each="{teams}" as="team">
-			<tr>
-				<td><f:link.action controller="Persons" action="show" arguments="{team : team}"> {team.teamname}</f:link.action></td>
-				<td> <f:link.typolink parameter="{team.teampage}">
-					Linktext
-				</f:link.typolink></td>
-			</tr>
-		</f:for>
-	</div-->
 </f:section>
 </html>
