@@ -206,6 +206,7 @@
 }
 .stafflist-rounded {
 	border-radius: 50%;
+	border: 1px solid #b9b9b9;
 	max-width: 200px;
 	max-height: 200px;
 	text-align: center;
