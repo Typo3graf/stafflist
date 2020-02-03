@@ -7,11 +7,7 @@
 </div>
 <f:section name="card">
 	<div class="stafflist-item{f:if(condition: oddEvenIterator.isEven, then: '')}{f:if(condition: oddEvenIterator.isOdd, then: ' alt')}">
-		<f:if condition="{person-item.avatar} && {settings.showimages}">
-		<div class="meta">
-			<div class="photo" style="background-image: url({f:uri.image(src: '{person-item.avatar.Uid}', treatIdAsReference:1)})"></div>
-		</div>
-		</f:if>
+		<f:render partial="Fields/BackgroundImage" arguments="{person-item: person-item, settings:settings}"/>
 		<div class="{f:if(condition: '{person-item.avatar} && {settings.showimages}', then: 'description', else: 'descriptionnophoto')}">
 			<span class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/> <f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/></span>
 			<h3><f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/></h3>

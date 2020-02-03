@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{settings.showimages}">
+	<div class="meta">
+		<f:if condition="{person-item.avatar}">
+			<f:then>
+				<div class="photo" style="background-image: url({f:uri.image(src: '{person-item.avatar.Uid}', treatIdAsReference:1)})"></div>
+			</f:then>
+			<f:else>
+				<f:if condition="{person-item.salutation} == 1">
+					<f:then>
+						<div class="photo" style="background-image: url({f:uri.image(src: 'EXT:stafflist/Resources/Public/Images/placeholder_Female.jpg')})"></div>
+					</f:then>
+					<f:else>
+						<div class="photo" style="background-image: url({f:uri.image(src: 'EXT:stafflist/Resources/Public/Images/placeholder_Male.jpg')})"></div>
+					</f:else>
+				</f:if>
+			</f:else>
+
+		</f:if>
+	</div>
+</f:if>
+</html>
