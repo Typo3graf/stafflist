@@ -133,13 +133,19 @@
 			<ROOT>
 				<TCEforms>
 					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.teamlist</sheetTitle>
-                    <displayCond>FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</displayCond>
+                    <displayCond>
+						<OR>
+							<numIndex index="0">FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</numIndex>
+							<numIndex index="1">FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</numIndex>
+						</OR>
+					</displayCond>
 				</TCEforms>
 				<type>array</type>
 				<el>
 					<settings.liststyle>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle</label>
+							<displayCond>FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</displayCond>
 							<config>
 								<type>select</type>
 								<items type="array">
@@ -195,15 +201,6 @@
 								</config>
 						</TCEforms>
 					</settings.ignoreGroupSelection>
-					<settings.ignoreTeamLeaders>
-						<TCEforms>
-								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.ignoreTeamLeaders</label>
-								<config>
-										<type>check</type>
-										<default>0</default>
-								</config>
-						</TCEforms>
-					</settings.ignoreTeamLeaders>
 					<settings.showimages>
 						<TCEforms>
 								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showimages</label>
@@ -405,7 +402,6 @@
 				</el>
 			</ROOT>
 		</Detailview>
-
 		<Fieldselect>
 			<ROOT>
 				<TCEforms>

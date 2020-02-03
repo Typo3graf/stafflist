@@ -62,13 +62,13 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $querySettings->setStoragePageIds($pidList);
         $this->setDefaultQuerySettings($querySettings);
         // Set defaultOrderings
-        if ($settings['sortOrderTeamsDirection'] === 'ASC') {
+        if ($settings['sortOrderDirection'] === 'ASC') {
             $orderings = [
-                $settings['sortOrderTeams'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+                $settings['sortOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
             ];
         } else {
             $orderings = [
-                $settings['sortOrderTeams'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+                $settings['sortOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
             ];
         }
         $this->defaultOrderings = $orderings;
