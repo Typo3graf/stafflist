@@ -1,19 +1,16 @@
 stages:
-  - php
+  - lint
   #- typoscript
   - yaml
   #- fluid
   #- xliff
 
-.php: #&phptesting
-  stage: php
+lint:php:
+  stage: lint
   image: sixlive/php-lint-fix
-  only:
-    - branches
 
-
-    script:
-      - php-cs-fixer fix --dry-run --diff
+  script:
+    - php-cs-fixer fix --dry-run --diff
   #script:
    # - .Build/bin/php-cs-fixer fix --dry-run --config=.php_cs --diff
 
