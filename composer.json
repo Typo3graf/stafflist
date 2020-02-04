@@ -11,6 +11,11 @@
     "require": {
         "typo3/cms-core": "^9.5"
     },
+    "require-dev": {
+        "nimut/testing-framework": "^4.0",
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "helmich/typo3-typoscript-lint": "^1.4"
+    },
     "autoload": {
         "psr-4": {
             "Typo3graf\\Stafflist\\": "Classes"
@@ -24,5 +29,16 @@
     "replace": {
         "typo3graf/stafflist": "self.version",
         "typo3-ter/stafflist": "self.version"
-    }
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "stafflist",
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "app-dir": ".Build",
+            "web-dir": ".Build/public"
+        }
 }
