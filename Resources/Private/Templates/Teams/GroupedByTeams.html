@@ -22,9 +22,7 @@
 		<div class="stafflist-card">
 			<div class="stafflist-card-inner">
 				<div class="stafflist-card-header">
-					<f:if condition="{person-item.avatar} && {settings.showimages}">
-						<f:image image="{person-item.avatar.originalResource}" class="stafflist-image" alt="{person-item.firstname} {person-item.lastname}"/>
-					</f:if>
+					<f:render partial="Fields/Image" arguments="{person-item: person-item, settings:settings}"/>
 				</div>
 				<div class="stafflist-card-body">
 					<p class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:1}"/>
