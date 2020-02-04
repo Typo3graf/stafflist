@@ -1,4 +1,5 @@
 <?php
+
 namespace Typo3graf\Stafflist\Tests\Unit\Controller;
 
 /**
@@ -8,6 +9,7 @@ namespace Typo3graf\Stafflist\Tests\Unit\Controller;
  */
 class PersonsControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 {
+
     /**
      * @var \Typo3graf\Stafflist\Controller\PersonsController
      */
