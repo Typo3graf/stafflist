@@ -314,7 +314,7 @@
 								</items>
 								<maxitems>1</maxitems>
 								<size>1</size>
-								<default>lastname</default>
+								<default>teamname</default>
 							</config>
 						</TCEforms>
 					</settings.sortTeamOrder>
