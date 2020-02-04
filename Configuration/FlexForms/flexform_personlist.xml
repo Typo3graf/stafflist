@@ -249,6 +249,7 @@
 					<settings.sortOrder>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrder</label>
+							<displayCond>FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</displayCond>
 							<config>
 								<type>select</type>
 								<items type="array">
@@ -295,6 +296,28 @@
 							</config>
 						</TCEforms>
 					</settings.sortOrder>
+					<settings.sortTeamOrder>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrder</label>
+							<displayCond>FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</displayCond>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_teams_teamname (default)</numIndex>
+										<numIndex index="1">teamname</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.sorting</numIndex>
+										<numIndex index="1">sorting</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<default>lastname</default>
+							</config>
+						</TCEforms>
+					</settings.sortTeamOrder>
 					<settings.sortOrderDirection>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection</label>

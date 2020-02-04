@@ -64,11 +64,11 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         // Set defaultOrderings
         if ($settings['sortOrderDirection'] === 'ASC') {
             $orderings = [
-                $settings['sortOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+                $settings['sortTeamOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
             ];
         } else {
             $orderings = [
-                $settings['sortOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+                $settings['sortTeamOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
             ];
         }
         $this->defaultOrderings = $orderings;
