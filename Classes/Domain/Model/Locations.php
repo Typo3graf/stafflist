@@ -1,17 +1,14 @@
 <?php
+
 namespace Typo3graf\Stafflist\Domain\Model;
 
-
 /***
- *
  * This file is part of the "Staff List" Extension for TYPO3 CMS.
- *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
- *
  *  (c) 2020 Development-Team <development@typo3graf.de>, Typo3graf media-agentur
- *
  ***/
+
 /**
  * Locations
  */
@@ -20,7 +17,7 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * title
-     * 
+     *
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
@@ -28,42 +25,42 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * street
-     * 
+     *
      * @var string
      */
     protected $street = '';
 
     /**
      * zip
-     * 
+     *
      * @var string
      */
     protected $zip = '';
 
     /**
      * city
-     * 
+     *
      * @var string
      */
     protected $city = '';
 
     /**
      * state
-     * 
+     *
      * @var string
      */
     protected $state = '';
 
     /**
      * country
-     * 
+     *
      * @var string
      */
     protected $country = '';
 
     /**
      * Returns the title
-     * 
+     *
      * @return string $title
      */
     public function getTitle()
@@ -73,9 +70,8 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the title
-     * 
+     *
      * @param string $title
-     * @return void
      */
     public function setTitle($title)
     {
@@ -84,7 +80,7 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the street
-     * 
+     *
      * @return string $street
      */
     public function getStreet()
@@ -94,9 +90,8 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the street
-     * 
+     *
      * @param string $street
-     * @return void
      */
     public function setStreet($street)
     {
@@ -105,7 +100,7 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the zip
-     * 
+     *
      * @return string $zip
      */
     public function getZip()
@@ -115,9 +110,8 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the zip
-     * 
+     *
      * @param string $zip
-     * @return void
      */
     public function setZip($zip)
     {
@@ -126,7 +120,7 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the city
-     * 
+     *
      * @return string $city
      */
     public function getCity()
@@ -136,9 +130,8 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the city
-     * 
+     *
      * @param string $city
-     * @return void
      */
     public function setCity($city)
     {
@@ -147,7 +140,7 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the state
-     * 
+     *
      * @return string $state
      */
     public function getState()
@@ -157,9 +150,8 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the state
-     * 
+     *
      * @param string $state
-     * @return void
      */
     public function setState($state)
     {
@@ -168,7 +160,7 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the country
-     * 
+     *
      * @return string $country
      */
     public function getCountry()
@@ -178,9 +170,8 @@ class Locations extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the country
-     * 
+     *
      * @param string $country
-     * @return void
      */
     public function setCountry($country)
     {

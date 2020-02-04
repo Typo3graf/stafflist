@@ -7,7 +7,8 @@ namespace Typo3graf\Stafflist\Tests\Unit\Controller;
  *
  * @author Development-Team <development@typo3graf.de>
  */
-class TeamsControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase {
+class TeamsControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
+{
 
     /**
      * @var \Typo3graf\Stafflist\Controller\TeamsController
