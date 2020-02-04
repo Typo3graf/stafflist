@@ -4,7 +4,7 @@ return [
         'title' => 'LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons',
         'label' => 'lastname',
         'label_alt' => 'firstname',
-		'label_alt_force' => 1,
+        'label_alt_force' => 1,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -242,7 +242,6 @@ return [
                     ],
                 ],
             ],
-
         ],
         'tasks' => [
             'exclude' => false,
@@ -278,7 +277,6 @@ return [
                     ],
                 ],
             ],
-
         ],
         'locations' => [
             'exclude' => true,
@@ -304,7 +302,6 @@ return [
                     ],
                 ],
             ],
-
         ],
         'building' => [
             'exclude' => false,

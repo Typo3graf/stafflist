@@ -2,8 +2,7 @@
 defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(
-    function()
-    {
+    function() {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Typo3graf.Stafflist',
@@ -19,9 +18,9 @@ call_user_func(
             ]
         );
 
-    // wizards
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     personlist {
@@ -37,14 +36,15 @@ call_user_func(
                 show = *
             }
        }'
-    );
-		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+        );
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 
-			$iconRegistry->registerIcon(
-				'stafflist-plugin-personlist',
-				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:stafflist/Resources/Public/Icons/user_plugin_personlist.svg']
-			);
-
+        $iconRegistry->registerIcon(
+            'stafflist-plugin-personlist',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            [
+                'source' => 'EXT:stafflist/Resources/Public/Icons/user_plugin_personlist.svg'
+            ]
+        );
     }
 );
