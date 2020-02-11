@@ -54,12 +54,13 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $this->defaultOrderings = $orderings;
 
         // Query result
-        if ($settings['ignoreGroupSelection']) {
-           return $queryResult = $this->findAll();
-        } else {
+        if ($settings['usergroup']) {
             $queryResult = $this->createQuery();
             $queryResult->matching($queryResult->in('teams.uid', $demand));
             return $queryResult->execute();
+
+        } else {
+            return $queryResult = $this->findAll();
         }
     }
 

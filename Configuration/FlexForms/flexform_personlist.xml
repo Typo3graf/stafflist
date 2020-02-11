@@ -192,24 +192,6 @@
 							</config>
 						</TCEforms>
 					</settings.usergroup>
-					<settings.ignoreGroupSelection>
-						<TCEforms>
-								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.ignoreGroupSelection</label>
-								<config>
-										<type>check</type>
-										<default>0</default>
-								</config>
-						</TCEforms>
-					</settings.ignoreGroupSelection>
-					<settings.showimages>
-						<TCEforms>
-								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showimages</label>
-								<config>
-										<type>check</type>
-										<default>1</default>
-								</config>
-						</TCEforms>
-					</settings.showimages>
 					<settings.linkNamesToSingleView>
 						<TCEforms>
 								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkNamesToSingleView</label>
@@ -439,6 +421,15 @@
 				</TCEforms>
 				<type>array</type>
 				<el>
+					<settings.showimages>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showimages</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.showimages>
 					<settings.showSalutation>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSalutation</label>

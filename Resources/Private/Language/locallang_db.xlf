@@ -160,12 +160,6 @@
 			<trans-unit id="tt_content.pi_flexform.click_enlarge">
 				<source>Click enlarge images?</source>
 			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.ignoreGroupSelection">
-				<source>Ignore Group selection (show every person)</source>
-			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.ignoreTeamLeaders">
-				<source>Ignore the team leaders (hide in list)?</source>
-			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.disableBackLink">
 				<source>Disable back links?</source>
 			</trans-unit>
@@ -284,7 +278,7 @@
 				<source>STAFFLIST - List of staff members</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle">
-				<source>Which layout to show?</source>
+				<source>Which layout should be used?</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_list">
 				<source>Text and images list (default)</source>
@@ -305,7 +299,7 @@
 				<source>TEAMS DIRECTORY - List of team(s)</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_group">
-				<source>Which group should be shown?</source>
+				<source>Which group(s) should be shown? (leave blank to show all persons)</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_inheritFromTypoScript">
 				<source>Defined in TypoScript</source>
@@ -326,11 +320,9 @@
 				<source>Link contact info's (phone, mobile and e-mail)</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.showIconsInsteadLabels">
-				<source>Show icons instead labels</source>
+				<source>Show icons instead contact labels</source>
 			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.ignoreTeamGroupSelection">
-				<source>Ignore Group selection (show every group)</source>
-			</trans-unit><trans-unit id="tx_stafflist_domain_teams_teamname">
+			<trans-unit id="tx_stafflist_domain_teams_teamname">
 				<source>Team name</source>
 			</trans-unit>
 		</body>
