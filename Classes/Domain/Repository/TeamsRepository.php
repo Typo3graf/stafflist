@@ -1,15 +1,12 @@
 <?php
+
 namespace Typo3graf\Stafflist\Domain\Repository;
 
 /***
- *
  * This file is part of the "Staff List" Extension for TYPO3 CMS.
- *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
- *
  *  (c) 2020 Development-Team <development@typo3graf.de>, Typo3graf media-agentur
- *
  ***/
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -19,6 +16,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+
     /**
      * @var array
      */
@@ -27,6 +25,7 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     /**
      * Returns a category constraint created by
      * a given list of categories and a junction string
+     *
      * @param array $demand
      * @param string $settings
      */
@@ -43,6 +42,7 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 
     /**
      * Returns a member list grouped by teams
+     *
      * @param array $demand
      * @param string $settings
      */
@@ -60,7 +60,7 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             ];
         } else {
             $orderings = [
-                 $settings['sortTeamOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+                $settings['sortTeamOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
             ];
         }
         $this->defaultOrderings = $orderings;
@@ -70,7 +70,6 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             $queryResult = $this->createQuery();
             $queryResult->matching($queryResult->in('uid', $demand));
             return $queryResult->execute();
-
         } else {
             return $queryResult = $this->findAll();
         }
