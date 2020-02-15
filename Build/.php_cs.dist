@@ -4,6 +4,7 @@ if (PHP_SAPI !== 'cli') {
     die('This script supports command line usage only. Please check your command.');
 }
 $finder = PhpCsFixer\Finder::create()
+    ->exclude('Tests')
     ->in(__DIR__ . '/../');
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
