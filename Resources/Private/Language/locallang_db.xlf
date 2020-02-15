@@ -137,7 +137,7 @@
 				<source>Staff list all</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.teamlist">
-				<source>Teamlist</source>
+				<source>List options</source>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.groupedbyteams">
 				<source>Grouped by teams list</source>
@@ -275,7 +275,7 @@
 				<source>CONTACT BOX - List of contact person(s)</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_listtype_teamlist">
-				<source>STAFFLIST - List of staff members</source>
+				<source>LIST - List of staff members</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle">
 				<source>Which layout should be used?</source>
@@ -296,7 +296,7 @@
 				<source>GROUPED BY TEAM(S) - Stafflist grouped by teams</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_liststyle_teams_directory">
-				<source>TEAMS DIRECTORY - List of team(s)</source>
+				<source>DIRECTORY - List of team(s)</source>
 			</trans-unit>
 			<trans-unit id="pi_flexform_group">
 				<source>Which group(s) should be shown? (leave blank to show all persons)</source>
@@ -324,6 +324,9 @@
 			</trans-unit>
 			<trans-unit id="tx_stafflist_domain_teams_teamname">
 				<source>Team name</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.Displayoptions">
+				<source>Display Options</source>
 			</trans-unit>
 		</body>
 	</file>

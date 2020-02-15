@@ -3,75 +3,100 @@
 		<General>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.settings</sheetTitle>
+					<sheetTitle>
+						LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.settings
+					</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el>
 					<switchableControllerActions>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype</label>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype
+							</label>
 							<onChange>reload</onChange>
 							<config>
 								<type>select</type>
 								<items>
 									<numIndex index="0">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_staff_divider</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_staff_divider
+										</numIndex>
 										<numIndex index="1">--div--</numIndex>
 									</numIndex>
 									<numIndex index="1">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_teamlist</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_teamlist
+										</numIndex>
 										<numIndex index="1">Persons->personList;Persons->detailView</numIndex>
 									</numIndex>
 									<numIndex index="2">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_detail</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_detail
+										</numIndex>
 										<numIndex index="1">Persons->detailView</numIndex>
 									</numIndex>
 									<numIndex index="3">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_box</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_box
+										</numIndex>
 										<numIndex index="1">Persons->boxView</numIndex>
 									</numIndex>
-									<numIndex index="4">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_teams_divider</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_grouped
+										</numIndex>
+										<numIndex index="1">Teams->groupedByTeams;Persons->detailView</numIndex>
+									</numIndex>
+									<numIndex index="10">
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_listtype_teams_divider
+										</numIndex>
 										<numIndex index="1">--div--</numIndex>
 									</numIndex>
-									<numIndex index="5">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_teams_directory</numIndex>
+									<numIndex index="11">
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_teams_directory
+										</numIndex>
 										<numIndex index="1">Teams->teamsList;</numIndex>
-									</numIndex>
-									<numIndex index="6">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_grouped</numIndex>
-										<numIndex index="1">Teams->groupedByTeams;Persons->detailView</numIndex>
 									</numIndex>
 								</items>
 								<default>Persons->personList;Persons->detailView</default>
 							</config>
 						</TCEforms>
 					</switchableControllerActions>
-                    <settings.detailPage>
+					<settings.detailPage>
 						<TCEforms>
-						<exclude>1</exclude>
-						<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.detailPage</label>
+							<exclude>1</exclude>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.detailPage
+							</label>
 							<displayCond>
 								<OR>
-									<numIndex index="0">FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</numIndex>
-									<numIndex index="1">FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</numIndex>
+									<numIndex index="0">
+										FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+									</numIndex>
+									<numIndex index="1">
+										FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+									</numIndex>
 								</OR>
 							</displayCond>
-						<config>
-							<type>group</type>
-							<internal_type>db</internal_type>
-							<allowed>pages</allowed>
-							<size>1</size>
-							<maxitems>1</maxitems>
-							<minitems>0</minitems>
-							<show_thumbs>1</show_thumbs>
-						</config>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
 						</TCEforms>
 					</settings.detailPage>
 					<settings.startingpoint>
 						<TCEforms>
 							<exclude>1</exclude>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_dataStoragePage</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_dataStoragePage
+							</label>
 							<config>
 								<type>group</type>
 								<internal_type>db</internal_type>
@@ -95,31 +120,45 @@
 								<type>select</type>
 								<items type="array">
 									<numIndex index="1" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_inheritFromTypoScript</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_inheritFromTypoScript
+										</numIndex>
 										<numIndex index="1"></numIndex>
 									</numIndex>
 									<numIndex index="2" type="array">
-										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0</numIndex>
+										<numIndex index="0">
+											LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0
+										</numIndex>
 										<numIndex index="1">0</numIndex>
 									</numIndex>
 									<numIndex index="3" type="array">
-										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.1</numIndex>
+										<numIndex index="0">
+											LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.1
+										</numIndex>
 										<numIndex index="1">1</numIndex>
 									</numIndex>
 									<numIndex index="4" type="array">
-										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.2</numIndex>
+										<numIndex index="0">
+											LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.2
+										</numIndex>
 										<numIndex index="1">2</numIndex>
 									</numIndex>
 									<numIndex index="5" type="array">
-										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.3</numIndex>
+										<numIndex index="0">
+											LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.3
+										</numIndex>
 										<numIndex index="1">3</numIndex>
 									</numIndex>
 									<numIndex index="6" type="array">
-										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.4</numIndex>
+										<numIndex index="0">
+											LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.4
+										</numIndex>
 										<numIndex index="1">4</numIndex>
 									</numIndex>
 									<numIndex index="7" type="array">
-										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5</numIndex>
+										<numIndex index="0">
+											LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5
+										</numIndex>
 										<numIndex index="1">250</numIndex>
 									</numIndex>
 								</items>
@@ -132,11 +171,17 @@
 		<Teamlist>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.teamlist</sheetTitle>
-                    <displayCond>
+					<sheetTitle>
+						LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.teamlist
+					</sheetTitle>
+					<displayCond>
 						<OR>
-							<numIndex index="0">FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</numIndex>
-							<numIndex index="1">FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</numIndex>
+							<numIndex index="0">
+								FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+							</numIndex>
+							<numIndex index="1">
+								FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+							</numIndex>
 						</OR>
 					</displayCond>
 				</TCEforms>
@@ -144,30 +189,37 @@
 				<el>
 					<settings.liststyle>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle</label>
-							<displayCond>FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</displayCond>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle
+							</label>
+							<displayCond>
+								FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+							</displayCond>
 							<config>
 								<type>select</type>
 								<items type="array">
 									<numIndex index="1" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_list</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_list
+										</numIndex>
 										<numIndex index="1">list</numIndex>
 									</numIndex>
 									<numIndex index="2" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_cards</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_cards
+										</numIndex>
 										<numIndex index="1">cards</numIndex>
 									</numIndex>
 									<numIndex index="3" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_images</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_images
+										</numIndex>
 										<numIndex index="1">images</numIndex>
 									</numIndex>
 									<numIndex index="4" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_names</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_names
+										</numIndex>
 										<numIndex index="1">names</numIndex>
-									</numIndex>
-									<numIndex index="5" type="array">
-										<numIndex index="0"></numIndex>
-										<numIndex index="1">grouped</numIndex>
 									</numIndex>
 								</items>
 								<default>list</default>
@@ -178,7 +230,8 @@
 					</settings.liststyle>
 					<settings.usergroup>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_group</label>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_group
+							</label>
 							<config>
 								<type>select</type>
 								<foreign_table>tx_stafflist_domain_model_teams</foreign_table>
@@ -187,88 +240,77 @@
 								<autoSizeMax>10</autoSizeMax>
 								<minitems>0</minitems>
 								<maxitems>99</maxitems>
-								<itemsHeader>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_group</itemsHeader>
+								<itemsHeader>
+									LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_group
+								</itemsHeader>
 								<allowNonIdValues>1</allowNonIdValues>
 							</config>
 						</TCEforms>
 					</settings.usergroup>
-					<settings.linkNamesToSingleView>
-						<TCEforms>
-								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkNamesToSingleView</label>
-								<config>
-										<type>check</type>
-									<default>0</default>
-								</config>
-						</TCEforms>
-					</settings.linkNamesToSingleView>
-					<settings.showIconsInsteadLabels>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIconsInsteadLabels</label>
-							<config>
-								<type>check</type>
-								<default>0</default>
-							</config>
-						</TCEforms>
-					</settings.showIconsInsteadLabels>
-					<settings.linkContactInfos>
-						<TCEforms>
-								<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkContactInfos</label>
-								<config>
-										<type>check</type>
-									<default>0</default>
-								</config>
-						</TCEforms>
-					</settings.linkContactInfos>
-					<settings.doNotLinkToDetailView>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.doNotLinkToDetailView</label>
-							<config>
-								<type>check</type>
-								<default>0</default>
-							</config>
-						</TCEforms>
-					</settings.doNotLinkToDetailView>
 					<settings.sortOrder>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrder</label>
-							<displayCond>FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</displayCond>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrder
+							</label>
+							<displayCond>
+								FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+							</displayCond>
 							<config>
 								<type>select</type>
 								<items type="array">
 									<numIndex index="0" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.lastname (default)</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.lastname
+											(default)
+										</numIndex>
 										<numIndex index="1">lastname</numIndex>
 									</numIndex>
 									<numIndex index="1" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.firstname</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.firstname
+										</numIndex>
 										<numIndex index="1">firstname</numIndex>
 									</numIndex>
 									<numIndex index="2" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.title</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.title
+										</numIndex>
 										<numIndex index="1">title</numIndex>
 									</numIndex>
 									<numIndex index="5" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.incompany</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.incompany
+										</numIndex>
 										<numIndex index="1">incompany</numIndex>
 									</numIndex>
 									<numIndex index="6" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.function</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.function
+										</numIndex>
 										<numIndex index="1">function</numIndex>
 									</numIndex>
 									<numIndex index="7" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.email</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.email
+										</numIndex>
 										<numIndex index="1">email</numIndex>
 									</numIndex>
 									<numIndex index="9" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.locations</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.locations
+										</numIndex>
 										<numIndex index="1">location</numIndex>
 									</numIndex>
 									<numIndex index="10" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.room</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.room
+										</numIndex>
 										<numIndex index="1">room</numIndex>
 									</numIndex>
-                                    <numIndex index="16" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.sorting</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.sorting
+										</numIndex>
 										<numIndex index="1">sorting</numIndex>
 									</numIndex>
 								</items>
@@ -280,17 +322,26 @@
 					</settings.sortOrder>
 					<settings.sortTeamOrder>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrder</label>
-							<displayCond>FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</displayCond>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrder
+							</label>
+							<displayCond>
+								FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+							</displayCond>
 							<config>
 								<type>select</type>
 								<items type="array">
 									<numIndex index="0" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_teams_teamname (default)</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_teams_teamname
+											(default)
+										</numIndex>
 										<numIndex index="1">teamname</numIndex>
 									</numIndex>
 									<numIndex index="16" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.sorting</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.sorting
+										</numIndex>
 										<numIndex index="1">sorting</numIndex>
 									</numIndex>
 								</items>
@@ -302,16 +353,22 @@
 					</settings.sortTeamOrder>
 					<settings.sortOrderDirection>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection
+							</label>
 							<config>
 								<type>select</type>
 								<items type="array">
 									<numIndex index="0" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection_asc</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection_asc
+										</numIndex>
 										<numIndex index="1">ASC</numIndex>
 									</numIndex>
 									<numIndex index="1" type="array">
-										<numIndex index="0">LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection_desc</numIndex>
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrderDirection_desc
+										</numIndex>
 										<numIndex index="1">DESC</numIndex>
 									</numIndex>
 								</items>
@@ -327,15 +384,19 @@
 		<Contactbox>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.contactbox</sheetTitle>
-                    <displayCond>FIELD:General.switchableControllerActions:=:Persons->boxView</displayCond>
+					<sheetTitle>
+						LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.contactbox
+					</sheetTitle>
+					<displayCond>FIELD:General.switchableControllerActions:=:Persons->boxView</displayCond>
 				</TCEforms>
 				<type>array</type>
 				<el>
 					<settings.source_plugin>
 						<TCEforms>
 							<exclude>1</exclude>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.source_fromplugin</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.source_fromplugin
+							</label>
 							<config>
 								<type>group</type>
 								<internal_type>db</internal_type>
@@ -347,39 +408,60 @@
 							</config>
 						</TCEforms>
 					</settings.source_plugin>
-					<settings.showIconsInsteadLabels>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIconsInsteadLabels</label>
-							<config>
-								<type>check</type>
-								<default>0</default>
-							</config>
-						</TCEforms>
-					</settings.showIconsInsteadLabels>
-
-					<settings.linkContactInfos>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkContactInfos</label>
-							<config>
-								<type>check</type>
-								<default>0</default>
-							</config>
-						</TCEforms>
-					</settings.linkContactInfos>
 				</el>
 			</ROOT>
 		</Contactbox>
-        <Detailview>
+		<Displayoptions>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.detailview</sheetTitle>
-					<displayCond>FIELD:General.switchableControllerActions:=:Persons->detailView</displayCond>
+					<sheetTitle>
+						LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.Displayoptions
+					</sheetTitle>
+					<displayCond>
+						<OR>
+							<numIndex index="0">
+								FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+							</numIndex>
+							<numIndex index="1">
+								FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+							</numIndex>
+							<numIndex index="2">
+								FIELD:General.switchableControllerActions:=:Persons->detailView
+							</numIndex>
+							<numIndex index="3">
+								FIELD:General.switchableControllerActions:=:Persons->boxView
+							</numIndex>
+						</OR>
+					</displayCond>
 				</TCEforms>
 				<type>array</type>
 				<el>
+					<settings.linkNamesToSingleView>
+						<TCEforms>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkNamesToSingleView
+							</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">
+										FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+									</numIndex>
+									<numIndex index="1">
+										FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+									</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.linkNamesToSingleView>
 					<settings.showIconsInsteadLabels>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIconsInsteadLabels</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIconsInsteadLabels
+							</label>
 							<config>
 								<type>check</type>
 								<default>0</default>
@@ -388,34 +470,55 @@
 					</settings.showIconsInsteadLabels>
 					<settings.linkContactInfos>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkContactInfos</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.linkContactInfos
+							</label>
 							<config>
 								<type>check</type>
 								<default>0</default>
 							</config>
 						</TCEforms>
 					</settings.linkContactInfos>
-					<settings.disableBackLink>
+					<settings.doNotLinkToDetailView>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.disableBackLink</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.doNotLinkToDetailView
+							</label>
+							<displayCond>
+								<OR>
+									<numIndex index="0">
+										FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+									</numIndex>
+									<numIndex index="1">
+										FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+									</numIndex>
+								</OR>
+							</displayCond>
 							<config>
 								<type>check</type>
 								<default>0</default>
 							</config>
 						</TCEforms>
-					</settings.disableBackLink>
+					</settings.doNotLinkToDetailView>
 				</el>
 			</ROOT>
-		</Detailview>
+		</Displayoptions>
 		<Fieldselect>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.fieldselect</sheetTitle>
+					<sheetTitle>
+						LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.fieldselect
+					</sheetTitle>
 					<displayCond>
 						<OR>
-							<numIndex index="0">FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView</numIndex>
-							<numIndex index="1">FIELD:General.switchableControllerActions:=:Persons->detailView</numIndex>
-							<numIndex index="2">FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView</numIndex>
+							<numIndex index="0">
+								FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+							</numIndex>
+							<numIndex index="1">FIELD:General.switchableControllerActions:=:Persons->detailView
+							</numIndex>
+							<numIndex index="2">
+								FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+							</numIndex>
 						</OR>
 					</displayCond>
 				</TCEforms>
@@ -423,7 +526,9 @@
 				<el>
 					<settings.showimages>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showimages</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showimages
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -432,7 +537,9 @@
 					</settings.showimages>
 					<settings.showSalutation>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSalutation</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSalutation
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -441,7 +548,9 @@
 					</settings.showSalutation>
 					<settings.showTitle>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTitle</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTitle
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -450,7 +559,9 @@
 					</settings.showTitle>
 					<settings.showFunction>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFunction</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFunction
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -459,7 +570,9 @@
 					</settings.showFunction>
 					<settings.showFunctions>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFunctions</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFunctions
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -468,7 +581,9 @@
 					</settings.showFunctions>
 					<settings.showTasks>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTasks</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTasks
+							</label>
 							<config>
 								<type>check</type>
 							</config>
@@ -476,7 +591,9 @@
 					</settings.showTasks>
 					<settings.showTeams>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTeams</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTeams
+							</label>
 							<config>
 								<type>check</type>
 							</config>
@@ -484,7 +601,9 @@
 					</settings.showTeams>
 					<settings.showLocations>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showLocations</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showLocations
+							</label>
 							<config>
 								<type>check</type>
 							</config>
@@ -492,7 +611,9 @@
 					</settings.showLocations>
 					<settings.showBuilding>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showBuilding</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showBuilding
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -501,7 +622,9 @@
 					</settings.showBuilding>
 					<settings.showRoom>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showRoom</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showRoom
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -510,7 +633,9 @@
 					</settings.showRoom>
 					<settings.showOfficehours>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showOfficehours</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showOfficehours
+							</label>
 							<config>
 								<type>check</type>
 							</config>
@@ -518,7 +643,9 @@
 					</settings.showOfficehours>
 					<settings.showPhone>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showPhone</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showPhone
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -527,7 +654,9 @@
 					</settings.showPhone>
 					<settings.showMobile>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showMobile</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showMobile
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -536,7 +665,9 @@
 					</settings.showMobile>
 					<settings.showFax>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFax</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFax
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -545,7 +676,9 @@
 					</settings.showFax>
 					<settings.showEmail>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showEmail</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showEmail
+							</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
@@ -554,7 +687,9 @@
 					</settings.showEmail>
 					<settings.showIncompany>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIncompany</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showIncompany
+							</label>
 							<config>
 								<type>check</type>
 							</config>
@@ -562,7 +697,9 @@
 					</settings.showIncompany>
 					<settings.showBio>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showBio</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showBio
+							</label>
 							<config>
 								<type>check</type>
 							</config>
@@ -570,7 +707,9 @@
 					</settings.showBio>
 					<settings.showSocialLinks>
 						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSocialLinks</label>
+							<label>
+								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSocialLinks
+							</label>
 							<config>
 								<type>check</type>
 							</config>
@@ -579,94 +718,5 @@
 				</el>
 			</ROOT>
 		</Fieldselect>
-		<ContactboxFieldselect>
-			<ROOT>
-				<TCEforms>
-					<sheetTitle>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.fieldselect</sheetTitle>
-					<displayCond>FIELD:General.switchableControllerActions:=:Persons->boxView</displayCond>
-				</TCEforms>
-				<type>array</type>
-				<el>
-					<settings.showSalutation>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showSalutation</label>
-							<config>
-								<type>check</type>
-							</config>
-						</TCEforms>
-					</settings.showSalutation>
-					<settings.showTitle>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showTitle</label>
-							<config>
-								<type>check</type>
-							</config>
-						</TCEforms>
-					</settings.showTitle>
-					<settings.showBuilding>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showBuilding</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.showBuilding>
-					<settings.showRoom>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showRoom</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.showRoom>
-					<settings.showOfficehours>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showOfficehours</label>
-							<config>
-								<type>check</type>
-							</config>
-						</TCEforms>
-					</settings.showOfficehours>
-					<settings.showPhone>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showPhone</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.showPhone>
-					<settings.showMobile>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showMobile</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.showMobile>
-					<settings.showFax>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showFax</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.showFax>
-					<settings.showEmail>
-						<TCEforms>
-							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showEmail</label>
-							<config>
-								<type>check</type>
-								<default>1</default>
-							</config>
-						</TCEforms>
-					</settings.showEmail>
-				</el>
-			</ROOT>
-		</ContactboxFieldselect>
 	</sheets>
 </T3DataStructure>

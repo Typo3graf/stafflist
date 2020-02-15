@@ -7,7 +7,7 @@
 				<div class="stafflist-sv-name">
 					<f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:1}"/>
 					<f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/>
-					<f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/>
+                    {person-item.firstname} {person-item.lastname}
 				</div>
 				<div class="stafflist-line" ></div>
 			</div>
@@ -43,7 +43,7 @@
 			<f:if condition="{settings.disableBackLink}">
 				<f:then></f:then>
 				<f:else>
-					<f:link.external uri="javascript:history.back()"><button class="stafflist-backlink">external link</button></f:link.external>
+					<f:link.external uri="javascript:history.back()"><button class="stafflist-backlink"><f:translate key="tx_stafflist_backLink" /></button></f:link.external>
 				</f:else>
 			</f:if>
 		</f:if>

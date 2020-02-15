@@ -139,6 +139,9 @@
 			<trans-unit id="constantEditor.stafflist_settings">
 				<source>Plugin settings</source>
 			</trans-unit>
+			<trans-unit id="tx_stafflist_backLink">
+				<source>Back</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

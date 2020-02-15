@@ -1,7 +1,6 @@
 <?php
 namespace Typo3graf\Stafflist\Domain\Repository;
 
-
 /***
  *
  * This file is part of the "Staff List" Extension for TYPO3 CMS.
@@ -56,8 +55,8 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      */
     public function findGroupedByTeams($demand, $settings)
     {
-        // Set startingpoint(s)
-        $pidList = $pidList = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $settings['startingpoint'], TRUE);
+        // Set startingpoint
+        $pidList = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $settings['startingpoint'], true);
         $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
         $querySettings->setStoragePageIds($pidList);
         $this->setDefaultQuerySettings($querySettings);
@@ -74,12 +73,15 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $this->defaultOrderings = $orderings;
 
         // Query result
-        if ($settings['ignoreGroupSelection']) {
-            return $queryResult = $this->findAll();
-        } else {
+        if ($settings['usergroup']) {
             $queryResult = $this->createQuery();
             $queryResult->matching($queryResult->in('uid', $demand));
             return $queryResult->execute();
+
+        } else {
+            return $queryResult = $this->findAll();
         }
+
+
     }
 }
