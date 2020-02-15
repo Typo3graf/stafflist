@@ -13,17 +13,16 @@ namespace Typo3graf\Stafflist\Controller;
  * PersonsController
  */
 
-use Typo3graf\Stafflist\Utility\TypoScript;
-use TYPO3\CMS\Core\TypoScript\TypoScriptService;
+
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use \TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\PathUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use Typo3graf\Stafflist\Utility\TypoScript;
 
 class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
     /**
      * Inject a persons repository to enable DI
      *
@@ -58,8 +57,6 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action groupedByList
-     *
-     * @return void
      */
     public function groupedByListAction()
     {
@@ -69,7 +66,6 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * action detailView
      *
      * @param \Typo3graf\Stafflist\Domain\Model\Persons $persons
-     * @return void
      */
     public function detailViewAction(\Typo3graf\Stafflist\Domain\Model\Persons $persons = null)
     {
@@ -81,8 +77,6 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     /**
      * action boxView
-     *
-     * @return void
      */
     public function boxViewAction()
     {
