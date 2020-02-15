@@ -54,8 +54,6 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Do not modify this method!
      * It will be rewritten on each save in the extension builder
      * You may modify the constructor of this class instead
-     *
-     * @return void
      */
     protected function initStorageObjects()
     {
@@ -64,7 +62,6 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the teamname
-     *
      * @return string $teamname
      */
     public function getTeamname()
@@ -74,9 +71,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the teamname
-     *
      * @param string $teamname
-     * @return void
      */
     public function setTeamname($teamname)
     {
@@ -85,7 +80,6 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the teampage
-     *
      * @return string $teampage
      */
     public function getTeampage()
@@ -95,9 +89,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the teampage
-     *
      * @param string $teampage
-     * @return void
      */
     public function setTeampage($teampage)
     {
@@ -106,9 +98,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Adds a Persons
-     *
      * @param \Typo3graf\Stafflist\Domain\Model\Persons $person
-     * @return void
      */
     public function addPerson(\Typo3graf\Stafflist\Domain\Model\Persons $person)
     {
