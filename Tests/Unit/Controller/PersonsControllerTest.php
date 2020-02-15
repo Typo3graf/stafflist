@@ -32,7 +32,7 @@ class PersonsControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCa
     /**
      * @test
      */
-    public function listActionFetchesAllPersonssFromRepositoryAndAssignsThemToView()
+    public function listActionFetchesAllPersonsFromRepositoryAndAssignsThemToView()
     {
 
         $allPersonss = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)

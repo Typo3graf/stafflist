@@ -32,7 +32,7 @@ class TeamsControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
-    public function listActionFetchesAllTeamssFromRepositoryAndAssignsThemToView()
+    public function listActionFetchesAllTeamsFromRepositoryAndAssignsThemToView()
     {
 
         $allTeamss = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
