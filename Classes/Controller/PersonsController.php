@@ -12,13 +12,11 @@ namespace Typo3graf\Stafflist\Controller;
 /**
  * PersonsController
  */
-
-
-use TYPO3\CMS\Core\Page\PageRenderer;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
-use TYPO3\CMS\Core\Utility\PathUtility;
+use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\PathUtility;
 use Typo3graf\Stafflist\Utility\TypoScript;
 
 class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
@@ -56,13 +54,6 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     }
 
     /**
-     * action groupedByList
-     */
-    public function groupedByListAction()
-    {
-    }
-
-    /**
      * action detailView
      *
      * @param \Typo3graf\Stafflist\Domain\Model\Persons $persons
@@ -89,7 +80,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $this->view->assign('persons', $persons);
     }
 
-    /**
+    /*
      * Helper
      */
 
@@ -102,7 +93,6 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
     ) {
         $this->configurationManager = $configurationManager;
-
         $tsSettings = $this->configurationManager->getConfiguration(
             \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK,
             'Stafflist',
@@ -119,13 +109,11 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
              $originalSettings[$property] = $tsSettings['settings'][$property];
          }
          $this->originalSettings = $originalSettings;*/
-
         // start override
         if (isset($tsSettings['settings']['overrideFlexformSettingsIfEmpty'])) {
             $typoScriptUtility = GeneralUtility::makeInstance(TypoScript::class);
             $originalSettings = $typoScriptUtility->override($originalSettings, $tsSettings);
         }
-
         if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['Stafflist']['Controller/PersonsController.php']['overrideSettings'])) {
             foreach ($GLOBALS['TYPO3_CONF_VARS']['EXT']['Stafflist']['Controller/PersonsController.php']['overrideSettings'] as $_funcRef) {
                 $_params = [
@@ -135,7 +123,6 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
                 $originalSettings = GeneralUtility::callUserFunction($_funcRef, $_params, $this);
             }
         }
-
         $this->settings = $originalSettings;
         //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($tsSettings, 'TS Settings');
         //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($originalSettings, 'OriginalSettings'); die();
