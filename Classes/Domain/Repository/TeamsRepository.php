@@ -60,7 +60,7 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             ];
         } else {
             $orderings = [
-                $settings['sortTeamOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+                 $settings['sortTeamOrder'] => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
             ];
         }
         $this->defaultOrderings = $orderings;
@@ -68,7 +68,9 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         // Query result
         if ($settings['usergroup']) {
             $queryResult = $this->createQuery();
-            $queryResult->matching($queryResult->in('uid', $demand));
+            $queryResult->matching(
+                $queryResult->in('uid', $demand)
+            );
             return $queryResult->execute();
 
         } else {
