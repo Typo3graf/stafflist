@@ -68,9 +68,7 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         // Query result
         if ($settings['usergroup']) {
             $queryResult = $this->createQuery();
-            $queryResult->matching(
-                $queryResult->in('uid', $demand)
-            );
+            $queryResult->matching($queryResult->in('uid', $demand));
             return $queryResult->execute();
 
         } else {

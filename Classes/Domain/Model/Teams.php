@@ -1,7 +1,6 @@
 <?php
 namespace Typo3graf\Stafflist\Domain\Model;
 
-
 /***
  *
  * This file is part of the "Staff List" Extension for TYPO3 CMS.
@@ -117,10 +116,8 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Removes a Persons
-     *
+     * Removes a Person
      * @param \Typo3graf\Stafflist\Domain\Model\Persons $personToRemove The Persons to be removed
-     * @return void
      */
     public function removePerson(\Typo3graf\Stafflist\Domain\Model\Persons $personToRemove)
     {
@@ -129,7 +126,6 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the persons
-     *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons> $persons
      */
     public function getPersons()
@@ -139,9 +135,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the persons
-     *
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons> $persons
-     * @return void
      */
     public function setPersons(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $persons)
     {
