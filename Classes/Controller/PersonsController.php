@@ -1,20 +1,18 @@
 <?php
+
 namespace Typo3graf\Stafflist\Controller;
 
-
 /***
- *
  * This file is part of the "Staff List" Extension for TYPO3 CMS.
- *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
- *
  *  (c) 2020 Development-Team <development@typo3graf.de>, Typo3graf media-agentur
- *
  ***/
+
 /**
  * PersonsController
  */
+
 use Typo3graf\Stafflist\Utility\TypoScript;
 use TYPO3\CMS\Core\TypoScript\TypoScriptService;
 use TYPO3\CMS\Core\Page\PageRenderer;
@@ -23,10 +21,9 @@ use \TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\PathUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-
-
 class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+
     /**
      * Inject a persons repository to enable DI
      *
@@ -39,24 +36,23 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
     public function initializeAction()
     {
-        $pathPrefix =  PathUtility::getAbsoluteWebPath(ExtensionManagementUtility::extPath($this->request->getControllerExtensionKey()));
+        $pathPrefix = PathUtility::getAbsoluteWebPath(ExtensionManagementUtility::extPath($this->request->getControllerExtensionKey()));
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
         $loadFontawesome = GeneralUtility::makeInstance(ExtensionConfiguration::class)
             ->get('stafflist', 'loadFontawesome');
-        if ($loadFontawesome) {$pageRenderer->addCssLibrary( $pathPrefix. 'Resources/Public/Fonts/Fontawesome/Css/all.css');};
-
+        if ($loadFontawesome) {
+            $pageRenderer->addCssLibrary($pathPrefix . 'Resources/Public/Fonts/Fontawesome/Css/all.css');
+        }
     }
 
-        /**
+    /**
      * action personList
-     *
-     * @return void
      */
     public function personListAction()
     {
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings, 'Settings -> Controller');
         $demand = '';
-        $persons = $this->personsRepository->findDemanded(GeneralUtility::trimExplode(',',$this->settings['usergroup'], TRUE), $this->settings);
+        $persons = $this->personsRepository->findDemanded(GeneralUtility::trimExplode(',', $this->settings['usergroup'], true), $this->settings);
         $this->view->assign('persons', $persons);
     }
 
@@ -90,10 +86,10 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function boxViewAction()
     {
-       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['source_plugin'], 'Settings -> Controller');
-       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['source_plugin'] != null, 'Settings -> Controller'); die();
+        // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['source_plugin'], 'Settings -> Controller');
+        // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['source_plugin'] != null, 'Settings -> Controller'); die();
         if ($this->settings['source_plugin'] != null) {
-            $persons = $this->personsRepository->findByUids($this->settings['source_plugin'],$this->settings);
+            $persons = $this->personsRepository->findByUids($this->settings['source_plugin'], $this->settings);
         }
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($persons, 'Settings -> Controller'); die();
         $this->view->assign('persons', $persons);
@@ -122,13 +118,13 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
             \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS
         );
         //   \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($tsSettings, 'TS Settings');
-       //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($originalSettings, 'OriginalSettings');
+        //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($originalSettings, 'OriginalSettings');
 
-       /* $propertiesNotAllowedViaFlexForms = [name];
-        foreach ($propertiesNotAllowedViaFlexForms as $property) {
-            $originalSettings[$property] = $tsSettings['settings'][$property];
-        }
-        $this->originalSettings = $originalSettings;*/
+        /* $propertiesNotAllowedViaFlexForms = [name];
+         foreach ($propertiesNotAllowedViaFlexForms as $property) {
+             $originalSettings[$property] = $tsSettings['settings'][$property];
+         }
+         $this->originalSettings = $originalSettings;*/
 
         // start override
         if (isset($tsSettings['settings']['overrideFlexformSettingsIfEmpty'])) {
@@ -147,7 +143,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         }
 
         $this->settings = $originalSettings;
-       //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($tsSettings, 'TS Settings');
-       //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($originalSettings, 'OriginalSettings'); die();
+        //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($tsSettings, 'TS Settings');
+        //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($originalSettings, 'OriginalSettings'); die();
     }
 }
