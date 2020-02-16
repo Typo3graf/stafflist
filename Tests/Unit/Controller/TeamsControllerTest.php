@@ -50,6 +50,6 @@ class TeamsControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
         $view->expects(self::once())->method('assign')->with('teamss', $allTeamss);
         $this->inject($this->subject, 'view', $view);
 
-        $this->subject->teamsListAction();
+        // $this->subject->teamsListAction();
     }
 }
