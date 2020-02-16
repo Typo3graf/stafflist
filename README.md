@@ -1,4 +1,4 @@
-[![pipeline status](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/pipeline.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master) [![coverage report](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/coverage.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)] [![pipeline status](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/pipeline.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master) [![coverage report](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/coverage.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master)
 <h1>Staff List</h1>
 
 responsive, high quality plugin to showcase your team or staff members.
