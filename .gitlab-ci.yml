@@ -24,7 +24,7 @@ stages:
   - test
   - upload
 
-cgl:php-cs:
+cgl:cs-php:
   image: composer:1.6
   stage: cgl
   before_script:
@@ -51,7 +51,7 @@ cgl:php74:
   script:
     - find . -name \*.php -exec php -l "{}" \;
 
-typoscript:typoscript-lint:
+typoscript:test:
   stage: typoscript
   image: composer:1.6
   script:
@@ -59,7 +59,7 @@ typoscript:typoscript-lint:
     - composer install --no-progress --no-ansi --no-interaction
     - .Build/bin/typoscript-lint -c tslint.yaml
 
-yaml:yaml-lint:
+yaml:test:
   stage: yaml
   image: python:alpine3.7
   before_script:
