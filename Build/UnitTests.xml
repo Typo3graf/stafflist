@@ -1,7 +1,6 @@
 <phpunit
 		backupGlobals="true"
 		backupStaticAttributes="false"
-		bootstrap="../.Build/vendor/typo3/testing-framework/res/Configuration/UnitTestsBootstrap.php"
 		colors="true"
 		convertErrorsToExceptions="true"
 		convertWarningsToExceptions="true"
