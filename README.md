@@ -47,7 +47,7 @@ Download and install the extension with the extension manager module.
 **How?** There are multiple ways to support the further development
 
 - **PayPal**: Support me by a donation on paypal.com. It is just one click away.
-- **T3terminal**: Buy a pro version of stafflist with more features and support.
+- **T3TERMINAL**: You can buy PRO version with more-features & free-support.
 ## 4. Administration corner
 ### 4.1 Changelog
 Please look into the official extension documentation in changelog chapter
