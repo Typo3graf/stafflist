@@ -1,9 +1,3 @@
----
-name: :beetle: Bug Report
-about: If something isn't working as expected :cry:.
-
----
-
 ## Bug Report
 
 **Current Behavior**
