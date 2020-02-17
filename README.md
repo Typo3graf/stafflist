@@ -6,7 +6,7 @@
 [![Total Downloads](https://poser.pugx.org/typo3graf/stafflist/downloads)](https://packagist.org/packages/typo3graf/stafflist)
 [![License](https://poser.pugx.org/typo3graf/stafflist/license)](https://packagist.org/packages/typo3graf/stafflist)
 
-> responsive, high quality plugin to showcase your team or staff members.
+> This versatile staff list is the easiest way to add staff directories to your website. Company and faculty are presented in several easy to understand layouts, including a team list or employee directory, allowing visitors to get to know your company and capabilities.
 
 Easily create a wide range of directories and listings:
 
