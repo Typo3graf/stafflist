@@ -1,4 +1,4 @@
-# TYPO3 Extension ``stafflist``
+# TYPO3 Extension ```stafflist```
 [![pipeline status](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/pipeline.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master)
 [![coverage report](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/coverage.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master)
 [![Latest Stable Version](https://poser.pugx.org/typo3graf/stafflist/v/stable)](https://packagist.org/packages/typo3graf/stafflist)
