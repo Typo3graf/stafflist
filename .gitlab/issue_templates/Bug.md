@@ -1,4 +1,4 @@
-## Bug Report
+## :beetle:  Bug Report
 
 **Current Behavior**
 A clear and concise description of the behavior.
@@ -8,7 +8,7 @@ A clear and concise description of what you expected to happen.
 
 **Environment**
 - TYPO3 version(s): [e.g. 8.7.12, 9.2.0]
-- namespace/project> version: [e.g. 1.0.0]
+- stafflist version: [e.g. 1.0.0]
 - Is your TYPO3 installation set up with Composer (Composer Mode): [yes, no]
 - OS: [e.g. OSX 10.13.4, Windows 10]
 
