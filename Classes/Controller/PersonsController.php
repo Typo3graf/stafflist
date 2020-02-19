@@ -77,6 +77,7 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
             $persons = $this->personsRepository->findByUids($this->settings['source_plugin'], $this->settings);
         }
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($persons, 'Settings -> Controller'); die();
+        /** @noinspection PhpUndefinedVariableInspection */
         $this->view->assign('persons', $persons);
     }
 

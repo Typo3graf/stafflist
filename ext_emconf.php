@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpUndefinedVariableInspection */
 
 /***************************************************************
  * Extension Manager/Repository config file for ext: "stafflist"
