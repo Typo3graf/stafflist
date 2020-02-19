@@ -91,11 +91,11 @@ yaml:test:
   script:
     - >
       if [[ "$COVERAGE" == "0" ]]; then
-        .Build/bin/phpunit --coverage-text --colors=never -c Build/UnitTests.xml Tests/Unit
+        .Build/bin/phpunit --coverage-text --colors=never --testdox -c Build/UnitTests.xml Tests/Unit
       fi
     - >
       if [[ "$COVERAGE" == "1" ]]; then
-        .Build/bin/phpunit --coverage-text --colors=never --coverage-clover=phpunit.coverage.xml --log-junit=phpunit.report.xml -c Build/UnitTests.xml Tests/Unit
+        .Build/bin/phpunit --coverage-text --colors=never --coverage-clover=phpunit.coverage.xml --log-junit=phpunit.report.xml --testdox -c Build/UnitTests.xml Tests/Unit
       fi
   #    - find 'Tests/Functional' -wholename '*Test.php' | parallel --gnu 'echo; echo "Running functional test suite {}"; .Build/bin/phpunit --colors  -c .Build/vendor/nimut/testing-framework/res/Configuration/FunctionalTests.xml {}'
   artifacts:
