@@ -128,3 +128,29 @@ test:php74:typo3_9:
     DOCKER_TAG: 7.4-alpine
     TYPO3_VERSION: ^9.5
     COVERAGE: 1
+
+ter-upload:
+  image: php:7.3-alpine
+  stage: upload
+  #only:
+  #  - tags
+  #when: manual
+  before_script:
+    - apk --no-cache add git zlib-dev libxml2-dev
+    - docker-php-ext-install mbstring zip soap
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - export COMPOSER_CACHE_DIR=.composer
+  script:
+    - composer install --no-progress --no-ansi --no-interaction
+    - composer require namelesscoder/typo3-repository-client
+    - export TYPO3_PATH_WEB="$PWD/.Build/Web"
+    - >
+      if [ -n "$Releas" ] && [ -n "$TerUsername" ] && [ -n "$TerPassword" ]; then
+        echo -e "Preparing upload of release ${Releas} to TER mit ${TerUsername} und ${TerPassword}\n"
+        # Cleanup before we upload
+      #  git reset --hard HEAD && git clean -fx
+        # Upload
+        TAG_MESSAGE=`git tag -n10 -l $Releas | sed 's/^[0-9.]*[ ]*//g'`
+        echo "Uploading release ${Releas} to TER mit ${TAG_MESSAGE}"
+       # .Build/bin/upload . "$TerUsername" "$TerPassword" "$TAG_MESSAGE"
+      fi;
