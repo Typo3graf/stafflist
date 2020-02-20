@@ -40,7 +40,9 @@ The recommended way to install the extension is by using [Composer][2].
 Download and install the extension with the extension manager module.
 ### 2) Minimal setup
 1) Include the static TypoScript of the extension.
+
 2) Create some stafflist records on a sysfolder.
+
 3) Create a plugin on a page and select at least the sysfolder as startingpoint.
 ## 3. Help supporting further development
 **Why?** The stafflist extension is a powerful tool with a lot of features, always trying to thrive on the latest possibilities of the TYPO3 core. This implies a lot of work bringing this to the TYPO3 community.
