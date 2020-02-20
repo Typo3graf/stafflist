@@ -1,6 +1,5 @@
 # TYPO3 Extension ```stafflist```
 [![pipeline status](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/pipeline.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master)
-[![coverage report](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/coverage.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master)
 [![Latest Stable Version](https://poser.pugx.org/typo3graf/stafflist/v/stable)](https://packagist.org/packages/typo3graf/stafflist)
 [![Latest Unstable Version](https://poser.pugx.org/typo3graf/stafflist/v/unstable)](https://packagist.org/packages/typo3graf/stafflist)
 [![Total Downloads](https://poser.pugx.org/typo3graf/stafflist/downloads)](https://packagist.org/packages/typo3graf/stafflist)
@@ -25,7 +24,7 @@ Easily create a wide range of directories and listings:
 * Responsive layout.
 * List layout.
 * Detail page option.
-* Selection of the groups and fields to be displayed.
+* Selection of groups and fields to be displayed.
 * Social Icons.
 * Custom templates.
 * [Well documented][1]
@@ -34,7 +33,9 @@ Easily create a wide range of directories and listings:
 
 ### 1) Installation
 #### Installation using composer
-The recommended way to install the extension is by using [Composer][2]. In your Composer based TYPO3 project root, just do `composer require typo3graf/stafflist`.
+The recommended way to install the extension is by using [Composer][2].
+
+`composer require typo3graf/stafflist`.
 #### Installation as extension from TYPO3 Extension Repository (TER)
 Download and install the extension with the extension manager module.
 ### 2) Minimal setup
