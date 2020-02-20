@@ -145,13 +145,13 @@ ter-upload:
     - composer require namelesscoder/typo3-repository-client
     - export TYPO3_PATH_WEB="$PWD/.Build/Web"
     - >
-      if [ -n "$CI_COMMIT_TAG" ] && [ -n "$TerUsername" ] && [ -n "$TerPassword" ]; then
-        echo -e "Preparing upload of CI_COMMIT_TAGe ${CI_COMMIT_TAG} to TER mit ${TerUsername} und ${TerPassword}\n"
+      if [ -n "$CI_COMMIT_TAG" ] && [ -n "$TER_USERNAME" ] && [ -n "$TER_PASSWORD" ]; then
+        echo -e "Preparing upload of CI_COMMIT_TAGe ${CI_COMMIT_TAG} to TER\n"
         # Cleanup before we upload
-      #  git reset --hard HEAD && git clean -fx
+        git reset --hard HEAD && git clean -fx
         # Upload
         TAG_MESSAGE=`git tag -n10 -l $CI_COMMIT_TAG | sed 's/^[0-9.]*[ ]*//g'`
-        echo "Uploading CI_COMMIT_TAGe ${CI_COMMIT_TAG} to TER mit ${TAG_MESSAGE}"
-       # .Build/bin/upload . "$TerUsername" "$TerPassword" "$TAG_MESSAGE"
+        echo "Uploading release ${CI_COMMIT_TAG} to TER mit ${TAG_MESSAGE}"
+        .Build/bin/upload . "$TER_USERNAME" "$TER_PASSWORD" "$TAG_MESSAGE"
       fi;
 
