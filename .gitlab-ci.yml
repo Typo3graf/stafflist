@@ -150,7 +150,8 @@ ter-upload:
         # Cleanup before we upload
       #  git reset --hard HEAD && git clean -fx
         # Upload
-        TAG_MESSAGE=`git tag -n10 -l $Releas | sed 's/^[0-9.]*[ ]*//g'`
+        TAG_MESSAGE="git tag -n10 -l $Releas | sed 's/^[0-9.]*[ ]*//g'"
         echo "Uploading release ${Releas} to TER mit ${TAG_MESSAGE}"
        # .Build/bin/upload . "$TerUsername" "$TerPassword" "$TAG_MESSAGE"
       fi;
+
