@@ -57,7 +57,7 @@ typoscript:test:
   script:
     - composer remove typo3/cms-core --no-update
     - composer install --no-progress --no-ansi --no-interaction
-    - .Build/bin/typoscript-lint -c tslint.yaml
+    - .Build/bin/typoscript-lint -c Build/tslint.yaml
 
 yaml:test:
   stage: yaml
