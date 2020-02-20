@@ -46,6 +46,9 @@
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "app-dir": ".Build",
             "web-dir": ".Build/public"
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
         }
     }
 }
