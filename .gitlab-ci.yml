@@ -136,7 +136,7 @@ ter-upload:
   #  - tags
   #when: manual
   before_script:
-    - apk --no-cache add git zlib-dev libxml2-dev
+    - apk --no-cache add git libzip-dev libxml2-dev
     - docker-php-ext-install mbstring zip soap
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
     - export COMPOSER_CACHE_DIR=.composer
