@@ -1,0 +1,181 @@
+# 0.0.1
+
+## FEATURE
+- [FEATURE] change contact labels to icons ca78218
+- [FEATURE] change contact labels to icons 8a6b48f
+
+## TASK
+- [TASK] add TER upload to gitlab-ci.yml 692763e
+- [TASK] change version of extension f2cd2c7
+- [TASK] change version of extension 42ad8a4
+- [TASK] add TER upload to gitlab-ci.yml 1f4754e
+- [TASK] suppress code inspection 51911b1
+- [TASK] add gitlab issue templates 5b0bfdf
+- [TASK] add gitlab labels c51233a
+- [TASK] add CONTRIBUTING.md da638c7
+- [TASK] transfer CONTRIBUTING.md to .gitlab folder e838782
+- [TASK] add gitlab labels 679b45e
+- [TASK] change extension description 008df5d
+- [TASK] add gitlab issue templates 021a200
+- [TASK] add gitlab issue templates 3dae833
+- [TASK] change CONTRIBUTING.md 1ac7a90
+- [TASK] add gitlab issue templates a29aec3
+- [TASK] add gitlab issue templates ea6ae1f
+- [TASK] add gitlab issue templates f2b79f8
+- [TASK] Implement teams html layouts 5acfd4f
+- [TASK] Implement teams controller actions f084671
+- [TASK] Implement teams controller actions da85145
+- [TASK] Implement teams controller actions 9ac1358
+- [TASK] Implement teams controller actions d1543b0
+- [TASK] Implement teams controller actions 337ffed
+- [TASK] Make extension further customable df0d98c
+- [TASK] Make extension further customable 845885e
+- [TASK] add boxView fc6caf8
+- [TASK] add boxView 94aca04
+- [TASK] add link to detailView action 9c4f4a5
+- [TASK] Change grid layout 977d81c
+- [TASK] Bidirectional persons teams a3c7ff6
+- [TASK] Bidirectional persons teams f821829
+- [TASK] Change card grid layout 8628234
+- [TASK] Change card grid layout 00a6526
+- [TASK] Demanded query integrated 8907615
+- [TASK] make contact info's linkable 39c085b
+- [TASK] insert typoscript page uid's e7d30c7
+- [TASK] set default fields 790a7a5
+- [TASK] make fontawesome switchable 621c546
+- [TASK] make fontawesome switchable 28c5181
+- [TASK] make fields selectable 4453218
+- [TASK] make fields selectable 89f0b01
+- [TASK] make fields selectable 5c8982c
+- [TASK] make fields selectable 8d2b3cd
+- [TASK] make fields selectable b05e131
+- [TASK] make fields selectable cc9b1ed
+- [TASK] add social links to layouts 4af1814
+- [TASK] add social links to layouts 031f619
+- [TASK] add some layouts c41372d
+- [TASK] add list layouts e13977c
+- [TASK] add list layouts 3f05685
+- [TASK] add list layouts 81464a1
+- [TASK] add list layouts 8ab9864
+- [TASK] add some actions to personsController c9c8e0a
+- [TASK] change some html templates 9f33315
+- [TASK] add some language strings 387e908
+- [TASK] change teamList in teamsList a808c1a
+- [TASK] change teamList in teamsList f8d744a
+- [TASK] add box view template 3580f9e
+- [TASK] add some flexform functions 8311e31
+- [TASK] persistence problem with flexform fixed a1eb120
+- [TASK] change inject and TCA migration to TYPO3 V9 5c5086e
+- [TASK] add TCA Overrides 0938e9c
+- [TASK] add README.md e1b78ab
+- [TASK] Update LICENSE 11c8f92
+- [TASK] Add license 584988c
+
+## BUGFIX
+- [BUGFIX] Fix bug no team selected 64a0d62
+- [BUGFIX] Fixed image rendering f7333e3
+- [BUGFIX] Resolve flexform conflict between Teamlist and GrouptedbyTeam 04fbbfe
+- [BUGFIX] Resolve flexform conflict between Teamlist and GrouptedbyTeam 30981e0
+- [BUGFIX] Resolve flexform conflict between Teamlist and GrouptedbyTeam bf32bd2
+- [BUGFIX] Problem with storagePid solved 60cb3ec
+- [BUGFIX] Problem with storagePid solved 117eb3f
+- [BUGFIX] Problem with storagePid solved a03a9e1
+- [BUGFIX] Problem with storagePid solved 0c60c71
+- [BUGFIX] fix some bugs in flexform d620017
+
+## MISC
+- [TODO] change README.md d718d42
+- Update .gitlab-ci.yml 68f9710
+- [TODO] make some GitLab changes c6d061f
+- [TODO] make some GitLab changes f2ce24a
+- [TODO] add .gitattributes file e1fc8be
+- [TODO] add TER upload to gitlab-ci.yml e2ef8f2
+- [TODO] add TER upload to gitlab-ci.yml 50567ac
+- [TODO] add TER upload to gitlab-ci.yml c102001
+- [TODO] extend gitlab-ci.yml 0488687
+- [TODO] change README.md 6fe5668
+- [TODO] change README.md 8ba9683
+- Merge remote-tracking branch 'stafflist/master' 2d05b26
+- Update CONTRIBUTING.md 4acde02
+- Add CONTRIBUTING 38d60f9
+- [TODO] change README.md 50a4954
+- [TODO] write README.md 709b2ae
+- [TODO] extend gitlab-ci.yml 9f9a06f
+- [TODO] add badges to README.md 8ffcc6e
+- [FIX] PHP-CS 80f8d90
+- [TODO] Extend gitlab-ci PHP unit tests 137e96e
+- [FIX] PHP-CS 0cf30a8
+- [FIX] PHP-CS 0bca43d
+- [FIX] PHP-CS 6b60531
+- [TODO] modify Unit tests 8c750f7
+- [FIX] PHP-CS 6afcacf
+- [FIX] PHP-CS 60645ec
+- [TODO] extend composer.json 48fad00
+- [TODO] add PHP-UNIT Tests to gitlab-ci 02c7788
+- [TODO] Extend gitlab-ci 7ae41d6
+- Update README.md b463d14
+- Update README.md 1535dc7
+- Update README.md a376058
+- Update README.md a95b9ea
+- Update README.md 20b1702
+- [FIX] PHP-CS 2c3674d
+- [FIX] PHP-CS 41458b7
+- [FIX] PHP-CS 3875d77
+- [FIX] PHP-CS 514162e
+- [FIX] PHP-CS 52fae84
+- [FIX] PHP-CS 3766348
+- [FIX] PHP-CS 1ff829e
+- [FIX] PHP-CS cf586f7
+- [FIX] PHP-CS d1fb541
+- [FIX] PHP-CS aca4920
+- [TEST] PHP-CS-Fixer 2900c6b
+- [TEST] PHP-CS-Fixer fcf5a48
+- [TEST] PHP-CS-Fixer 82e30d4
+- [TEST] PHP-CS-Fixer c7273f0
+- [TEST] PHP-CS-Fixer a433a26
+- [FIX] CGL 927e897
+- [FIX] CGL e650e9d
+- [FIX] CGL 68ffbf3
+- [FIX] CGL bbc3ba6
+- [FIX] CGL 3ef7803
+- [FIX] CGL 5ac389d
+- [TEST] Gitlab CI 08a7b94
+- [TEST] Gitlab CI a79ce23
+- [TEST] Gitlab CI 3dc1412
+- [TEST] Gitlab CI 4e9fa17
+- [TEST] Gitlab CI 2eeba68
+- [TEST] Gitlab CI 836bfb4
+- [TEST] Gitlab CI 46ed2b4
+- [TEST] Gitlab CI 13bd633
+- [TODO] Add placeholder images 525e563
+- [Task] Change Layout for image-grid ab4273c
+- [Task] Change Layout for image-grid a4f1d9f
+- [TODO] Update CHANGELOG.md 6c9947e
+- [TODO] Update CHANGELOG.md 1de9df2
+- [TODO] Update CHANGELOG.md 57cb692
+- [TODO] Update CHANGELOG.md 73d524a
+- [TODO] Update CHANGELOG.md 3455c53
+- [TODO] Update CHANGELOG.md cfb87c9
+- [TODO] Update CHANGELOG.md 1e8b4a0
+- [TODO] Update CHANGELOG.md 28ef7a2
+- [TODO] Update CHANGELOG.md b7d06d2
+- [TODO] Update CHANGELOG.md 059fdb8
+- [TODO] Update CHANGELOG.md dd80067
+- [TODO] Update CHANGELOG.md 4a07ef8
+- [TODO] Update CHANGELOG.md 2ecadf5
+- [TODO] Update CHANGELOG.md 84de347
+- [TODO] Update CHANGELOG.md 65c8d60
+- [TODO] Update CHANGELOG.md 051381d
+- Update README.md 665d0d9
+- Update README.md 8cdc48d
+- CHANGELOG hinzufügen 77bfa28
+- [TODO] Implement Gitlab CI/CD 412110b
+- Merge remote-tracking branch 'stafflist/master' 05348b2
+- Update README.md 67a5d0b
+- Update README.md 05252f2
+- Update README.md 6cc3376
+- Update README.md 38462f5
+- [TODO] Code clean up 778a4f2
+- [TODO] Code clean up a263c73
+- Initial commit dc1157d
+

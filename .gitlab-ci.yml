@@ -6,7 +6,8 @@ cache:
 
 variables:
   COMPOSER_CACHE_DIR: ".composer"
-  TYPO3_PATH_WEB: "$CI_PROJECT_DIR/.Build/Web"
+  TYPO3_PATH_WEB: "$CI_PROJECT_DIR/.build/Web"
+  TYPO3_IS_SET_UP: "1"
   MYSQL_DATABASE: "typo3"
   MYSQL_ROOT_PASSWORD: "joh316"
   typo3DatabaseName: "typo3"
@@ -18,48 +19,53 @@ before_script:
   - apk add git --update
 
 stages:
-  - cgl
+  - PHPLint
+  - CGL
   - typoscript
   - yaml
-  - test
-  - upload
+  - PHP-Unit Tests
+  - Upload
 
-cgl:cs-php:
+php-lint74:
+  stage: PHPLint
+  image: php:7.4-alpine
+  script:
+    - wget https://composer.github.io/installer.sig -O - -q | tr -d '\n' > installer.sig
+    - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    - php -r "if (hash_file('SHA384', 'composer-setup.php') === trim(file_get_contents('installer.sig'))) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    - php composer-setup.php --no-ansi --install-dir=/usr/bin --filename=composer
+    - php -r "unlink('composer-setup.php'); unlink('installer.sig');"
+    - composer require overtrue/phplint
+    - .build/bin/phplint -c Build/.phplint.yml
+php-cs-fixer:
   image: composer:1.6
-  stage: cgl
+  stage: CGL
   before_script:
     - composer remove typo3/cms-core --no-update
     - composer install --no-progress --no-ansi --no-interaction
   script:
-    - .Build/bin/php-cs-fixer fix --config=Build/.php_cs.dist -v --dry-run --using-cache=no --path-mode=intersection ./
+    - .build/bin/php-cs-fixer fix --config=Build/.php_cs.dist -v --dry-run --using-cache=no --path-mode=intersection ./
+#php73:
+#  stage: CGL
+#  image: php:7.3-alpine
+#  script:
+#    - find . -name \*.php -exec php -l "{}" \;
 
-cgl:php72:
-  stage: cgl
-  image: php:7.2-alpine
-  script:
-    - find . -name \*.php -exec php -l "{}" \;
+#php74:
+#  stage: CGL
+#  image: php:7.4-alpine
+#  script:
+#    - find . -name \*.php -exec php -l "{}" \;
 
-cgl:php73:
-  stage: cgl
-  image: php:7.3-alpine
-  script:
-    - find . -name \*.php -exec php -l "{}" \;
-
-cgl:php74:
-  stage: cgl
-  image: php:7.4-alpine
-  script:
-    - find . -name \*.php -exec php -l "{}" \;
-
-typoscript:test:
+typoscript-lint:
   stage: typoscript
   image: composer:1.6
   script:
     - composer remove typo3/cms-core --no-update
     - composer install --no-progress --no-ansi --no-interaction
-    - .Build/bin/typoscript-lint -c Build/tslint.yaml
+    - .build/bin/typoscript-lint -c Build/tslint.yaml
 
-yaml:test:
+yaml-lint:
   stage: yaml
   image: python:alpine3.7
   before_script:
@@ -68,7 +74,7 @@ yaml:test:
     - yamllint -c Build/yamllint.yaml Configuration/ Resources/
 
 .test: &test_php
-  stage: test
+  stage: PHP-Unit Tests
   services:
     - mysql:5
   image: php:$DOCKER_TAG
@@ -91,13 +97,13 @@ yaml:test:
   script:
     - >
       if [[ "$COVERAGE" == "0" ]]; then
-        .Build/bin/phpunit --coverage-text --colors=never --testdox -c Build/UnitTests.xml Tests/Unit
+        .build/bin/phpunit --coverage-text --colors=never --testdox -c Build/UnitTests.xml Tests/Unit
       fi
     - >
       if [[ "$COVERAGE" == "1" ]]; then
-        .Build/bin/phpunit --coverage-text --colors=never --coverage-clover=phpunit.coverage.xml --log-junit=phpunit.report.xml --testdox -c Build/UnitTests.xml Tests/Unit
+        .build/bin/phpunit --coverage-text --colors=never --coverage-clover=phpunit.coverage.xml --log-junit=phpunit.report.xml --testdox -c Build/UnitTests.xml Tests/Unit
       fi
-  #    - find 'Tests/Functional' -wholename '*Test.php' | parallel --gnu 'echo; echo "Running functional test suite {}"; .Build/bin/phpunit --colors  -c .Build/vendor/nimut/testing-framework/res/Configuration/FunctionalTests.xml {}'
+  #    - find 'Tests/Functional' -wholename '*Test.php' | parallel --gnu 'echo; echo "Running functional test suite {}"; .build/bin/phpunit --colors  -c .build/vendor/nimut/testing-framework/res/Configuration/FunctionalTests.xml {}'
   artifacts:
     paths:
       - phpunit.coverage.xml
@@ -106,7 +112,7 @@ yaml:test:
     when: always
 
 # Build in PHP 7.2 and TYPO3 9.5
-test:php72:typo3_9:
+php72:typo3_9:
   <<: *test_php
   variables:
     DOCKER_TAG: 7.2-alpine
@@ -114,7 +120,7 @@ test:php72:typo3_9:
     COVERAGE: 0
 
 # Build in PHP 7.3 and TYPO3 9.5
-test:php73:typo3_9:
+php73:typo3_9:
   <<: *test_php
   variables:
     DOCKER_TAG: 7.3-alpine
@@ -122,16 +128,17 @@ test:php73:typo3_9:
     COVERAGE: 0
 
 # Build in PHP 7.4 and TYPO3 9.5
-test:php74:typo3_9:
+php74:typo3_9:
   <<: *test_php
   variables:
     DOCKER_TAG: 7.4-alpine
     TYPO3_VERSION: ^9.5
     COVERAGE: 1
 
-ter-upload:
+
+TER-Upload:
   image: php:7.3-alpine
-  stage: upload
+  stage: Upload
   only:
     - tags
   when: manual
@@ -143,7 +150,7 @@ ter-upload:
   script:
     - composer install --no-progress --no-ansi --no-interaction
     - composer require namelesscoder/typo3-repository-client
-    - export TYPO3_PATH_WEB="$PWD/.Build/Web"
+    - export TYPO3_PATH_WEB="$PWD/.build/Web"
     - >
       if [ -n "$CI_COMMIT_TAG" ] && [ -n "$TER_USERNAME" ] && [ -n "$TER_PASSWORD" ]; then
         echo -e "Preparing upload of CI_COMMIT_TAGe ${CI_COMMIT_TAG} to TER\n"
@@ -152,6 +159,6 @@ ter-upload:
         # Upload
         TAG_MESSAGE=`git tag -n10 -l $CI_COMMIT_TAG | sed 's/^[0-9.]*[ ]*//g'`
         echo "Uploading release ${CI_COMMIT_TAG} to TER mit ${TAG_MESSAGE}"
-        .Build/bin/upload . "$TER_USERNAME" "$TER_PASSWORD" "$TAG_MESSAGE"
+        .build/bin/upload . "$TER_USERNAME" "$TER_PASSWORD" "$TAG_MESSAGE"
       fi;
 

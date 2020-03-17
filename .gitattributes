@@ -1,9 +1,10 @@
 # Folder
+/.ddev export-ignore
+/.gitlab/ export-ignore
 /Build/ export-ignore
 
 # Files
 /.gitattributes export-ignore
-/.gitlab/ export-ignore
 /.gitignore export-ignore
 /.gitlab-ci.yml export-ignore
 

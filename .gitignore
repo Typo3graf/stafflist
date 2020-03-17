@@ -1,5 +1,8 @@
+.build
 /vendor/
 .idea/
+composer.lock
+*.cache
 .editorconfig
 ExtensionBuilder.json
 /Configuration/ExtensionBuilder/
