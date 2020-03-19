@@ -12,12 +12,12 @@ namespace T3graf\Stafflist\Controller;
 /**
  * PersonsController
  */
+use T3graf\Stafflist\Utility\TypoScript;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\PathUtility;
-use T3graf\Stafflist\Utility\TypoScript;
 
 class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {

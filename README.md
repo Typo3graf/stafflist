@@ -1,5 +1,5 @@
 # TYPO3 Extension ```stafflist```
-[![pipeline status](https://gitlab.com/t3graf/developer-team/extensions/stafflist/badges/master/pipeline.svg)](https://gitlab.com/t3graf/developer-team/extensions/stafflist/-/commits/master)
+[![pipeline status](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/pipeline.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master)
 [![Latest Stable Version](https://poser.pugx.org/t3graf/stafflist/v/stable)](https://packagist.org/packages/t3graf/stafflist)
 [![Latest Unstable Version](https://poser.pugx.org/t3graf/stafflist/v/unstable)](https://packagist.org/packages/t3graf/stafflist)
 [![Total Downloads](https://poser.pugx.org/t3graf/stafflist/downloads)](https://packagist.org/packages/t3graf/stafflist)
