@@ -1,12 +1,12 @@
 <?php
 
-namespace Typo3graf\Stafflist\Controller;
+namespace T3graf\Stafflist\Controller;
 
 /***
  * This file is part of the "Staff List" Extension for TYPO3 CMS.
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
- *  (c) 2020 Development-Team <development@typo3graf.de>, Typo3graf media-agentur
+ *  (c) 2020 Development-Team <development@t3graf.de>, T3graf media-agentur
  ***/
 
 /**
@@ -17,16 +17,16 @@ use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\PathUtility;
-use Typo3graf\Stafflist\Utility\TypoScript;
+use T3graf\Stafflist\Utility\TypoScript;
 
 class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
      * Inject a persons repository to enable DI
      *
-     * @param \Typo3graf\Stafflist\Domain\Repository\PersonsRepository $personsRepository
+     * @param \T3graf\Stafflist\Domain\Repository\PersonsRepository $personsRepository
      */
-    public function injectPersonsRepository(\Typo3graf\Stafflist\Domain\Repository\PersonsRepository $personsRepository)
+    public function injectPersonsRepository(\T3graf\Stafflist\Domain\Repository\PersonsRepository $personsRepository)
     {
         $this->personsRepository = $personsRepository;
     }
@@ -56,9 +56,9 @@ class PersonsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action detailView
      *
-     * @param \Typo3graf\Stafflist\Domain\Model\Persons $persons
+     * @param \T3graf\Stafflist\Domain\Model\Persons $persons
      */
-    public function detailViewAction(\Typo3graf\Stafflist\Domain\Model\Persons $persons = null)
+    public function detailViewAction(\T3graf\Stafflist\Domain\Model\Persons $persons = null)
     {
         /*$requestData = $this->request->getArguments();
         \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($persons, 'Person -> Controller');

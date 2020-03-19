@@ -1,5 +1,5 @@
 <?php
-namespace Typo3graf\Stafflist\Domain\Model;
+namespace T3graf\Stafflist\Domain\Model;
 
 /***
  *
@@ -8,7 +8,7 @@ namespace Typo3graf\Stafflist\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
  *
- *  (c) 2020 Development-Team <development@typo3graf.de>, Typo3graf media-agentur
+ *  (c) 2020 Development-Team <development@t3graf.de>, T3graf media-agentur
  *
  ***/
 /**
@@ -35,7 +35,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * persons
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Persons>
      */
     protected $persons = null;
 
@@ -98,25 +98,25 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Adds a Persons
-     * @param \Typo3graf\Stafflist\Domain\Model\Persons $person
+     * @param \T3graf\Stafflist\Domain\Model\Persons $person
      */
-    public function addPerson(\Typo3graf\Stafflist\Domain\Model\Persons $person)
+    public function addPerson(\T3graf\Stafflist\Domain\Model\Persons $person)
     {
         $this->persons->attach($person);
     }
 
     /**
      * Removes a Person
-     * @param \Typo3graf\Stafflist\Domain\Model\Persons $personToRemove The Persons to be removed
+     * @param \T3graf\Stafflist\Domain\Model\Persons $personToRemove The Persons to be removed
      */
-    public function removePerson(\Typo3graf\Stafflist\Domain\Model\Persons $personToRemove)
+    public function removePerson(\T3graf\Stafflist\Domain\Model\Persons $personToRemove)
     {
         $this->persons->detach($personToRemove);
     }
 
     /**
      * Returns the persons
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons> $persons
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Persons> $persons
      */
     public function getPersons()
     {
@@ -125,7 +125,7 @@ class Teams extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the persons
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Persons> $persons
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Persons> $persons
      */
     public function setPersons(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $persons)
     {

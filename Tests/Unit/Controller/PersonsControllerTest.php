@@ -1,24 +1,24 @@
 <?php
 
-namespace Typo3graf\Stafflist\Tests\Unit\Controller;
+namespace T3graf\Stafflist\Tests\Unit\Controller;
 
 /**
  * Test case.
  *
- * @author Development-Team <development@typo3graf.de>
+ * @author Development-Team <development@t3graf.de>
  */
 class PersonsControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 {
 
     /**
-     * @var \Typo3graf\Stafflist\Controller\PersonsController
+     * @var \T3graf\Stafflist\Controller\PersonsController
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder(\Typo3graf\Stafflist\Controller\PersonsController::class)
+        $this->subject = $this->getMockBuilder(\T3graf\Stafflist\Controller\PersonsController::class)
             ->setMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -39,7 +39,7 @@ class PersonsControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCa
             ->disableOriginalConstructor()
             ->getMock();
 
-        $personsRepository = $this->getMockBuilder(\Typo3graf\Stafflist\Domain\Repository\PersonsRepository::class)
+        $personsRepository = $this->getMockBuilder(\T3graf\Stafflist\Domain\Repository\PersonsRepository::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();

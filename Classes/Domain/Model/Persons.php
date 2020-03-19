@@ -1,12 +1,12 @@
 <?php
 
-namespace Typo3graf\Stafflist\Domain\Model;
+namespace T3graf\Stafflist\Domain\Model;
 
 /***
  * This file is part of the "Staff List" Extension for TYPO3 CMS.
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
- *  (c) 2020 Development-Team <development@typo3graf.de>, Typo3graf media-agentur
+ *  (c) 2020 Development-Team <development@t3graf.de>, T3graf media-agentur
  ***/
 
 /**
@@ -156,21 +156,21 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * teams
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Teams>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Teams>
      */
     protected $teams = null;
 
     /**
      * Repetitive functions
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Functions>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Functions>
      */
     protected $functions = null;
 
     /**
      * locations
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Locations>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Locations>
      */
     protected $locations = null;
 
@@ -625,9 +625,9 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Teams
      *
-     * @param \Typo3graf\Stafflist\Domain\Model\Teams $team
+     * @param \T3graf\Stafflist\Domain\Model\Teams $team
      */
-    public function addTeam(\Typo3graf\Stafflist\Domain\Model\Teams $team)
+    public function addTeam(\T3graf\Stafflist\Domain\Model\Teams $team)
     {
         $this->teams->attach($team);
     }
@@ -635,9 +635,9 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Teams
      *
-     * @param \Typo3graf\Stafflist\Domain\Model\Teams $teamToRemove The Teams to be removed
+     * @param \T3graf\Stafflist\Domain\Model\Teams $teamToRemove The Teams to be removed
      */
-    public function removeTeam(\Typo3graf\Stafflist\Domain\Model\Teams $teamToRemove)
+    public function removeTeam(\T3graf\Stafflist\Domain\Model\Teams $teamToRemove)
     {
         $this->teams->detach($teamToRemove);
     }
@@ -645,7 +645,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the teams
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Teams> $teams
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Teams> $teams
      */
     public function getTeams()
     {
@@ -655,7 +655,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the teams
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Teams> $teams
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Teams> $teams
      */
     public function setTeams(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $teams)
     {
@@ -665,9 +665,9 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Functions
      *
-     * @param \Typo3graf\Stafflist\Domain\Model\Functions $function
+     * @param \T3graf\Stafflist\Domain\Model\Functions $function
      */
-    public function addFunction(\Typo3graf\Stafflist\Domain\Model\Functions $function)
+    public function addFunction(\T3graf\Stafflist\Domain\Model\Functions $function)
     {
         $this->functions->attach($function);
     }
@@ -675,9 +675,9 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Functions
      *
-     * @param \Typo3graf\Stafflist\Domain\Model\Functions $functionToRemove The Functions to be removed
+     * @param \T3graf\Stafflist\Domain\Model\Functions $functionToRemove The Functions to be removed
      */
-    public function removeFunction(\Typo3graf\Stafflist\Domain\Model\Functions $functionToRemove)
+    public function removeFunction(\T3graf\Stafflist\Domain\Model\Functions $functionToRemove)
     {
         $this->functions->detach($functionToRemove);
     }
@@ -685,7 +685,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the functions
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Functions> $functions
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Functions> $functions
      */
     public function getFunctions()
     {
@@ -695,7 +695,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the functions
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Functions> $functions
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Functions> $functions
      */
     public function setFunctions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $functions)
     {
@@ -705,9 +705,9 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Locations
      *
-     * @param \Typo3graf\Stafflist\Domain\Model\Locations $location
+     * @param \T3graf\Stafflist\Domain\Model\Locations $location
      */
-    public function addLocation(\Typo3graf\Stafflist\Domain\Model\Locations $location)
+    public function addLocation(\T3graf\Stafflist\Domain\Model\Locations $location)
     {
         $this->locations->attach($location);
     }
@@ -715,9 +715,9 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Locations
      *
-     * @param \Typo3graf\Stafflist\Domain\Model\Locations $locationToRemove The Locations to be removed
+     * @param \T3graf\Stafflist\Domain\Model\Locations $locationToRemove The Locations to be removed
      */
-    public function removeLocation(\Typo3graf\Stafflist\Domain\Model\Locations $locationToRemove)
+    public function removeLocation(\T3graf\Stafflist\Domain\Model\Locations $locationToRemove)
     {
         $this->locations->detach($locationToRemove);
     }
@@ -725,7 +725,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the locations
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Locations> $locations
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Locations> $locations
      */
     public function getLocations()
     {
@@ -735,7 +735,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the locations
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Typo3graf\Stafflist\Domain\Model\Locations> $locations
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\T3graf\Stafflist\Domain\Model\Locations> $locations
      */
     public function setLocations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $locations)
     {

@@ -1,4 +1,5 @@
 .build
+.Build
 /vendor/
 .idea/
 composer.lock

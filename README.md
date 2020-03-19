@@ -1,9 +1,9 @@
 # TYPO3 Extension ```stafflist```
-[![pipeline status](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/badges/master/pipeline.svg)](https://gitlab.com/typo3graf/developer-team/extensions/stafflist/-/commits/master)
-[![Latest Stable Version](https://poser.pugx.org/typo3graf/stafflist/v/stable)](https://packagist.org/packages/typo3graf/stafflist)
-[![Latest Unstable Version](https://poser.pugx.org/typo3graf/stafflist/v/unstable)](https://packagist.org/packages/typo3graf/stafflist)
-[![Total Downloads](https://poser.pugx.org/typo3graf/stafflist/downloads)](https://packagist.org/packages/typo3graf/stafflist)
-[![License](https://poser.pugx.org/typo3graf/stafflist/license)](https://packagist.org/packages/typo3graf/stafflist)
+[![pipeline status](https://gitlab.com/t3graf/developer-team/extensions/stafflist/badges/master/pipeline.svg)](https://gitlab.com/t3graf/developer-team/extensions/stafflist/-/commits/master)
+[![Latest Stable Version](https://poser.pugx.org/t3graf/stafflist/v/stable)](https://packagist.org/packages/t3graf/stafflist)
+[![Latest Unstable Version](https://poser.pugx.org/t3graf/stafflist/v/unstable)](https://packagist.org/packages/t3graf/stafflist)
+[![Total Downloads](https://poser.pugx.org/t3graf/stafflist/downloads)](https://packagist.org/packages/t3graf/stafflist)
+[![License](https://poser.pugx.org/t3graf/stafflist/license)](https://packagist.org/packages/t3graf/stafflist)
 
 > This versatile staff list is the easiest way to add staff directories to your website. Company and faculty are presented in several easy to understand layouts, including a team list or employee directory, allowing visitors to get to know your company and capabilities.
 
@@ -35,7 +35,7 @@ Easily create a wide range of directories and listings:
 #### Installation using composer
 The recommended way to install the extension is by using [Composer][2].
 
-`composer require typo3graf/stafflist`.
+`composer require t3graf/stafflist`.
 #### Installation as extension from TYPO3 Extension Repository (TER)
 Download and install the extension with the extension manager module.
 ### 2) Minimal setup

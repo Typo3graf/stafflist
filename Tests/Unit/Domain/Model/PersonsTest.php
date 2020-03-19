@@ -1,22 +1,22 @@
 <?php
-namespace Typo3graf\Stafflist\Tests\Unit\Domain\Model;
+namespace T3graf\Stafflist\Tests\Unit\Domain\Model;
 
 /**
  * Test case.
  *
- * @author Development-Team <development@typo3graf.de>
+ * @author Development-Team <development@t3graf.de>
  */
 class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 {
     /**
-     * @var \Typo3graf\Stafflist\Domain\Model\Persons
+     * @var \T3graf\Stafflist\Domain\Model\Persons
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = new \Typo3graf\Stafflist\Domain\Model\Persons();
+        $this->subject = new \T3graf\Stafflist\Domain\Model\Persons();
     }
 
     protected function tearDown()
@@ -593,7 +593,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function setTeamsForObjectStorageContainingTeamsSetsTeams()
     {
-        $team = new \Typo3graf\Stafflist\Domain\Model\Teams();
+        $team = new \T3graf\Stafflist\Domain\Model\Teams();
         $objectStorageHoldingExactlyOneTeams = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneTeams->attach($team);
         $this->subject->setTeams($objectStorageHoldingExactlyOneTeams);
@@ -610,7 +610,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function addTeamToObjectStorageHoldingTeams()
     {
-        $team = new \Typo3graf\Stafflist\Domain\Model\Teams();
+        $team = new \T3graf\Stafflist\Domain\Model\Teams();
         $teamsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -627,7 +627,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function removeTeamFromObjectStorageHoldingTeams()
     {
-        $team = new \Typo3graf\Stafflist\Domain\Model\Teams();
+        $team = new \T3graf\Stafflist\Domain\Model\Teams();
         $teamsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
@@ -656,7 +656,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function setFunctionsForObjectStorageContainingFunctionsSetsFunctions()
     {
-        $function = new \Typo3graf\Stafflist\Domain\Model\Functions();
+        $function = new \T3graf\Stafflist\Domain\Model\Functions();
         $objectStorageHoldingExactlyOneFunctions = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneFunctions->attach($function);
         $this->subject->setFunctions($objectStorageHoldingExactlyOneFunctions);
@@ -673,7 +673,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function addFunctionToObjectStorageHoldingFunctions()
     {
-        $function = new \Typo3graf\Stafflist\Domain\Model\Functions();
+        $function = new \T3graf\Stafflist\Domain\Model\Functions();
         $functionsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -690,7 +690,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function removeFunctionFromObjectStorageHoldingFunctions()
     {
-        $function = new \Typo3graf\Stafflist\Domain\Model\Functions();
+        $function = new \T3graf\Stafflist\Domain\Model\Functions();
         $functionsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
@@ -719,7 +719,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function setLocationsForObjectStorageContainingLocationsSetsLocations()
     {
-        $location = new \Typo3graf\Stafflist\Domain\Model\Locations();
+        $location = new \T3graf\Stafflist\Domain\Model\Locations();
         $objectStorageHoldingExactlyOneLocations = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneLocations->attach($location);
         $this->subject->setLocations($objectStorageHoldingExactlyOneLocations);
@@ -736,7 +736,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function addLocationToObjectStorageHoldingLocations()
     {
-        $location = new \Typo3graf\Stafflist\Domain\Model\Locations();
+        $location = new \T3graf\Stafflist\Domain\Model\Locations();
         $locationsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -753,7 +753,7 @@ class PersonsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function removeLocationFromObjectStorageHoldingLocations()
     {
-        $location = new \Typo3graf\Stafflist\Domain\Model\Locations();
+        $location = new \T3graf\Stafflist\Domain\Model\Locations();
         $locationsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()

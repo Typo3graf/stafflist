@@ -1,22 +1,22 @@
 <?php
-namespace Typo3graf\Stafflist\Tests\Unit\Domain\Model;
+namespace T3graf\Stafflist\Tests\Unit\Domain\Model;
 
 /**
  * Test case.
  *
- * @author Development-Team <development@typo3graf.de>
+ * @author Development-Team <development@t3graf.de>
  */
 class FunctionsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 {
     /**
-     * @var \Typo3graf\Stafflist\Domain\Model\Functions
+     * @var \T3graf\Stafflist\Domain\Model\Functions
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = new \Typo3graf\Stafflist\Domain\Model\Functions();
+        $this->subject = new \T3graf\Stafflist\Domain\Model\Functions();
     }
 
     protected function tearDown()

@@ -1,6 +1,6 @@
 <?php
 
-namespace Typo3graf\Stafflist\Utility;
+namespace T3graf\Stafflist\Utility;
 
 /**
  * This file is part of the "stafflist" Extension for TYPO3 CMS.
