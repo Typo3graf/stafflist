@@ -60,8 +60,6 @@ class BaseController extends ActionController
      * overrides flexform settings with original typoscript values when
      * flexform value is empty and settings key is defined in
      * 'settings.overrideFlexformSettingsIfEmpty'
-     *
-     * @return void
      */
     public function overrideFlexformSettings()
     {
