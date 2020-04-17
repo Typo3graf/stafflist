@@ -38,7 +38,6 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $queryResult = $this->generateQuery($demand);
 
         return $queryResult->execute();
-
     }
 
     /**
@@ -137,7 +136,6 @@ class TeamsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
                 }
             }
         }
-
 
         return $orderings;
     }

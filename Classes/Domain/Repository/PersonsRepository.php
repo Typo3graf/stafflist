@@ -13,7 +13,6 @@ use T3graf\Stafflist\Domain\Model\StafflistDemand;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
-
 /**
  * The repository for Persons
  */
@@ -36,10 +35,9 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     public function findDemanded(StafflistDemand $demand)
     {
         // Query result
-       $queryResult = $this->generateQuery($demand);
+        $queryResult = $this->generateQuery($demand);
 
-       return $queryResult->execute();
-
+        return $queryResult->execute();
     }
 
     /**
@@ -88,23 +86,22 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     {
         $orderings = [];
 
-            $orderList = GeneralUtility::trimExplode(',', $demand->getOrder(), true);
+        $orderList = GeneralUtility::trimExplode(',', $demand->getOrder(), true);
         \TYPO3\CMS\Core\Utility\DebugUtility::debug($orderList, '$orderList -> PersonRepository');
-            if (!empty($orderList)) {
-                // go through every order statement
-                foreach ($orderList as $orderItem) {
-                    list($orderField, $ascDesc) = GeneralUtility::trimExplode(' ', $orderItem, true);
-                    // count == 1 means that no direction is given
-                    if ($ascDesc) {
-                        $orderings[$orderField] = ((strtolower($ascDesc) === 'desc') ?
+        if (!empty($orderList)) {
+            // go through every order statement
+            foreach ($orderList as $orderItem) {
+                list($orderField, $ascDesc) = GeneralUtility::trimExplode(' ', $orderItem, true);
+                // count == 1 means that no direction is given
+                if ($ascDesc) {
+                    $orderings[$orderField] = ((strtolower($ascDesc) === 'desc') ?
                             QueryInterface::ORDER_DESCENDING :
                             QueryInterface::ORDER_ASCENDING);
-                    } else {
-                        $orderings[$orderField] = QueryInterface::ORDER_ASCENDING;
-                    }
+                } else {
+                    $orderings[$orderField] = QueryInterface::ORDER_ASCENDING;
                 }
             }
-
+        }
 
         return $orderings;
     }
@@ -134,5 +131,4 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         \TYPO3\CMS\Core\Utility\DebugUtility::debug($query, '$query -> PersonRepository');
         return $query;
     }
-
 }

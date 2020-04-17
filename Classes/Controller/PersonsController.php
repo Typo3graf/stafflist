@@ -64,8 +64,8 @@ class PersonsController extends BaseController
      */
     public function boxViewAction()
     {
-            $demand = $this->createDemandObjectFromSettings($this->settings, 'persons');
-            $persons = $this->personsRepository->findDemanded($demand);
+        $demand = $this->createDemandObjectFromSettings($this->settings, 'persons');
+        $persons = $this->personsRepository->findDemanded($demand);
 
         $this->view->assign('persons', $persons);
     }

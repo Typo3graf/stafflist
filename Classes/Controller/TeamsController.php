@@ -61,6 +61,4 @@ class TeamsController extends BaseController
 
         $this->view->assign('teams', $teams);
     }
-
-
 }

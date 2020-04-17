@@ -56,7 +56,6 @@ class BaseController extends ActionController
         parent::initializeView($view);
     }
 
-
     /**
      * overrides flexform settings with original typoscript values when
      * flexform value is empty and settings key is defined in
@@ -75,7 +74,7 @@ class BaseController extends ActionController
             'stafflist_personlist'
         );
         if (isset($typoScriptSettings['settings']['overrideFlexformSettingsIfEmpty'])) {
-            $overrideIfEmpty = GeneralUtility::trimExplode(',', $typoScriptSettings['settings']['overrideFlexformSettingsIfEmpty'], TRUE);
+            $overrideIfEmpty = GeneralUtility::trimExplode(',', $typoScriptSettings['settings']['overrideFlexformSettingsIfEmpty'], true);
             foreach ($overrideIfEmpty as $settingToOverride) {
                 // if flexform setting is empty and value is available in TS
                 if ((!isset($originalSettings[$settingToOverride]) || empty($originalSettings[$settingToOverride]))
@@ -87,15 +86,14 @@ class BaseController extends ActionController
         }
     }
 
-
     /**
      * StoragePid fallback: TypoScript settings will be overridden by plugin data.
      * No flexform settings, field pages of tt_content will be used.
-     *
      */
     protected function storagePidFallback()
     {
-        $configuration = $this->configurationManager->getConfiguration(ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK,
+        $configuration = $this->configurationManager->getConfiguration(
+            ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK,
             'stafflist',
             'stafflist_personlist'
         );
@@ -107,7 +105,7 @@ class BaseController extends ActionController
         // Use current page as storagePid if neither set in TypoScript nor plugin data
         elseif (!$configuration['persistence']['storagePid']) {
             // Use current PID as storage PID
-            $pid['persistence']['storagePid'] = $GLOBALS["TSFE"]->id;
+            $pid['persistence']['storagePid'] = $GLOBALS['TSFE']->id;
             $this->configurationManager->setConfiguration(array_merge($configuration, $pid));
         }
     }
@@ -122,26 +120,31 @@ class BaseController extends ActionController
     protected function createDemandObjectFromSettings(
         $settings,
         $action = 'person'
-    )
-    {
+    ) {
         \TYPO3\CMS\Core\Utility\DebugUtility::debug($settings, '$settings -> BaseController::createDemandObjectFromSettings');
         /* @var $demand \T3graf\Stafflist\Domain\Model\StafflistDemand */
-        $demand = $this->objectManager->get('T3graf\\Stafflist\\Domain\\Model\\StafflistDemand',$settings);
+        $demand = $this->objectManager->get('T3graf\\Stafflist\\Domain\\Model\\StafflistDemand', $settings);
         if ($action) {
             $demand->setAction($action);
         }
         $demand->setTeams(GeneralUtility::trimExplode(',', $settings['teams'], true));
         if ($settings['sortOrder']) {
-            if ($settings['sortOrder'] == 'fullLastname') {$settings ['sortOrder'] = 'lastname,firstname';}
-            if ($settings['sortOrder'] == 'fullFirstname') {$settings ['sortOrder'] = 'firstname,lastname';}
+            if ($settings['sortOrder'] == 'fullLastname') {
+                $settings ['sortOrder'] = 'lastname,firstname';
+            }
+            if ($settings['sortOrder'] == 'fullFirstname') {
+                $settings ['sortOrder'] = 'firstname,lastname';
+            }
             $demand->setOrder($settings['sortOrder'] . ' ' . $settings['sortOrderDirection']);
         }
         if ($settings['sortTeamOrder']) {
             $demand->setTeamOrder($settings['sortTeamOrder'] . ' ' . $settings['sortOrderDirection']);
         }
 
-        $demand->setStoragePage($this->extendPidListByChildren($settings['startingpoint'],
-            $settings['recursive']));
+        $demand->setStoragePage($this->extendPidListByChildren(
+            $settings['startingpoint'],
+            $settings['recursive']
+        ));
         $demand->setPersons(GeneralUtility::trimExplode(',', $settings['source_plugin'], true));
         return $demand;
     }

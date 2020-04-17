@@ -8,7 +8,7 @@ namespace T3graf\Stafflist\Domain\Model;
  *  (c) 2020 Development-Team <development@t3graf.de>, T3graf media-agentur
  ***/
 
-use \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject;
+use TYPO3\CMS\Extbase\DomainObject\AbstractValueObject;
 
 /**
  * News Demand object which holds all information to get the correct news records.
