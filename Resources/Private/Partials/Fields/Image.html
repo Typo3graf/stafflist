@@ -1,7 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:if condition="{settings.showimages}">
-
-
 		<f:if condition="{person-item.avatar}">
 			<f:then>
 				<f:image image="{person-item.avatar.originalResource}" class="stafflist-image{f:if(condition: rounded, then: ' stafflist-rounded')}" alt="{person-item.firstname} {person-item.lastname}"/>
@@ -17,7 +15,5 @@
 				</f:if>
 			</f:else>
 		</f:if>
-
-
 </f:if>
 </html>

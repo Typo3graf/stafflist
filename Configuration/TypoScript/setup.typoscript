@@ -1,12 +1,16 @@
 
-plugin.tx_stafflist_personlist {
+plugin.tx_stafflist {
     view {
         templateRootPaths.0 = EXT:{extension.shortExtensionKey}/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_stafflist_personlist.view.templateRootPath}
+        templateRootPaths.1 = {$plugin.tx_stafflist.view.templateRootPath}
         partialRootPaths.0 = EXT:stafflist/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_stafflist_personlist.view.partialRootPath}
+        partialRootPaths.1 = {$plugin.tx_stafflist.view.partialRootPath}
         layoutRootPaths.0 = EXT:tx_stafflist/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_stafflist_personlist.view.layoutRootPath}
+        layoutRootPaths.1 = {$plugin.tx_stafflist.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_stafflist.settings.defaultStartingpoint}
+        recursive = {$plugin.tx_stafflist.settings.recursive}
     }
     features {
         #skipDefaultArguments = 1
@@ -20,10 +24,11 @@ plugin.tx_stafflist_personlist {
     }
 
     settings{
-        overrideFlexformSettingsIfEmpty = startingpoint,recursive,detailpage
-        startingpoint = {$plugin.tx_stafflist_personlist.settings.defaultStartingpoint}
-        detailPage = {$plugin.tx_stafflist_personlist.settings.defaultDetailPage}
-        bioCrop = {$plugin.tx_stafflist_personlist.settings.bioCrop}
+        overrideFlexformSettingsIfEmpty = startingpoint,recursive,detailPage
+        startingpoint = {$plugin.tx_stafflist.settings.defaultStartingpoint}
+        detailPage = {$plugin.tx_stafflist.settings.defaultDetailPage}
+        recursive = {$plugin.tx_stafflist.settings.recursive}
+        bioCrop = {$plugin.tx_stafflist.settings.bioCrop}
     }
     }
 

@@ -1,4 +1,4 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns: data-namespace-typo3-fluid="true">
 <div class="stafflist-container-list">
 <f:for each="{persons}" as="person-item" iteration="oddEvenIterator">
 
@@ -7,7 +7,12 @@
 </div>
 <f:section name="card">
 	<div class="stafflist-item{f:if(condition: oddEvenIterator.isEven, then: '')}{f:if(condition: oddEvenIterator.isOdd, then: ' alt')}">
-		<f:render partial="Fields/BackgroundImage" arguments="{person-item: person-item, settings:settings}"/>
+        <f:if condition="{settings.showimages}">
+            <div class="meta">
+                <div class="photo" {f:render(partial: 'Fields/BackgroundImage', arguments: {person-item: person-item}, optional: 1)}>
+            </div>
+            </div>
+        </f:if>
 		<div class="{f:if(condition: '{person-item.avatar} && {settings.showimages}', then: 'description', else: 'descriptionnophoto')}">
 			<span class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:0}"/> <f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/></span>
 			<h3><f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/></h3>

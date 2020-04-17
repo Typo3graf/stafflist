@@ -20,6 +20,7 @@
     "prefer-stable": true,
     "require": {
         "typo3/cms-core": "^9.5"
+
     },
     "require-dev": {
         "typo3/cms-backend": "^9.5",
@@ -36,6 +37,7 @@
         "typo3/cms-install": "^9.5",
         "typo3/cms-rte-ckeditor": "^9.5",
         "typo3/cms-seo": "^9.5",
+        "typo3/cms-recycler": "^9.5",
         "typo3-console/composer-typo3-auto-install": "^0.3",
         "helhum/typo3-console": "^5.6",
         "typo3-console/composer-auto-commands": "^0.3",
@@ -101,7 +103,7 @@
             "app-dir": ".build"
         },
         "branch-alias": {
-            "dev-master": "0.0.x-dev"
+            "dev-master": "1.0.x-dev"
         }
     }
 }

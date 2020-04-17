@@ -1,7 +1,7 @@
 # customsubcategory=stafflist_uids=LLL:EXT:stafflist/Resources/Private/Language/locallang.xlf:constantEditor.stafflist_uids
 # customsubcategory=stafflist_settings=LLL:EXT:stafflist/Resources/Private/Language/locallang.xlf:constantEditor.stafflist_settings
 
-plugin.tx_stafflist_personlist {
+plugin.tx_stafflist {
     view {
         # cat=plugin.tx_stafflist_personlist/file/a; type=string; label=Path to template root (FE)
         templateRootPath = EXT:stafflist/Resources/Private/Templates/
@@ -15,7 +15,9 @@ plugin.tx_stafflist_personlist {
         # cat=plugin.tx_stafflist_personlist/stafflist_uids/a; type=string; label=Default detail page
         defaultDetailPage =
         # cat=plugin.tx_stafflist_personlist/stafflist_uids/b; type=string; label=Default startingpoint
-        defaultStartingpoint =
+        defaultStartingpoint = 
+        # cat=plugin.tx_stafflist_personlist/stafflist_settings/c; type=int+; label=Recursive
+        recursive =
         # cat=plugin.tx_stafflist_personlist/stafflist_settings/c; type=int+; label=Crop biography text on x characters
         bioCrop = 200
     }

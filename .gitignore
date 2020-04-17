@@ -7,3 +7,5 @@ composer.lock
 .editorconfig
 ExtensionBuilder.json
 /Configuration/ExtensionBuilder/
+/docker-compose.yaml
+/Documentation-GENERATED-temp/

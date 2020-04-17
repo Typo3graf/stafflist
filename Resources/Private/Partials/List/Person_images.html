@@ -1,39 +1,21 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <section class="stafflist-card-grid">
-	<f:for each="{persons}" as="person-item" iteration="iterator">
-		<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
-	</f:for>
+    <ul class="ch-grid">
+    <f:for each="{persons}" as="person-item" iteration="iterator">
+        <f:render section="image-grid-item"
+                  arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>
+    </f:for>
+    </ul>
 </section>
-</html>
 
-<f:section name="card">
-	<div class="stafflist-card stafflist-img">
-		<div class="stafflist-card-inner">
-			<div class="stafflist-card-header stafflist-header-image">
-				<f:render partial="Fields/Image" arguments="{person-item: person-item, settings:settings, rounded:1}"/>
-			</div>
-			<div class="stafflist-card-body">
-				<p class="stafflist-title"><f:render partial="Fields/List/Salutation" arguments="{person-item: person-item, settings:settings, space:1}"/>
-					<f:render partial="Fields/List/Title" arguments="{person-item: person-item, settings:settings}"/></p>
-				<h3><f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/></h3>
-				<h4 class="stafflist-title"><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/>
-					<br/><f:render partial="Fields/List/Tasks" arguments="{person-item: person-item, settings:settings}"/>
-				</h4>
-				<p><f:render partial="Fields/List/Teams" arguments="{person-item: person-item, settings:settings}"/></p>
-				<p><f:render partial="Fields/List/Locations" arguments="{person-item: person-item, settings:settings}"/></p>
-				<p><f:render partial="Fields/List/Building" arguments="{person-item: person-item, settings:settings}"/>  <f:render partial="Fields/List/Room" arguments="{person-item: person-item, settings:settings}"/></p>
-				<p><f:render partial="Fields/List/OfficeHours" arguments="{person-item: person-item, settings:settings}"/></p>
-				<p><f:render partial="Fields/List/Phone" arguments="{person-item: person-item, settings:settings, cr:1}"/>
-					<f:render partial="Fields/List/Mobile" arguments="{person-item: person-item, settings:settings, cr:1}"/>
-					<f:render partial="Fields/List/Fax" arguments="{person-item: person-item, settings:settings, cr:1}"/>
-					<f:render partial="Fields/List/Email" arguments="{person-item: person-item, settings:settings}"/></p>
-				<p><f:render partial="Fields/List/InCompany" arguments="{person-item: person-item, settings:settings}"/></p>
-				<f:render partial="Fields/List/Bio" arguments="{person-item: person-item, settings:settings, crop:1}"/>
-			</div>
-			<div class="stafflist-card-footer">
-				<f:render partial="Fields/List/SocialLinks" arguments="{person-item:person-item, settings:settings}" />
-				<span class="stafflist-footer"><f:render partial="Fields/Button" arguments="{person-item: person-item, settings:settings}"/></span>
-			</div>
-		</div>
-	</div>
+<f:section name="image-grid-item">
+        <li>
+            <div class="ch-item ch-img" {f:render(partial: 'Fields/BackgroundImage', arguments: {person-item: person-item})}>
+                <div class="ch-info" >
+                    <h3><f:render partial="Fields/Fullname" arguments="{person-item: person-item, settings:settings}"/></h3>
+                    <p><f:render partial="Fields/List/Function" arguments="{person-item: person-item, settings:settings}"/><f:render partial="Fields/List/Functions" arguments="{person-item: person-item, settings:settings}"/></p>
+                </div>
+            </div>
+        </li>
 </f:section>
+</html>

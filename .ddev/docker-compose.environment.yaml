@@ -6,6 +6,7 @@ services:
       - "~/.composer/cache/:/home/.composer/cache/"
     environment:
       - TYPO3_CONTEXT=Development
+      - TYPO3_INSTALL_DB_DRIVER=mysqli
       - TYPO3_INSTALL_DB_USER=db
       - TYPO3_INSTALL_DB_PASSWORD=db
       - TYPO3_INSTALL_DB_HOST=db
@@ -17,3 +18,4 @@ services:
       - TYPO3_INSTALL_ADMIN_PASSWORD=typo3graf
       - TYPO3_INSTALL_SITE_NAME=$DDEV_SITENAME (on DDEV)
       - TYPO3_INSTALL_SITE_SETUP_TYPE=no
+      - TYPO3_INSTALL_WEB_SERVER_CONFIG=apache

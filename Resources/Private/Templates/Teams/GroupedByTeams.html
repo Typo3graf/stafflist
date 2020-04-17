@@ -4,7 +4,7 @@
 	<article class="tx_stafflist">
 		<f:for each="{teams}" as="team">
 			<h3 class="grpteamname">{team.teamname}</h3>
-				<section class="stafflist-card-grid">
+				<section class="stafflist-card-grid stafflist-col-{settings.columns}">
 					<f:for each="{team.persons}" as="person-item">
 
 						<f:render section="card" arguments="{person-item: person-item, settings:settings, className:className, view:'list'}"/>

@@ -57,7 +57,7 @@
 										<numIndex index="0">
 											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_liststyle_teams_directory
 										</numIndex>
-										<numIndex index="1">Teams->teamsList;</numIndex>
+										<numIndex index="1">Teams->teamsList</numIndex>
 									</numIndex>
 								</items>
 								<default>Persons->personList;Persons->detailView</default>
@@ -182,6 +182,9 @@
 							<numIndex index="1">
 								FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
 							</numIndex>
+							<numIndex index="2">
+								FIELD:General.switchableControllerActions:=:Teams->teamsList
+							</numIndex>
 						</OR>
 					</displayCond>
 				</TCEforms>
@@ -194,6 +197,7 @@
 							<displayCond>
 								FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
 							</displayCond>
+							<onChange>reload</onChange>
 							<config>
 								<type>select</type>
 								<items type="array">
@@ -228,7 +232,127 @@
 							</config>
 						</TCEforms>
 					</settings.liststyle>
-					<settings.usergroup>
+					<settings.cardlayout>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_cardlayout
+							</label>
+							<displayCond>
+								<AND>
+									<numIndex index="0">
+										FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+									</numIndex>
+									<numIndex index="1">
+										FIELD:Teamlist.settings.liststyle:=:cards
+									</numIndex>
+								</AND>
+							</displayCond>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">
+											Layout 1
+										</numIndex>
+										<numIndex index="1">layout1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">
+											Layout 2
+										</numIndex>
+										<numIndex index="1">layout2</numIndex>
+									</numIndex>
+								</items>
+								<default>layout1</default>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</settings.cardlayout>
+					<settings.withhovereffect>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_withhovereffect
+							</label>
+							<displayCond>
+								<AND>
+									<numIndex index="0">
+										FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+									</numIndex>
+									<numIndex index="1">
+										FIELD:Teamlist.settings.liststyle:=:cards
+									</numIndex>
+								</AND>
+							</displayCond>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.withhovereffect>
+					<settings.columns>
+						<TCEforms>
+							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_columns
+							</label>
+							<displayCond>
+								<OR>
+										<AND>
+											<numIndex index="0">
+												FIELD:General.switchableControllerActions:=:Persons->personList;Persons->detailView
+											</numIndex>
+											<OR>
+												<numIndex index="0">
+													FIELD:Teamlist.settings.liststyle:=:cards
+												</numIndex>
+												<numIndex index="1">
+													FIELD:Teamlist.settings.liststyle:=:images
+												</numIndex>
+											</OR>
+										</AND>
+									<numIndex index="0">
+										FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+									</numIndex>
+								</OR>
+							</displayCond>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">
+											auto (default)
+										</numIndex>
+										<numIndex index="1">auto</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">
+											1
+										</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">
+											2
+										</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">
+											3
+										</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">
+											4
+										</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+								</items>
+								<default>auto</default>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</settings.columns>
+					<settings.teams>
 						<TCEforms>
 							<label>LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:pi_flexform_group
 							</label>
@@ -246,7 +370,7 @@
 								<allowNonIdValues>1</allowNonIdValues>
 							</config>
 						</TCEforms>
-					</settings.usergroup>
+					</settings.teams>
 					<settings.sortOrder>
 						<TCEforms>
 							<label>
@@ -261,7 +385,6 @@
 									<numIndex index="0" type="array">
 										<numIndex index="0">
 											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.lastname
-											(default)
 										</numIndex>
 										<numIndex index="1">lastname</numIndex>
 									</numIndex>
@@ -272,6 +395,18 @@
 										<numIndex index="1">firstname</numIndex>
 									</numIndex>
 									<numIndex index="2" type="array">
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.lastfirstname
+										</numIndex>
+										<numIndex index="1">fullLastname</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">
+											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.firstnamelastname
+										</numIndex>
+										<numIndex index="1">fullFirstname</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
 										<numIndex index="0">
 											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_model_persons.title
 										</numIndex>
@@ -326,7 +461,14 @@
 								LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sortOrder
 							</label>
 							<displayCond>
-								FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+								<OR>
+									<numIndex index="0">
+										FIELD:General.switchableControllerActions:=:Teams->teamsList
+									</numIndex>
+									<numIndex index="1">
+										FIELD:General.switchableControllerActions:=:Teams->groupedByTeams;Persons->detailView
+									</numIndex>
+								</OR>
 							</displayCond>
 							<config>
 								<type>select</type>
@@ -334,7 +476,6 @@
 									<numIndex index="0" type="array">
 										<numIndex index="0">
 											LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tx_stafflist_domain_teams_teamname
-											(default)
 										</numIndex>
 										<numIndex index="1">teamname</numIndex>
 									</numIndex>

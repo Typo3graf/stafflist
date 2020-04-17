@@ -9,13 +9,24 @@ namespace T3graf\Stafflist\Controller;
  *  (c) 2020 Development-Team <development@t3graf.de>, T3graf media-agentur
  ***/
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 /**
  * TeamsController
  */
-class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class TeamsController extends BaseController
 {
+    /**
+     * @var ConfigurationManagerInterface
+     */
+    protected $configurationManager;
+
+    /**
+     * teamsRepository
+     *
+     * @var \T3graf\Stafflist\Domain\Repository\TeamsRepository
+     */
+    protected $teamsRepository;
 
     /**
      * Inject a teams repository to enable DI
@@ -32,7 +43,9 @@ class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function teamsListAction()
     {
-        $teams = $this->teamsRepository->findDemanded(GeneralUtility::trimExplode(',', $this->settings['usergroup'], true), $this->settings);
+        $this->settings['sortOrder'] = '';
+        $demand = $this->createDemandObjectFromSettings($this->settings, 'team');
+        $teams = $this->teamsRepository->findDemanded($demand);
 
         $this->view->assign('teams', $teams);
     }
@@ -42,9 +55,12 @@ class TeamsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function groupedByTeamsAction()
     {
-        $demand = '';
-        $teams = $this->teamsRepository->findGroupedByTeams(GeneralUtility::trimExplode(',', $this->settings['usergroup'], true), $this->settings);
+        $this->settings['sortOrder'] = '';
+        $demand = $this->createDemandObjectFromSettings($this->settings, 'team');
+        $teams = $this->teamsRepository->findDemanded($demand);
 
         $this->view->assign('teams', $teams);
     }
+
+
 }
