@@ -36,7 +36,7 @@ php-lint74:
     - php composer-setup.php --no-ansi --install-dir=/usr/bin --filename=composer
     - php -r "unlink('composer-setup.php'); unlink('installer.sig');"
     - composer require overtrue/phplint
-    - .build/bin/phplint -c Build/.phplint.yml
+    - .build/bin/phplint -c .build/.phplint.yml
 php-cs-fixer:
   image: composer:1.6
   stage: CGL

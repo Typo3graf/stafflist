@@ -75,7 +75,7 @@
             "typo3cms install:extensionsetupifpossible"
         ],
         "test:php:lint": [
-            "phplint -c Build/.phplint.yml"
+            "phplint -c .build/.phplint.yml"
         ],
         "test:php:unit": [
           "phpunit -c .build/UnitTests.xml"
@@ -85,7 +85,7 @@
             "@test:php:unit"
         ],
         "cgl": [
-            "php-cs-fixer --diff --config=Build/.php_cs.dist -v fix"
+            "php-cs-fixer --diff --config=.build/.php_cs.dist -v fix"
         ],
         "set-version": [
             "extension-helper version:set"
@@ -94,13 +94,13 @@
             "extension-helper changelog:create"
         ],
         "post-autoload-dump": [
-            "mkdir -p .build/web/typo3conf/ext/",
-            "[ -L .build/web/typo3conf/ext/stafflist ] || ln -snvf ../../../../. .build/web/typo3conf/ext/stafflist"
+            "mkdir -p .build/Web/typo3conf/ext/",
+            "[ -L .build/Web/typo3conf/ext/stafflist ] || ln -snvf ../../../../. .build/Web/typo3conf/ext/stafflist"
         ]
     },
     "extra": {
         "typo3/cms": {
-            "web-dir": ".build/web",
+            "web-dir": ".build/Web",
             "app-dir": ".build"
         },
         "branch-alias": {
