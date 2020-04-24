@@ -357,7 +357,7 @@ class Persons extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @param \DateTime $incompany
      */
-    public function setIncompany(\DateTime $incompany)
+    public function setIncompany(\DateTime $incompany=null)
     {
         $this->incompany = $incompany;
     }

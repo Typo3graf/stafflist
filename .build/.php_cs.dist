@@ -5,7 +5,7 @@ if (PHP_SAPI !== 'cli') {
 }
 $finder = PhpCsFixer\Finder::create()
     ->exclude('Tests')
-    ->in(__DIR__ . '/../');
+    ->in(__DIR__ . '/stafflist/');
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
     ->setRules([

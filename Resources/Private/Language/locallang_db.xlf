@@ -343,6 +343,17 @@
 			<trans-unit id="tx_stafflist_domain_model_persons.firstnamelastname">
 				<source>Firstname, Lastname</source>
 			</trans-unit>
+			<trans-unit id="tabs.socialmedia">
+				<source>Social media</source>
+			</trans-unit><trans-unit id="tabs.contactinfo">
+				<source>Contact info's</source>
+			</trans-unit>
+		    <trans-unit id="tabs.teams">
+				<source>Team(s) and function(s)</source>
+			</trans-unit>
+			<trans-unit id="tabs.personinfo">
+				<source>Personal info</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
