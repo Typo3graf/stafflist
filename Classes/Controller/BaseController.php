@@ -119,7 +119,7 @@ class BaseController extends ActionController
         $settings,
         $action = 'person'
     ) {
-        \TYPO3\CMS\Core\Utility\DebugUtility::debug($settings, '$settings -> BaseController::createDemandObjectFromSettings');
+        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($settings, '$settings -> BaseController::createDemandObjectFromSettings');
         /* @var $demand \T3graf\Stafflist\Domain\Model\StafflistDemand */
         $demand = $this->objectManager->get('T3graf\\Stafflist\\Domain\\Model\\StafflistDemand', $settings);
         if ($action) {

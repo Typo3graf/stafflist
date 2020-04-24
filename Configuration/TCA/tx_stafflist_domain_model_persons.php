@@ -26,7 +26,7 @@ return [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, function, functions, tasks, teams, locations, building, room, officehours, phone, mobile, fax, email, incompany, bio, twitter, facebook, instagram, xing, github, gitlab',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, function, functions, tasks, teams, locations, building, room, officehours, phone, mobile, fax, email, incompany, bio, twitter, facebook, instagram, xing, github, gitlab, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => '--div--;LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tabs.personinfo,sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, salutation, title, avatar, incompany, bio, --div--;LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tabs.contactinfo, locations, building, room, officehours, phone, mobile, fax, email, --div--;LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tabs.teams, teams, function, functions, tasks, --div--;LLL:EXT:stafflist/Resources/Private/Language/locallang_db.xlf:tabs.socialmedia,twitter, facebook, instagram, xing, github, gitlab, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -374,8 +374,8 @@ return [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
                 'size' => 7,
-                'eval' => 'date',
-                'default' => time()
+                'eval' => 'date,int',
+                'default' => 0
             ],
         ],
         'bio' => [

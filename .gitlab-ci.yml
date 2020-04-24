@@ -36,7 +36,7 @@ php-lint74:
     - php composer-setup.php --no-ansi --install-dir=/usr/bin --filename=composer
     - php -r "unlink('composer-setup.php'); unlink('installer.sig');"
     - composer require overtrue/phplint
-    - .build/bin/phplint -c Build/.phplint.yml
+    - .build/bin/phplint -c .build/.phplint.yml
 php-cs-fixer:
   image: composer:1.6
   stage: CGL
@@ -44,7 +44,7 @@ php-cs-fixer:
     - composer remove typo3/cms-core --no-update
     - composer install --no-progress --no-ansi --no-interaction
   script:
-    - .build/bin/php-cs-fixer fix --config=Build/.php_cs.dist -v --dry-run --using-cache=no --path-mode=intersection ./
+    - .build/bin/php-cs-fixer fix --config=.build/.php_cs.dist -v --dry-run --using-cache=no --path-mode=intersection ./
 #php73:
 #  stage: CGL
 #  image: php:7.3-alpine
@@ -63,7 +63,7 @@ typoscript-lint:
   script:
     - composer remove typo3/cms-core --no-update
     - composer install --no-progress --no-ansi --no-interaction
-    - .build/bin/typoscript-lint -c Build/tslint.yaml
+    - .build/bin/typoscript-lint -c .build/tslint.yaml
 
 yaml-lint:
   stage: yaml
@@ -71,7 +71,7 @@ yaml-lint:
   before_script:
     - pip install yamllint==1.10.0
   script:
-    - yamllint -c Build/yamllint.yaml Configuration/ Resources/
+    - yamllint -c .build/yamllint.yaml Configuration/ Resources/
 
 .test: &test_php
   stage: PHP-Unit Tests
@@ -97,11 +97,11 @@ yaml-lint:
   script:
     - >
       if [[ "$COVERAGE" == "0" ]]; then
-        .build/bin/phpunit --coverage-text --colors=never --testdox -c Build/UnitTests.xml Tests/Unit
+        .build/bin/phpunit --coverage-text --colors=never --testdox -c .build/UnitTests.xml Tests/Unit
       fi
     - >
       if [[ "$COVERAGE" == "1" ]]; then
-        .build/bin/phpunit --coverage-text --colors=never --coverage-clover=phpunit.coverage.xml --log-junit=phpunit.report.xml --testdox -c Build/UnitTests.xml Tests/Unit
+        .build/bin/phpunit --coverage-text --colors=never --coverage-clover=phpunit.coverage.xml --log-junit=phpunit.report.xml --testdox -c .build/UnitTests.xml Tests/Unit
       fi
   #    - find 'Tests/Functional' -wholename '*Test.php' | parallel --gnu 'echo; echo "Running functional test suite {}"; .build/bin/phpunit --colors  -c .build/vendor/nimut/testing-framework/res/Configuration/FunctionalTests.xml {}'
   artifacts:

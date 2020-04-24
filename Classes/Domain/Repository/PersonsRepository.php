@@ -87,7 +87,6 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $orderings = [];
 
         $orderList = GeneralUtility::trimExplode(',', $demand->getOrder(), true);
-        \TYPO3\CMS\Core\Utility\DebugUtility::debug($orderList, '$orderList -> PersonRepository');
         if (!empty($orderList)) {
             // go through every order statement
             foreach ($orderList as $orderItem) {
@@ -128,7 +127,6 @@ class PersonsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         if ($orderings = $this->createOrderingsFromDemand($demand)) {
             $query->setOrderings($orderings);
         }
-        \TYPO3\CMS\Core\Utility\DebugUtility::debug($query, '$query -> PersonRepository');
         return $query;
     }
 }

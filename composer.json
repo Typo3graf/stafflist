@@ -46,7 +46,8 @@
         "bk2k/extension-helper": "^1.0",
         "overtrue/phplint": "^1.1",
         "helmich/typo3-typoscript-lint": "^1.4",
-        "bk2k/bootstrap-package": "^11.0"
+        "bk2k/bootstrap-package": "^11.0",
+        "t3graf/setdefaultauthor": "^10.0"
     },
     "autoload": {
         "psr-4": {
@@ -74,17 +75,17 @@
             "typo3cms install:extensionsetupifpossible"
         ],
         "test:php:lint": [
-            "phplint -c Build/.phplint.yml"
+            "phplint -c .build/.phplint.yml"
         ],
         "test:php:unit": [
-            "phpunit -c Build/UnitTests.xml"
+          "phpunit -c .build/UnitTests.xml"
         ],
         "test": [
             "@test:php:lint",
             "@test:php:unit"
         ],
         "cgl": [
-            "php-cs-fixer --diff --config=Build/.php_cs.dist -v fix"
+            "php-cs-fixer --diff --config=.build/.php_cs.dist -v fix"
         ],
         "set-version": [
             "extension-helper version:set"
@@ -93,13 +94,13 @@
             "extension-helper changelog:create"
         ],
         "post-autoload-dump": [
-            "mkdir -p .build/web/typo3conf/ext/",
-            "[ -L .build/web/typo3conf/ext/stafflist ] || ln -snvf ../../../../. .build/web/typo3conf/ext/stafflist"
+            "mkdir -p .build/Web/typo3conf/ext/",
+            "[ -L .build/Web/typo3conf/ext/stafflist ] || ln -snvf ../../../../. .build/Web/typo3conf/ext/stafflist"
         ]
     },
     "extra": {
         "typo3/cms": {
-            "web-dir": ".build/web",
+            "web-dir": ".build/Web",
             "app-dir": ".build"
         },
         "branch-alias": {
